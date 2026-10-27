@@ -26,7 +26,7 @@ William te parle depuis claude.ai/code (ou l'application Claude sur son téléph
 
 William dépose ses photos dans le dossier `a-integrer/` du dépôt, depuis l'interface web de GitHub.
 Quand il te demande de les intégrer : redimensionne-les à 1400 pixels maximum sur le plus grand côté, en JPEG qualité 82
-(Python avec Pillow, ou ImageMagick s'il est disponible), visez moins de 500 Ko par image,
+(Python avec Pillow, ou ImageMagick s'il est disponible), vise moins de 500 Ko par image,
 range-les dans `assets/work/` avec le bon nom, ajoute les légendes, puis supprime-les de `a-integrer/`.
 
 ## Comment le site est construit
