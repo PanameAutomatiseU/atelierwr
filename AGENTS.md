@@ -16,13 +16,13 @@ William te parle depuis Codex, dans ChatGPT (chatgpt.com/codex ou l'application 
 
 ## Le circuit d'une modification
 
-Le site est publié par **Cloudflare Pages**, relié au dépôt GitHub. Chaque fusion dans `main` met le site en ligne. Chaque pull request reçoit un lien d'aperçu de Cloudflare.
+Le dépôt de travail est `PanameAutomatiseU/atelierwr`. Le dépôt de publication est `Willsky69/atelierwr`, relié à Cloudflare. Le workflow `.github/workflows/sync-upstream.yml` synchronise automatiquement les deux dépôts toutes les cinq minutes, puis Cloudflare publie la branche `main`.
 
-1. Fais la modification, puis résume à William ce que tu as changé, fichier par fichier, en mots simples.
-2. Dis-lui de cliquer sur le bouton qui crée la pull request (« Create PR »).
-3. Explique-lui ensuite : ouvrir la pull request dans GitHub, attendre le lien d'aperçu ajouté par Cloudflare (il finit par `.pages.dev`), vérifier le site sur ce lien.
-4. Rien ne part en ligne sans son accord. Pour publier, c'est lui qui clique sur « Merge pull request » puis « Confirm merge » dans GitHub.
-5. Si William signale que le site en ligne est cassé, prépare le retour à la version précédente (annulation de la dernière fusion) et suis le même circuit. En secours, il peut aussi remettre en ligne une publication précédente depuis Cloudflare : onglet Deployments, trois points, « Rollback to this deployment ».
+1. Modifie et vérifie les fichiers dans `PanameAutomatiseU/atelierwr`, sur la branche `main`.
+2. Enregistre directement la modification dans ce dépôt. William a demandé le déploiement automatique : ne lui demande pas de créer ou de fusionner une pull request pour une modification courante.
+3. Laisse le workflow synchroniser `Willsky69/atelierwr`. Utilise la synchronisation ou une pull request manuelle uniquement comme solution de secours si le workflow échoue.
+4. Vérifie ensuite le résultat sur `https://atelierwr.william-rigoulet.workers.dev/` et résume simplement ce qui a changé.
+5. Si le site publié est cassé, annule le dernier commit ou remets en ligne la publication Cloudflare précédente.
 
 ## Les photos
 
