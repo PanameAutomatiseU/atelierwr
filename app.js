@@ -6,16 +6,19 @@ const W = (cat, n, caps) => caps.map((c, i) => {
 
 const HORLOGERIE = W('horlogerie', 12, ['Panthère, haute joaillerie · Cartier', 'Co-création de la marque · Maison Boanton', 'Emblème · Maison Boanton', 'Collection Héritage · Maison Boanton', 'Croquis de recherche · Maison Boanton', 'Calibre Diver · Cartier', 'Hypnose · Cartier', 'Collection de bijoux · Joaillerie', 'Calibre · Cartier', 'Tank Anglaise · Cartier', 'Les Indomptables · Cartier', 'Édition Octobre Rose · Maison Boanton']);
 
-const JOAILLERIE = [
-  { src: 'assets/work/horlogerie-08.jpg', cat: 'joaillerie', title: 'Collection géométrique', client: 'Vue d’ensemble' },
-  { src: 'assets/work/joaillerie-02.jpg', cat: 'joaillerie', title: 'Recherche de motifs', client: 'Bracelets & manchettes' },
-  { src: 'assets/work/joaillerie-03.jpg', cat: 'joaillerie', title: 'Mockups & déclinaisons', client: 'Colliers, bagues & bracelets' },
-  { src: 'assets/work/joaillerie-04.jpg', cat: 'joaillerie', title: 'Pièces & parures', client: 'Pendentifs, bagues & boucles d’oreilles' },
+const JEWELRY_GALLERY = [
+  { src: 'assets/work/horlogerie-08.jpg', title: 'Dessins de collection', client: 'Planche complète' },
+  { src: 'assets/work/joaillerie-mosaic-01.jpg', title: 'Pierre centrale', client: 'Pendentif et bagues' },
+  { src: 'assets/work/joaillerie-mosaic-02.jpg', title: 'Pendentifs', client: 'Déclinaisons géométriques' },
+  { src: 'assets/work/joaillerie-mosaic-03.jpg', title: 'Bagues & manchettes', client: 'Volumes ajourés' },
+  { src: 'assets/work/joaillerie-mosaic-04.jpg', title: 'Boucles d’oreilles', client: 'Construction du motif' },
+  { src: 'assets/work/joaillerie-mosaic-05.jpg', title: 'Parure', client: 'Boucles et pendentifs' },
+  { src: 'assets/work/joaillerie-mosaic-06.jpg', title: 'Bracelet', client: 'Motif et fermoir' },
+  { src: 'assets/work/joaillerie-mosaic-07.jpg', title: 'Bracelet rigide', client: 'Rythme des maillons' },
 ];
 
 const DESIGN = [
   ...[1, 2, 3, 4, 11, 0, 5, 6, 8, 9, 10].map(i => HORLOGERIE[i]),
-  ...JOAILLERIE,
   ...W('maroquinerie', 12, ['Eyewear · Lunetterie', 'Collection Signature · Maroquinerie', 'Sandales cordes · Almé Paris', 'Lunettes haute joaillerie · Lunetterie', 'Sacs · Céline', 'Maroquinerie · Almé Paris', 'Shoes bag · Bally', 'Sneakers · Bally', 'Trolley pliable · Kipling', 'Croquis de sacs · Recherches', 'Croquis · Burberry', 'Sacs · Sonia Rykiel']),
   ...W('mobilier', 8, ['Piano « Italy » · Carod', 'Piano en situation · Carod', 'Sofa · Grand Palais', 'Collection · Grand Palais', 'Ère de je · Mobilier modulable', 'Ego · Assise', 'Mobilier outdoor · Grand Palais', 'Croquis de collection · Grand Palais']),
   ...W('packaging', 10, ['Coffrets · Almé Paris', 'Édition Nouvel An chinois · Packaging', 'Étiquettes · Domaine de la Bégude', 'Pleine Nature · Étiquettes de vin', "L'Ernest · La Grange d'Ernest", 'Triplette · Cantarelle', 'Gamme · Jean-Étienne Chermette', 'Coffret Année du Lapin · Philips', 'Coffret montre · Maison Boanton', 'Écrin V · Packaging']),
@@ -90,6 +93,7 @@ lb.querySelector('.lb-close').onclick = closeLb;
 lb.querySelector('.lb-prev').onclick = e => { e.stopPropagation(); lbIndex = (lbIndex - 1 + lbList.length) % lbList.length; showLb(); };
 lb.querySelector('.lb-next').onclick = e => { e.stopPropagation(); lbIndex = (lbIndex + 1) % lbList.length; showLb(); };
 lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+document.querySelectorAll('[data-jewelry-i]').forEach(button => button.addEventListener('click', () => openLb(JEWELRY_GALLERY, +button.dataset.jewelryI)));
 document.addEventListener('keydown', e => {
   if (!lb.classList.contains('open')) return;
   if (e.key === 'Escape') closeLb();

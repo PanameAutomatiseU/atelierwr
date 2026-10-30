@@ -124,6 +124,24 @@ p{margin:0}
 .process-list li>span{padding-top:2px;color:var(--orange);font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:.12em}
 .process-list strong{display:block;margin-bottom:8px;font-family:var(--font-display);font-size:18px;line-height:1.15;text-transform:uppercase}
 .process-list p{color:var(--muted);font-size:14px;line-height:1.6}
+.jewelry-work{margin:0 0 34px;padding-top:clamp(16px,3vw,34px)}
+.jewelry-work[hidden]{display:none}
+.jewelry-block-head{display:grid;grid-template-columns:minmax(240px,.7fr) 1fr;gap:14px clamp(28px,5vw,76px);align-items:end;margin:0 0 26px}
+.jewelry-block-head small{grid-column:1/-1;color:var(--orange);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.jewelry-block-head h3{font-size:clamp(34px,4.8vw,62px);line-height:.96;text-transform:uppercase}
+.jewelry-block-head p{max-width:650px;color:var(--muted);font-size:15px;line-height:1.65}
+.jewelry-drawing,.jewelry-tile{display:block;width:100%;margin:0;padding:0;border:0;background:#fff;color:inherit;font:inherit;text-align:left;cursor:zoom-in}
+.jewelry-drawing{border:1px solid var(--ink)}
+.jewelry-drawing img{width:100%;height:auto}
+.jewelry-drawing>span{display:block;padding:14px 16px;border-top:1px solid var(--line);font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
+.jewelry-drawing:focus-visible,.jewelry-tile:focus-visible{outline:3px solid var(--orange);outline-offset:4px}
+.jewelry-mosaic-head{margin-top:clamp(56px,8vw,104px)}
+.jewelry-mosaic{columns:3;column-gap:14px}
+.jewelry-tile{position:relative;break-inside:avoid;margin:0 0 14px;overflow:hidden;background:var(--ink)}
+.jewelry-tile img{width:100%;height:auto;transition:transform .45s ease,opacity .3s ease}
+.jewelry-tile>span{position:absolute;left:0;right:0;bottom:0;padding:34px 13px 12px;background:linear-gradient(transparent,rgba(0,0,0,.82));color:#fff;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:0;transition:opacity .25s}
+.jewelry-tile:hover img{transform:scale(1.025);opacity:.94}
+.jewelry-tile:hover>span,.jewelry-tile:focus-visible>span{opacity:1}
 .project-group{display:grid;grid-template-columns:minmax(240px,.8fr) 1.2fr;align-items:stretch;margin:0 0 28px;background:var(--blue-deep);color:#fff;overflow:hidden;transition:transform .25s,box-shadow .25s}
 .project-group[hidden]{display:none}
 .project-group:hover{transform:translateY(-3px);box-shadow:0 22px 45px -30px rgba(21,21,21,.7)}
@@ -247,6 +265,8 @@ p{margin:0}
   .project-group-media{min-height:0;aspect-ratio:16/9}
   .category-intro{grid-template-columns:1fr}
   .category-intro-copy{border-right:0;border-bottom:1px solid var(--ink)}
+  .jewelry-block-head{grid-template-columns:1fr}
+  .jewelry-mosaic{columns:2}
 }
 @media (max-width:560px){
   .grid{columns:2;column-gap:10px}
