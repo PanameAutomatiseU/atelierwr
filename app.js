@@ -7,14 +7,13 @@ const W = (cat, n, caps) => caps.map((c, i) => {
 const HORLOGERIE = W('horlogerie', 12, ['Panthère, haute joaillerie · Cartier', 'Co-création de la marque · Maison Boanton', 'Emblème · Maison Boanton', 'Collection Héritage · Maison Boanton', 'Croquis de recherche · Maison Boanton', 'Calibre Diver · Cartier', 'Hypnose · Cartier', 'Collection de bijoux · Joaillerie', 'Calibre · Cartier', 'Tank Anglaise · Cartier', 'Les Indomptables · Cartier', 'Édition Octobre Rose · Maison Boanton']);
 
 const JEWELRY_GALLERY = [
-  { src: 'assets/work/horlogerie-08.jpg', title: 'Dessins de collection', client: 'Planche complète' },
-  { src: 'assets/work/joaillerie-mosaic-01.jpg', title: 'Pierre centrale', client: 'Pendentif et bagues' },
-  { src: 'assets/work/joaillerie-mosaic-02.jpg', title: 'Pendentifs', client: 'Déclinaisons géométriques' },
-  { src: 'assets/work/joaillerie-mosaic-03.jpg', title: 'Bagues & manchettes', client: 'Volumes ajourés' },
-  { src: 'assets/work/joaillerie-mosaic-04.jpg', title: 'Boucles d’oreilles', client: 'Construction du motif' },
-  { src: 'assets/work/joaillerie-mosaic-05.jpg', title: 'Parure', client: 'Boucles et pendentifs' },
-  { src: 'assets/work/joaillerie-mosaic-06.jpg', title: 'Bracelet', client: 'Motif et fermoir' },
-  { src: 'assets/work/joaillerie-mosaic-07.jpg', title: 'Bracelet rigide', client: 'Rythme des maillons' },
+  { src: 'assets/work/horlogerie-08.jpg', title: 'Collection Interstice', client: 'Planche complète des dessins' },
+  { src: 'https://static.wixstatic.com/media/223f51_aee806852e38479c92a34c0edd117975~mv2_d_3508_4961_s_4_2.jpg', title: 'Collection Interstice', client: 'Mockup 01' },
+  { src: 'https://static.wixstatic.com/media/223f51_0ffcf5558bfd4da49fe86f08e864ea46~mv2_d_3508_2480_s_4_2.jpg', title: 'Collection Interstice', client: 'Mockup 02' },
+  { src: 'https://static.wixstatic.com/media/223f51_5add9772df6a4ef4ab69d588b8fffce8~mv2.jpg', title: 'Collection Interstice', client: 'Mockup 03' },
+  { src: 'https://static.wixstatic.com/media/223f51_1e1628b9480b480a877ff0be5b58c60a~mv2.png', title: 'Collection Interstice', client: 'Mockup 04' },
+  { src: 'https://static.wixstatic.com/media/223f51_bfd0a91ae1964668a80ec4f594579050~mv2_d_3508_2480_s_4_2.png', title: 'Collection Interstice', client: 'Mockup 05' },
+  { src: 'https://static.wixstatic.com/media/223f51_27c54311b8f3443eb247638db929905c~mv2_d_3508_2480_s_4_2.png', title: 'Collection Interstice', client: 'Mockup 06' },
 ];
 
 const DESIGN = [
