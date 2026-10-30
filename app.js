@@ -1,6 +1,7 @@
 const W = (cat, n, caps) => caps.map((c, i) => {
   const [title, client] = c.split(' · ');
-  return { src: `assets/work/${cat}-${String(i + 1).padStart(2, '0')}.jpg`, cat, title, client: client || '' };
+  const projectHref = client === 'Maison Boanton' ? 'boanton.html' : '';
+  return { src: `assets/work/${cat}-${String(i + 1).padStart(2, '0')}.jpg`, cat, title, client: client || '', projectHref };
 });
 
 const DESIGN = [
@@ -29,11 +30,11 @@ function renderGrid(gridEl, items, cat, moreBtn) {
   const list = cat === 'all' ? items : items.filter(i => i.cat === cat);
   const shown = gridEl.dataset.expanded === '1' ? list : list.slice(0, LIMIT);
   gridEl.innerHTML = shown.map((it, i) => `
-    <figure class="card" data-i="${i}">
+    ${it.projectHref ? `<a class="card project-card" href="${it.projectHref}" aria-label="Découvrir le projet Maison Boanton : ${it.title}">` : `<figure class="card" data-i="${i}">`}
       <img src="${it.src}" alt="${it.title}${it.client ? ', ' + it.client : ''}" loading="lazy" decoding="async">
-      <figcaption><b>${it.title}</b><span>${it.client}</span></figcaption>
-    </figure>`).join('');
-  gridEl.querySelectorAll('.card').forEach(c => {
+      ${it.projectHref ? '<span class="card-caption">' : '<figcaption>'}<b>${it.title}</b><span>${it.client}${it.projectHref ? ' · Découvrir le projet →' : ''}</span>${it.projectHref ? '</span>' : '</figcaption>'}
+    ${it.projectHref ? '</a>' : '</figure>'}`).join('');
+  gridEl.querySelectorAll('figure.card').forEach(c => {
     c.addEventListener('click', () => openLb(shown, +c.dataset.i));
   });
   observeCards(gridEl);
