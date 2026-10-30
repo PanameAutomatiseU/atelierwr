@@ -4,8 +4,10 @@ const W = (cat, n, caps) => caps.map((c, i) => {
   return { src: `assets/work/${cat}-${String(i + 1).padStart(2, '0')}.jpg`, cat, title, client: client || '', projectHref };
 });
 
+const HORLOGERIE = W('horlogerie', 12, ['Panthère, haute joaillerie · Cartier', 'Co-création de la marque · Maison Boanton', 'Emblème · Maison Boanton', 'Collection Héritage · Maison Boanton', 'Croquis de recherche · Maison Boanton', 'Calibre Diver · Cartier', 'Hypnose · Cartier', 'Collection de bijoux · Joaillerie', 'Calibre · Cartier', 'Tank Anglaise · Cartier', 'Les Indomptables · Cartier', 'Édition Octobre Rose · Maison Boanton']);
+
 const DESIGN = [
-  ...W('horlogerie', 12, ['Panthère, haute joaillerie · Cartier', 'Co-création de la marque · Maison Boanton', 'Emblème · Maison Boanton', 'Collection Héritage · Maison Boanton', 'Croquis de recherche · Maison Boanton', 'Calibre Diver · Cartier', 'Hypnose · Cartier', 'Collection de bijoux · Joaillerie', 'Calibre · Cartier', 'Tank Anglaise · Cartier', 'Les Indomptables · Cartier', 'Édition Octobre Rose · Maison Boanton']),
+  ...[1, 2, 3, 4, 11, 0, 5, 6, 8, 9, 10, 7].map(i => HORLOGERIE[i]),
   ...W('maroquinerie', 12, ['Eyewear · Lunetterie', 'Collection Signature · Maroquinerie', 'Sandales cordes · Almé Paris', 'Lunettes haute joaillerie · Lunetterie', 'Sacs · Céline', 'Maroquinerie · Almé Paris', 'Shoes bag · Bally', 'Sneakers · Bally', 'Trolley pliable · Kipling', 'Croquis de sacs · Recherches', 'Croquis · Burberry', 'Sacs · Sonia Rykiel']),
   ...W('mobilier', 8, ['Piano « Italy » · Carod', 'Piano en situation · Carod', 'Sofa · Grand Palais', 'Collection · Grand Palais', 'Ère de je · Mobilier modulable', 'Ego · Assise', 'Mobilier outdoor · Grand Palais', 'Croquis de collection · Grand Palais']),
   ...W('packaging', 10, ['Coffrets · Almé Paris', 'Édition Nouvel An chinois · Packaging', 'Étiquettes · Domaine de la Bégude', 'Pleine Nature · Étiquettes de vin', "L'Ernest · La Grange d'Ernest", 'Triplette · Cantarelle', 'Gamme · Jean-Étienne Chermette', 'Coffret Année du Lapin · Philips', 'Coffret montre · Maison Boanton', 'Écrin V · Packaging']),
