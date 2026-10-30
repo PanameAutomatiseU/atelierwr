@@ -1,6 +1,6 @@
 const W = (cat, n, caps) => caps.map((c, i) => {
   const [title, client] = c.split(' · ');
-  const projectHref = client === 'Maison Boanton' ? 'boanton.html' : '';
+  const projectHref = client === 'Maison Boanton' ? 'boanton.html' : client === 'Cartier' ? 'cartier.html' : '';
   return { src: `assets/work/${cat}-${String(i + 1).padStart(2, '0')}.jpg`, cat, title, client: client || '', projectHref };
 });
 
@@ -30,7 +30,7 @@ function renderGrid(gridEl, items, cat, moreBtn) {
   const list = cat === 'all' ? items : items.filter(i => i.cat === cat);
   const shown = gridEl.dataset.expanded === '1' ? list : list.slice(0, LIMIT);
   gridEl.innerHTML = shown.map((it, i) => `
-    ${it.projectHref ? `<a class="card project-card" href="${it.projectHref}" aria-label="Découvrir le projet Maison Boanton : ${it.title}">` : `<figure class="card" data-i="${i}">`}
+    ${it.projectHref ? `<a class="card project-card" href="${it.projectHref}" aria-label="Découvrir le projet ${it.client} : ${it.title}">` : `<figure class="card" data-i="${i}">`}
       <img src="${it.src}" alt="${it.title}${it.client ? ', ' + it.client : ''}" loading="lazy" decoding="async">
       ${it.projectHref ? '<span class="card-caption">' : '<figcaption>'}<b>${it.title}</b><span>${it.client}${it.projectHref ? ' · Découvrir le projet →' : ''}</span>${it.projectHref ? '</span>' : '</figcaption>'}
     ${it.projectHref ? '</a>' : '</figure>'}`).join('');
@@ -49,9 +49,11 @@ function setupTabs(sectionId, items) {
   const grid = sec.querySelector('.grid');
   const more = sec.querySelector('.more button');
   const tabs = sec.querySelectorAll('.tab');
+  const projectGroup = sec.querySelector('[data-project-cat]');
   tabs.forEach(t => t.addEventListener('click', () => {
     tabs.forEach(x => x.classList.remove('active'));
     t.classList.add('active');
+    if (projectGroup) projectGroup.hidden = projectGroup.dataset.projectCat !== t.dataset.cat;
     grid.dataset.expanded = '0';
     renderGrid(grid, items, t.dataset.cat, more);
   }));
