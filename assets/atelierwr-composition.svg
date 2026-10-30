@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Atelier WR</title>
+  <desc id="desc">Composition graphique avec la signature Atelier WR, un disque orange, des lignes noires, un arc et un rectangle bleu.</desc>
+  <rect width="1536" height="1024" fill="#fff"/>
+  <circle cx="1024" cy="382" r="228" fill="#ff5a00"/>
+  <image href="logo-wr.png" x="190" y="292" width="900" height="302" preserveAspectRatio="xMidYMid meet"/>
+  <text x="650" y="720" text-anchor="middle" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="40" font-weight="500" fill="#101010">Chaque création doit trouver sa signature</text>
+  <text x="650" y="770" text-anchor="middle" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="40" font-weight="500" fill="#101010">et son identité propre.</text>
+  <line x1="1212" y1="100" x2="1212" y2="942" stroke="#111" stroke-width="4"/>
+  <path d="M1088 916 C1028 824 1034 708 1115 634 C1176 578 1260 558 1332 568" fill="none" stroke="#111" stroke-width="3"/>
+  <rect x="1040" y="782" width="195" height="55" fill="#1235d1"/>
+  <line x1="66" y1="828" x2="1486" y2="828" stroke="#111" stroke-width="4"/>
+  <line x1="664" y1="850" x2="1120" y2="850" stroke="#111" stroke-width="4"/>
+</svg>
