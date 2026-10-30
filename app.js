@@ -17,6 +17,7 @@ const JEWELRY_GALLERY = [
 ];
 
 const DESIGN = [
+  HORLOGERIE[7],
   ...[1, 2, 3, 4, 11, 0, 5, 6, 8, 9, 10].map(i => HORLOGERIE[i]),
   ...W('maroquinerie', 12, ['Eyewear · Lunetterie', 'Collection Signature · Maroquinerie', 'Sandales cordes · Almé Paris', 'Lunettes haute joaillerie · Lunetterie', 'Sacs · Céline', 'Maroquinerie · Almé Paris', 'Shoes bag · Bally', 'Sneakers · Bally', 'Trolley pliable · Kipling', 'Croquis de sacs · Recherches', 'Croquis · Burberry', 'Sacs · Sonia Rykiel']),
   ...W('mobilier', 8, ['Piano « Italy » · Carod', 'Piano en situation · Carod', 'Sofa · Grand Palais', 'Collection · Grand Palais', 'Ère de je · Mobilier modulable', 'Ego · Assise', 'Mobilier outdoor · Grand Palais', 'Croquis de collection · Grand Palais']),
@@ -64,14 +65,17 @@ function setupTabs(sectionId, items) {
   const projectGroups = sec.querySelectorAll('[data-project-cat]');
   const categoryIntros = sec.querySelectorAll('[data-category-intro]');
   tabs.forEach(t => t.addEventListener('click', () => {
-    tabs.forEach(x => x.classList.remove('active'));
+    tabs.forEach(x => { x.classList.remove('active'); x.setAttribute('aria-pressed', 'false'); });
     t.classList.add('active');
-    projectGroups.forEach(group => { group.hidden = group.dataset.projectCat !== t.dataset.cat; });
+    t.setAttribute('aria-pressed', 'true');
+    projectGroups.forEach(group => { group.hidden = t.dataset.cat !== 'all' && group.dataset.projectCat !== t.dataset.cat; });
     categoryIntros.forEach(intro => { intro.hidden = intro.dataset.categoryIntro !== t.dataset.cat; });
     grid.dataset.expanded = '0';
     renderGrid(grid, items, t.dataset.cat, more);
   }));
+  tabs.forEach(t => t.setAttribute('aria-pressed', String(t.classList.contains('active'))));
   const initialCat = sec.querySelector('.tab.active').dataset.cat;
+  projectGroups.forEach(group => { group.hidden = initialCat !== 'all' && group.dataset.projectCat !== initialCat; });
   categoryIntros.forEach(intro => { intro.hidden = intro.dataset.categoryIntro !== initialCat; });
   renderGrid(grid, items, initialCat, more);
 }
@@ -101,10 +105,13 @@ document.addEventListener('keydown', e => {
 });
 
 /* instagram strip */
-const igGrid = document.querySelector('.ig-grid');
-const igItems = IG_FILES.map((f, i) => { const [title, client] = IG[i].split(' · '); return { src: `assets/ig/${f}.jpg`, title, client }; });
-igGrid.innerHTML = igItems.map((it, i) => `<a href="#" data-i="${i}"><img src="${it.src}" alt="${it.title}" loading="lazy"></a>`).join('');
-igGrid.querySelectorAll('a').forEach(a => a.addEventListener('click', e => { e.preventDefault(); openLb(igItems, +a.dataset.i); }));
+const igItems = IG_FILES.map((f, i) => {
+  const [title, client] = IG[i].split(' · ');
+  const cat = [1, 2, 5, 11].includes(i) ? 'baigneuses' : [3, 4, 9, 10].includes(i) ? 'marseille' : 'affiches';
+  return { src: `assets/ig/${f}.jpg`, title, client, cat };
+});
+const PAINTINGS = ART.filter(item => item.cat !== 'nus');
+const DRAWINGS = [...igItems, ...ART.filter(item => item.cat === 'nus')];
 
 /* nav */
 const nav = document.querySelector('.nav');
@@ -132,4 +139,8 @@ const ro = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting
 document.querySelectorAll('.rv').forEach(el => ro.observe(el));
 
 setupTabs('design', DESIGN);
-setupTabs('fineart', ART);
+setupTabs('peinture', PAINTINGS);
+setupTabs('dessin', DRAWINGS);
+setupTabs('photographie', []);
+const legacySections = { '#fineart': 'peinture', '#encres': 'dessin' };
+if (legacySections[location.hash]) document.getElementById(legacySections[location.hash]).scrollIntoView();

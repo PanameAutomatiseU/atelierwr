@@ -24,11 +24,12 @@
       <img src="assets/logo-wr.png" alt="Atelier WR">
       <span>Studio de création</span>
     </a>
-    <nav class="menu">
-      <a href="#studio">Studio</a>
+    <nav class="menu" aria-label="Navigation principale">
       <a href="#design">Design</a>
-      <a href="#fineart">Fine Art</a>
-      <a href="#parcours">Parcours</a>
+      <a href="#peinture">Peinture</a>
+      <a href="#dessin">Dessin</a>
+      <a href="#photographie">Photographie</a>
+      <a href="#studio">À propos</a>
       <a href="#contact">Contact</a>
     </nav>
     <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -100,7 +101,7 @@
   <div class="wrap">
     <div class="section-head rv">
       <span class="num">02</span>
-      <h2>Design <em>&amp; création</em></h2>
+      <h2>Design</h2>
     </div>
     <a class="project-spotlight rv" href="boanton.html" aria-label="Découvrir le projet Maison Boanton">
       <div class="project-spotlight-copy">
@@ -112,15 +113,15 @@
       <img src="assets/work/horlogerie-03.jpg" alt="Collection Emblème de Maison Boanton et références Art déco" loading="lazy">
     </a>
     <div class="tabs rv">
-      <button class="tab active" data-cat="horlogerie">Horlogerie</button>
-      <button class="tab" data-cat="joaillerie">Joaillerie</button>
+      <button class="tab active" data-cat="all">Tout</button>
+      <button class="tab" data-cat="horlogerie">Horlogerie &amp; Joaillerie</button>
       <button class="tab" data-cat="maroquinerie">Maroquinerie &amp; accessoires</button>
-      <button class="tab" data-cat="mobilier">Mobilier &amp; objets</button>
-      <button class="tab" data-cat="packaging">Packaging &amp; vins</button>
-      <button class="tab" data-cat="logo">Logo &amp; identité</button>
+      <button class="tab" data-cat="mobilier">Objets &amp; Mobilier</button>
+      <button class="tab" data-cat="packaging">Packaging</button>
+      <button class="tab" data-cat="logo">Identité visuelle</button>
       <button class="tab" data-cat="affiches">Affiches &amp; illustrations</button>
     </div>
-    <section class="category-intro" data-category-intro="joaillerie" hidden aria-labelledby="joaillerie-title">
+    <section class="category-intro" data-category-intro="horlogerie" hidden aria-labelledby="joaillerie-title">
       <div class="category-intro-copy">
         <small>Collection Interstice · Joaillerie</small>
         <h3 id="joaillerie-title">Géométrie<br>en mouvement.</h3>
@@ -132,7 +133,7 @@
         <li><span>03</span><div><strong>Développement &amp; réalisation</strong><p>Le modèle retenu est précisé avec le maquettiste et les artisans : construction, systèmes d’attache, épaisseurs, sertissage et finitions. Les prototypes servent ensuite à ajuster le porté, l’équilibre et la qualité perçue jusqu’à la pièce finale.</p></div></li>
       </ol>
     </section>
-    <section class="jewelry-work" data-category-intro="joaillerie" hidden aria-label="Dessins et mockups de joaillerie">
+    <section class="jewelry-work" data-category-intro="horlogerie" hidden aria-label="Dessins et mockups de joaillerie">
       <div class="jewelry-block-head">
         <small>01 · Dessins de collection</small>
         <h3>La recherche<br>dans son ensemble.</h3>
@@ -183,31 +184,39 @@
   </div>
 </section>
 
-<section class="section fineart" id="fineart">
+<section class="section fineart" id="peinture">
   <div class="wrap">
     <div class="section-head rv">
       <span class="num">03</span>
-      <h2>Fine <em>Art</em></h2>
+      <h2>Peinture</h2>
     </div>
     <p class="quote rv">Ce que je peins pour moi : la mer, <i>Marseille et la Méditerranée,</i> et les carnets que je rapporte de voyage.</p>
     <div class="tabs rv">
-      <button class="tab active" data-cat="sea">By the sea</button>
+      <button class="tab active" data-cat="all">Toutes les œuvres</button>
+      <button class="tab" data-cat="sea">By the sea</button>
       <button class="tab" data-cat="voyage">Carnet de voyage</button>
       <button class="tab" data-cat="animales">Lignes animales</button>
-      <button class="tab" data-cat="nus">Nus</button>
     </div>
     <div class="grid"></div>
     <div class="more"><button class="btn-ghost">Voir toute la série</button></div>
   </div>
 </section>
 
-<section class="section" id="encres">
+<section class="section" id="dessin">
   <div class="wrap">
     <div class="section-head rv">
       <span class="num">04</span>
-      <h2>Dernières <em>encres</em></h2>
+      <h2>Dessin</h2>
     </div>
-    <div class="ig-grid rv"></div>
+    <div class="tabs rv">
+      <button class="tab active" data-cat="all">Tous les dessins</button>
+      <button class="tab" data-cat="baigneuses">Baigneuses</button>
+      <button class="tab" data-cat="marseille">Marseille</button>
+      <button class="tab" data-cat="affiches">Affiches</button>
+      <button class="tab" data-cat="nus">Nus</button>
+    </div>
+    <div class="grid"></div>
+    <div class="more"><button class="btn-ghost">Voir tous les dessins</button></div>
     <div class="ig-cta rv">
       <p>Mes derniers dessins à l'encre bleue. J'en publie plusieurs par semaine sur Instagram.</p>
       <a class="link-arrow" href="https://www.instagram.com/wrigoulet/" target="_blank" rel="noopener">Suivre @wrigoulet <span aria-hidden="true">↗</span></a>
@@ -215,10 +224,25 @@
   </div>
 </section>
 
+<section class="section" id="photographie">
+  <div class="wrap">
+    <div class="section-head rv"><span class="num">05</span><h2>Photographie</h2></div>
+    <div class="tabs rv">
+      <button class="tab active" data-cat="all">Toutes les photos</button>
+      <button class="tab" data-cat="architecture">Architecture</button>
+      <button class="tab" data-cat="paysages">Paysages</button>
+      <button class="tab" data-cat="details">Détails</button>
+      <button class="tab" data-cat="instants">Instants</button>
+    </div>
+    <div class="grid"></div>
+    <p class="gallery-empty" role="status">Sélection photographique à venir.</p>
+  </div>
+</section>
+
 <section class="section studio" id="parcours">
   <div class="wrap">
     <div class="section-head rv">
-      <span class="num">05</span>
+      <span class="num">06</span>
       <h2>Le <em>parcours</em></h2>
     </div>
     <div class="timeline rv">
@@ -250,7 +274,7 @@
   <div class="contact-sun" aria-hidden="true"></div>
   <div class="wrap">
     <div class="section-head rv">
-      <span class="num">06</span>
+      <span class="num">07</span>
       <h2>Écrivez-<br><em>moi</em></h2>
     </div>
     <div class="contact-grid rv">
