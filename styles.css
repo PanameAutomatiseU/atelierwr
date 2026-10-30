@@ -89,6 +89,15 @@ p{margin:0}
 .domain p{font-size:14px;color:var(--muted);line-height:1.5}
 
 /* gallery */
+.project-spotlight{display:grid;grid-template-columns:.8fr 1.2fr;margin-bottom:36px;background:var(--ink);color:#fff;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.project-spotlight:hover{transform:translateY(-3px);box-shadow:0 22px 45px -30px rgba(21,21,21,.7)}
+.project-spotlight:focus-visible{outline:3px solid var(--orange);outline-offset:5px}
+.project-spotlight-copy{padding:clamp(24px,4vw,48px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.project-spotlight small{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);font-weight:700}
+.project-spotlight h3{font-size:clamp(28px,4vw,54px);text-transform:uppercase;margin:16px 0 18px}
+.project-spotlight p{max-width:470px;color:#d8d3c9;font-size:16px}
+.project-spotlight-copy>span{margin-top:28px;border-bottom:2px solid var(--orange);padding-bottom:4px;font-size:12px;letter-spacing:.13em;text-transform:uppercase;font-weight:700}
+.project-spotlight img{width:100%;height:100%;min-height:340px;object-fit:cover}
 .tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
 .tab{background:none;border:1.5px solid var(--ink);padding:9px 16px;border-radius:999px;font:inherit;font-size:13px;letter-spacing:.06em;font-weight:600;cursor:pointer;transition:.2s}
 .tab:hover{background:var(--paper-2)}
@@ -201,6 +210,8 @@ p{margin:0}
   .facts{grid-template-columns:1fr}
   .domains{grid-template-columns:1fr 1fr}
   .section-head{grid-template-columns:1fr;gap:8px}
+  .project-spotlight{grid-template-columns:1fr}
+  .project-spotlight img{min-height:0;aspect-ratio:4/3}
 }
 @media (max-width:560px){
   .grid{columns:2;column-gap:10px}
