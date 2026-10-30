@@ -104,6 +104,15 @@ p{margin:0}
 .tab:hover{background:var(--paper-2)}
 .tab.active{background:var(--ink);color:var(--paper)}
 .tab.active.blue{background:var(--blue);border-color:var(--blue)}
+.project-group{display:grid;grid-template-columns:minmax(240px,.8fr) 1.2fr;align-items:stretch;margin:0 0 28px;background:var(--blue-deep);color:#fff;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.project-group[hidden]{display:none}
+.project-group:hover{transform:translateY(-3px);box-shadow:0 22px 45px -30px rgba(21,21,21,.7)}
+.project-group:focus-visible{outline:3px solid var(--orange);outline-offset:5px}
+.project-group>img{width:100%;height:100%;min-height:230px;object-fit:cover}
+.project-group-copy{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:clamp(24px,4vw,46px)}
+.project-group-copy small{color:var(--orange);font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase}
+.project-group-copy strong{font-family:var(--font-display);font-size:clamp(30px,4vw,56px);line-height:1;margin:14px 0 18px}
+.project-group-copy>span{max-width:620px;color:#d8d3c9;font-size:14px;line-height:1.55}
 .grid{columns:3;column-gap:18px}
 .card{break-inside:avoid;margin:0 0 18px;position:relative;cursor:zoom-in;background:#fff;padding:0;overflow:hidden;opacity:0;transform:translateY(16px);transition:opacity .5s,transform .5s}
 .card.in{opacity:1;transform:none}
@@ -213,6 +222,8 @@ p{margin:0}
   .section-head{grid-template-columns:1fr;gap:8px}
   .project-spotlight{grid-template-columns:1fr}
   .project-spotlight img{min-height:0;aspect-ratio:4/3}
+  .project-group{grid-template-columns:1fr}
+  .project-group>img{min-height:0;aspect-ratio:16/9}
 }
 @media (max-width:560px){
   .grid{columns:2;column-gap:10px}
