@@ -1,0 +1,41 @@
+name: Synchroniser automatiquement le site
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-atelierwr-main
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    if: github.repository == 'Willsky69/atelierwr'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - name: Récupérer les modifications de l’atelier
+        run: |
+          git remote add upstream https://github.com/PanameAutomatiseU/atelierwr.git
+          git fetch upstream main
+
+      - name: Synchroniser la branche principale
+        run: |
+          if git merge-base --is-ancestor upstream/main HEAD; then
+            echo "Le site est déjà à jour."
+            exit 0
+          fi
+
+          git config user.name "Atelier WR — publication automatique"
+          git config user.email "actions@users.noreply.github.com"
+          git merge --no-edit upstream/main
+          git push origin main
