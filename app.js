@@ -6,8 +6,16 @@ const W = (cat, n, caps) => caps.map((c, i) => {
 
 const HORLOGERIE = W('horlogerie', 12, ['Panthère, haute joaillerie · Cartier', 'Co-création de la marque · Maison Boanton', 'Emblème · Maison Boanton', 'Collection Héritage · Maison Boanton', 'Croquis de recherche · Maison Boanton', 'Calibre Diver · Cartier', 'Hypnose · Cartier', 'Collection de bijoux · Joaillerie', 'Calibre · Cartier', 'Tank Anglaise · Cartier', 'Les Indomptables · Cartier', 'Édition Octobre Rose · Maison Boanton']);
 
+const JOAILLERIE = [
+  { src: 'assets/work/horlogerie-08.jpg', cat: 'joaillerie', title: 'Collection géométrique', client: 'Vue d’ensemble' },
+  { src: 'assets/work/joaillerie-02.jpg', cat: 'joaillerie', title: 'Recherche de motifs', client: 'Bracelets & manchettes' },
+  { src: 'assets/work/joaillerie-03.jpg', cat: 'joaillerie', title: 'Mockups & déclinaisons', client: 'Colliers, bagues & bracelets' },
+  { src: 'assets/work/joaillerie-04.jpg', cat: 'joaillerie', title: 'Pièces & parures', client: 'Pendentifs, bagues & boucles d’oreilles' },
+];
+
 const DESIGN = [
-  ...[1, 2, 3, 4, 11, 0, 5, 6, 8, 9, 10, 7].map(i => HORLOGERIE[i]),
+  ...[1, 2, 3, 4, 11, 0, 5, 6, 8, 9, 10].map(i => HORLOGERIE[i]),
+  ...JOAILLERIE,
   ...W('maroquinerie', 12, ['Eyewear · Lunetterie', 'Collection Signature · Maroquinerie', 'Sandales cordes · Almé Paris', 'Lunettes haute joaillerie · Lunetterie', 'Sacs · Céline', 'Maroquinerie · Almé Paris', 'Shoes bag · Bally', 'Sneakers · Bally', 'Trolley pliable · Kipling', 'Croquis de sacs · Recherches', 'Croquis · Burberry', 'Sacs · Sonia Rykiel']),
   ...W('mobilier', 8, ['Piano « Italy » · Carod', 'Piano en situation · Carod', 'Sofa · Grand Palais', 'Collection · Grand Palais', 'Ère de je · Mobilier modulable', 'Ego · Assise', 'Mobilier outdoor · Grand Palais', 'Croquis de collection · Grand Palais']),
   ...W('packaging', 10, ['Coffrets · Almé Paris', 'Édition Nouvel An chinois · Packaging', 'Étiquettes · Domaine de la Bégude', 'Pleine Nature · Étiquettes de vin', "L'Ernest · La Grange d'Ernest", 'Triplette · Cantarelle', 'Gamme · Jean-Étienne Chermette', 'Coffret Année du Lapin · Philips', 'Coffret montre · Maison Boanton', 'Écrin V · Packaging']),
@@ -52,14 +60,18 @@ function setupTabs(sectionId, items) {
   const more = sec.querySelector('.more button');
   const tabs = sec.querySelectorAll('.tab');
   const projectGroup = sec.querySelector('[data-project-cat]');
+  const categoryIntros = sec.querySelectorAll('[data-category-intro]');
   tabs.forEach(t => t.addEventListener('click', () => {
     tabs.forEach(x => x.classList.remove('active'));
     t.classList.add('active');
     if (projectGroup) projectGroup.hidden = projectGroup.dataset.projectCat !== t.dataset.cat;
+    categoryIntros.forEach(intro => { intro.hidden = intro.dataset.categoryIntro !== t.dataset.cat; });
     grid.dataset.expanded = '0';
     renderGrid(grid, items, t.dataset.cat, more);
   }));
-  renderGrid(grid, items, sec.querySelector('.tab.active').dataset.cat, more);
+  const initialCat = sec.querySelector('.tab.active').dataset.cat;
+  categoryIntros.forEach(intro => { intro.hidden = intro.dataset.categoryIntro !== initialCat; });
+  renderGrid(grid, items, initialCat, more);
 }
 
 function observeCards(root) {

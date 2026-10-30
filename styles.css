@@ -112,6 +112,18 @@ p{margin:0}
 .tab:hover{background:var(--paper-2)}
 .tab.active{background:var(--ink);color:var(--paper)}
 .tab.active.blue{background:var(--blue);border-color:var(--blue)}
+.category-intro{display:grid;grid-template-columns:minmax(280px,.82fr) 1.18fr;margin:0 0 28px;border:1px solid var(--ink);background:#fff}
+.category-intro[hidden]{display:none}
+.category-intro-copy{padding:clamp(28px,4vw,52px);border-right:1px solid var(--ink)}
+.category-intro-copy small{display:block;margin-bottom:20px;color:var(--orange);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.category-intro h3{font-size:clamp(38px,5vw,66px);line-height:.96;text-transform:uppercase}
+.category-intro-copy>p{max-width:520px;margin-top:28px;color:var(--muted);font-size:15px;line-height:1.65}
+.process-list{list-style:none;margin:0;padding:0}
+.process-list li{display:grid;grid-template-columns:48px 1fr;gap:18px;padding:clamp(22px,3vw,34px);border-bottom:1px solid var(--line)}
+.process-list li:last-child{border-bottom:0}
+.process-list li>span{padding-top:2px;color:var(--orange);font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:.12em}
+.process-list strong{display:block;margin-bottom:8px;font-family:var(--font-display);font-size:18px;line-height:1.15;text-transform:uppercase}
+.process-list p{color:var(--muted);font-size:14px;line-height:1.6}
 .project-group{display:grid;grid-template-columns:minmax(240px,.8fr) 1.2fr;align-items:stretch;margin:0 0 28px;background:var(--blue-deep);color:#fff;overflow:hidden;transition:transform .25s,box-shadow .25s}
 .project-group[hidden]{display:none}
 .project-group:hover{transform:translateY(-3px);box-shadow:0 22px 45px -30px rgba(21,21,21,.7)}
@@ -233,6 +245,8 @@ p{margin:0}
   .project-spotlight img{min-height:0;aspect-ratio:4/3}
   .project-group{grid-template-columns:1fr}
   .project-group-media{min-height:0;aspect-ratio:16/9}
+  .category-intro{grid-template-columns:1fr}
+  .category-intro-copy{border-right:0;border-bottom:1px solid var(--ink)}
 }
 @media (max-width:560px){
   .grid{columns:2;column-gap:10px}
