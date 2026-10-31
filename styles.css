@@ -163,20 +163,6 @@ p{margin:0}
 .jewelry-mockup-copy p{color:var(--muted);font-size:14px;line-height:1.65}
 .jewelry-mockup-copy p+p{margin-top:16px}
 .jewelry-mockup-copy>span{display:block;margin-top:28px;padding-top:14px;border-top:1px solid var(--line);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
-.other-watch-work{margin:0 0 34px;border:1px solid var(--ink);background:#fff}
-.other-watch-work[hidden]{display:none}
-.other-watch-intro{display:grid;grid-template-columns:minmax(300px,.9fr) 1.1fr;gap:28px clamp(34px,6vw,88px);padding:clamp(30px,5vw,64px);align-items:end;border-bottom:1px solid var(--ink)}
-.other-watch-intro>small{grid-column:1/-1;color:var(--orange);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
-.other-watch-intro h3{font-size:clamp(48px,7vw,94px);line-height:.86;text-transform:uppercase}
-.other-watch-intro h3 span{font-size:.38em;letter-spacing:.02em}
-.other-watch-intro strong{display:block;margin-bottom:15px;font-family:var(--font-display);font-size:14px;letter-spacing:.13em;text-transform:uppercase}
-.other-watch-intro p{max-width:670px;color:var(--muted);font-size:16px;line-height:1.7}
-.other-watch-gallery{display:grid;grid-template-columns:1.25fr .75fr;gap:1px;background:var(--ink)}
-.other-watch-tile{position:relative;display:block;width:100%;min-height:420px;margin:0;padding:0;border:0;background:#fff;color:inherit;font:inherit;text-align:left;cursor:zoom-in;overflow:hidden}
-.other-watch-tile img{width:100%;height:100%;object-fit:contain;background:#fff;transition:transform .55s cubic-bezier(.2,.8,.2,1)}
-.other-watch-tile:hover img{transform:scale(1.018)}
-.other-watch-tile span{position:absolute;left:0;right:0;bottom:0;padding:34px 18px 15px;background:linear-gradient(transparent,rgba(0,0,0,.78));color:#fff;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
-.other-watch-tile:focus-visible{outline:3px solid var(--orange);outline-offset:-6px}
 .jewelry-tile{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--ink)}
 .jewelry-tile img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease,opacity .3s ease}
 .jewelry-tile>span{position:absolute;left:0;right:0;bottom:0;padding:34px 13px 12px;background:linear-gradient(transparent,rgba(0,0,0,.82));color:#fff;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:0;transition:opacity .25s}
@@ -310,9 +296,6 @@ p{margin:0}
   .jewelry-mosaic{grid-template-columns:repeat(2,minmax(0,1fr))}
   .jewelry-mockup-layout{grid-template-columns:1fr}
   .jewelry-mockup-copy{position:static}
-  .other-watch-intro{grid-template-columns:1fr}
-  .other-watch-gallery{grid-template-columns:1fr}
-  .other-watch-tile{min-height:0;aspect-ratio:4/3}
 }
 @media (max-width:560px){
   .grid{columns:2;column-gap:10px}
