@@ -8,7 +8,13 @@ const HORLOGERIE = W('horlogerie', 12, ['Panthère, haute joaillerie · Cartier'
 
 const JEWELRY_GALLERY = [
   { src: 'assets/work/horlogerie-08.jpg', title: 'Collection Interstice', client: 'Planche complète des dessins' },
-  { src: 'https://static.wixstatic.com/media/223f51_342bf6a054fb4d5c8a0f1b245d35b071~mv2.png', title: 'Collection Interstice', client: 'Mockups de bijoux géométriques' },
+  { src: 'joaillerie-mockup-01.png', title: 'Collection Interstice', client: 'Mockup 01' },
+  { src: 'joaillerie-mockup-02.png', title: 'Collection Interstice', client: 'Mockup 02' },
+  { src: 'joaillerie-mockup-03.png', title: 'Collection Interstice', client: 'Mockup 03' },
+  { src: 'joaillerie-mockup-04.png', title: 'Collection Interstice', client: 'Mockup 04' },
+  { src: 'joaillerie-mockup-06.png', title: 'Collection Interstice', client: 'Mockup 06' },
+  { src: 'joaillerie-mockup-07.png', title: 'Collection Interstice', client: 'Mockup 07' },
+  { src: 'joaillerie-mockup-08.png', title: 'Collection Interstice', client: 'Mockup 08' },
   { src: document.querySelector('.jewelry-cardholder img')?.src || '', title: 'Porte-cartes sécurisé', client: 'Décors en laque, métal et diamants' },
 ];
 
