@@ -70,15 +70,18 @@ function setupTabs(sectionId, items) {
   const tabs = sec.querySelectorAll('.tab');
   const projectGroups = sec.querySelectorAll('[data-project-cat]');
   const categoryIntros = sec.querySelectorAll('[data-category-intro]');
+  const categoryTitle = sec.querySelector('[data-category-title]');
   tabs.forEach(t => t.addEventListener('click', () => {
     tabs.forEach(x => x.classList.remove('active'));
     t.classList.add('active');
     projectGroups.forEach(group => { group.hidden = group.dataset.projectCat !== t.dataset.cat; });
     categoryIntros.forEach(intro => { intro.hidden = intro.dataset.categoryIntro !== t.dataset.cat; });
+    if (categoryTitle) categoryTitle.textContent = t.textContent.trim();
     grid.dataset.expanded = '0';
     renderGrid(grid, items, t.dataset.cat, more);
   }));
   const initialCat = sec.querySelector('.tab.active').dataset.cat;
+  if (categoryTitle) categoryTitle.textContent = sec.querySelector('.tab.active').textContent.trim();
   categoryIntros.forEach(intro => { intro.hidden = intro.dataset.categoryIntro !== initialCat; });
   renderGrid(grid, items, initialCat, more);
 }
