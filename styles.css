@@ -194,16 +194,16 @@ p{margin:0}
 .btn-ghost:hover{background:var(--ink);color:var(--paper)}
 
 /* fine art */
-.fineart{background:var(--blue);color:var(--paper)}
+.fineart{background:#2c2d2b;color:var(--paper)}
 .fineart .num{color:var(--orange)}
 .fineart h2 em{color:var(--orange)}
 .fineart .tab{border-color:var(--paper);color:var(--paper)}
 .fineart .tab:hover{background:rgba(255,255,255,.12)}
 .fineart .tab.active{background:var(--paper);color:var(--blue)}
-.fineart .card{background:var(--blue-deep)}
+.fineart .card{background:#20211f}
 .fineart .lead{color:var(--paper)}
 .fineart .btn-ghost{border-color:var(--paper);color:var(--paper)}
-.fineart .btn-ghost:hover{background:var(--paper);color:var(--blue)}
+.fineart .btn-ghost:hover{background:var(--paper);color:#2c2d2b}
 .quote{font-size:clamp(22px,3vw,40px);font-weight:700;letter-spacing:-.02em;line-height:1.15;max-width:820px;margin:0 0 clamp(32px,5vw,56px)}
 .quote i{font-style:normal;color:var(--orange)}
 
