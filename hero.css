@@ -1,6 +1,9 @@
-/* Composition moderniste du bandeau d'accueil */
-.hero-identity{width:100%;overflow:hidden;background:#fff;box-shadow:0 30px 70px -48px rgba(15,15,15,.65)}
-.identity-composition{width:100%;height:auto;display:block;transition:transform .7s cubic-bezier(.2,.8,.2,1)}
-.hero-identity:hover .identity-composition{transform:scale(1.012)}
-@media(max-width:820px){.hero-identity{max-width:760px}.hero-identity:hover .identity-composition{transform:none}}
-@media(prefers-reduced-motion:reduce){.identity-composition{transition:none}.hero-identity:hover .identity-composition{transform:none}}
+/* Visuel d'ouverture pleine largeur */
+.hero{padding:0;background:#f8f7f2}
+.hero-full{width:100%;margin:0;overflow:hidden}
+.hero-full img{display:block;width:100%;height:auto}
+.hero .marquee{margin-top:0}
+
+@media(max-width:560px){
+  .hero-full img{min-height:230px;object-fit:cover;object-position:center}
+}
