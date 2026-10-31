@@ -1,9 +1,9 @@
 /* Visuel d'ouverture pleine largeur */
 .hero{padding:0;background:#f8f7f2}
-.hero-full{width:100%;margin:0;overflow:hidden}
-.hero-full img{display:block;width:100%;height:auto}
+.hero-full{display:flex;justify-content:flex-end;width:100%;margin:0;overflow:hidden;background:#fff}
+.hero-full img{display:block;width:min(92vw,1672px);height:auto;margin-left:auto;object-position:center}
 .hero .marquee{margin-top:0}
 
 @media(max-width:560px){
-  .hero-full img{min-height:230px;object-fit:cover;object-position:center}
+  .hero-full img{width:96vw;min-height:0;object-fit:contain;object-position:center}
 }
