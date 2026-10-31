@@ -4,8 +4,6 @@ const W = (cat, n, caps) => caps.map((c, i) => {
   return { src: `assets/work/${cat}-${String(i + 1).padStart(2, '0')}.jpg`, cat, title, client: client || '', projectHref };
 });
 
-const HORLOGERIE = W('horlogerie', 12, ['Panthère, haute joaillerie · Cartier', 'Co-création de la marque · Maison Boanton', 'Emblème · Maison Boanton', 'Collection Héritage · Maison Boanton', 'Croquis de recherche · Maison Boanton', 'Calibre Diver · Cartier', 'Hypnose · Cartier', 'Collection de bijoux · Joaillerie', 'Calibre · Cartier', 'Tank Anglaise · Cartier', 'Les Indomptables · Cartier', 'Édition Octobre Rose · Maison Boanton']);
-
 const JEWELRY_GALLERY = [
   { src: 'assets/work/horlogerie-08.jpg', title: 'Collection Interstice', client: 'Planche complète des dessins' },
   { src: 'joaillerie-mockup-01.png', title: 'Collection Interstice', client: 'Mockup 01' },
@@ -18,13 +16,7 @@ const JEWELRY_GALLERY = [
   { src: document.querySelector('.jewelry-cardholder img')?.src || '', title: 'Porte-cartes sécurisé', client: 'Décors en laque, métal et diamants' },
 ];
 
-const OTHER_WATCH_GALLERY = [
-  { src: 'https://static.wixstatic.com/media/223f51_aa85ebe2fe2e4dde92cd0b90a2735d4b~mv2.png', title: 'HILAL — Moonphase Collection', client: 'Collection complète' },
-  { src: 'https://static.wixstatic.com/media/223f51_07bb9e0eb6c149fd94e036b44599ac63~mv2.png', title: 'HILAL — Moonphase Collection', client: 'Cadran rayonnant et phase de lune' },
-];
-
 const DESIGN = [
-  ...[1, 2, 3, 4, 11, 0, 5, 6, 8, 9, 10].map(i => HORLOGERIE[i]),
   ...W('maroquinerie', 12, ['Eyewear · Lunetterie', 'Collection Signature · Maroquinerie', 'Sandales cordes · Almé Paris', 'Lunettes haute joaillerie · Lunetterie', 'Sacs · Céline', 'Maroquinerie · Almé Paris', 'Shoes bag · Bally', 'Sneakers · Bally', 'Trolley pliable · Kipling', 'Croquis de sacs · Recherches', 'Croquis · Burberry', 'Sacs · Sonia Rykiel']),
   ...W('mobilier', 8, ['Piano « Italy » · Carod', 'Piano en situation · Carod', 'Sofa · Grand Palais', 'Collection · Grand Palais', 'Ère de je · Mobilier modulable', 'Ego · Assise', 'Mobilier outdoor · Grand Palais', 'Croquis de collection · Grand Palais']),
   ...W('packaging', 10, ['Coffrets · Almé Paris', 'Édition Nouvel An chinois · Packaging', 'Étiquettes · Domaine de la Bégude', 'Pleine Nature · Étiquettes de vin', "L'Ernest · La Grange d'Ernest", 'Triplette · Cantarelle', 'Gamme · Jean-Étienne Chermette', 'Coffret Année du Lapin · Philips', 'Coffret montre · Maison Boanton', 'Écrin V · Packaging']),
@@ -103,7 +95,6 @@ lb.querySelector('.lb-prev').onclick = e => { e.stopPropagation(); lbIndex = (lb
 lb.querySelector('.lb-next').onclick = e => { e.stopPropagation(); lbIndex = (lbIndex + 1) % lbList.length; showLb(); };
 lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
 document.querySelectorAll('[data-jewelry-i]').forEach(button => button.addEventListener('click', () => openLb(JEWELRY_GALLERY, +button.dataset.jewelryI)));
-document.querySelectorAll('[data-other-watch-i]').forEach(button => button.addEventListener('click', () => openLb(OTHER_WATCH_GALLERY, +button.dataset.otherWatchI)));
 document.addEventListener('keydown', e => {
   if (!lb.classList.contains('open')) return;
   if (e.key === 'Escape') closeLb();
