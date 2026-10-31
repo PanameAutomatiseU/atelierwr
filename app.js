@@ -69,11 +69,13 @@ function setupTabs(sectionId, items) {
     projectGroups.forEach(group => { group.hidden = group.dataset.projectCat !== t.dataset.cat; });
     categoryIntros.forEach(intro => { intro.hidden = intro.dataset.categoryIntro !== t.dataset.cat; });
     if (categoryTitle) categoryTitle.textContent = t.textContent.trim();
+    if (grid.hasAttribute('data-design-grid')) grid.hidden = t.dataset.cat === 'horlogerie';
     grid.dataset.expanded = '0';
     renderGrid(grid, items, t.dataset.cat, more);
   }));
   const initialCat = sec.querySelector('.tab.active').dataset.cat;
   if (categoryTitle) categoryTitle.textContent = sec.querySelector('.tab.active').textContent.trim();
+  if (grid.hasAttribute('data-design-grid')) grid.hidden = initialCat === 'horlogerie';
   categoryIntros.forEach(intro => { intro.hidden = intro.dataset.categoryIntro !== initialCat; });
   renderGrid(grid, items, initialCat, more);
 }
