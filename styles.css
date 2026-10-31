@@ -86,6 +86,14 @@ p{margin:0}
 
 /* studio */
 .studio{background:var(--paper-2)}
+.studio-portrait{display:grid;grid-template-columns:minmax(260px,360px) minmax(0,1fr);max-width:980px;margin:clamp(48px,6vw,76px) 0 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);background:#fff}
+.studio-portrait img{width:100%;height:100%;aspect-ratio:1;object-fit:cover}
+.studio-portrait figcaption{display:flex;flex-direction:column;justify-content:center;padding:clamp(26px,4vw,52px)}
+.studio-portrait small{color:var(--orange);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.studio-portrait h3{margin:12px 0 8px;font-size:clamp(32px,4vw,52px);text-transform:uppercase}
+.studio-portrait strong{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.studio-portrait p{max-width:540px;margin-top:20px;color:var(--muted);font-size:14px;line-height:1.65}
+.studio-portrait p+p{margin-top:12px}
 .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:clamp(40px,5vw,64px);background:var(--ink);border:2px solid var(--ink)}
 .fact{background:var(--paper-2);padding:28px 24px}
 .fact b{display:block;font-family:var(--font-display);font-size:clamp(40px,5vw,64px);font-weight:900;letter-spacing:-.03em;line-height:1;color:var(--blue)}
@@ -285,6 +293,7 @@ p{margin:0}
   .hero-art{justify-self:start;width:min(100%,380px);margin-top:28px}
   .hero-art .bar{left:auto;right:-18px}
   .cols,.timeline,.contact-grid{grid-template-columns:1fr}
+  .studio-portrait{grid-template-columns:minmax(220px,320px) 1fr}
   .facts{grid-template-columns:1fr}
   .domains{grid-template-columns:1fr 1fr}
   .section-head{grid-template-columns:1fr;gap:8px}
@@ -307,6 +316,7 @@ p{margin:0}
   .card{margin-bottom:10px}
   .card figcaption{display:none}
   .domains{grid-template-columns:1fr}
+  .studio-portrait{grid-template-columns:1fr;max-width:360px;margin-left:auto;margin-right:auto}
   .ig-grid{grid-template-columns:repeat(3,1fr);gap:6px}
   .hero-sun{left:auto;right:-40px;top:20px}
   .hero-art .hatch{display:none}
