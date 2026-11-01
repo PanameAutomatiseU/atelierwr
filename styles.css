@@ -259,8 +259,13 @@ p{margin:0}
 .lb{position:fixed;inset:0;z-index:60;background:rgba(21,21,21,.94);display:none;align-items:center;justify-content:center;padding:24px}
 .lb.open{display:flex}
 .lb img{max-width:min(92vw,1200px);max-height:82vh;object-fit:contain;background:#fff;box-shadow:0 40px 80px -40px #000}
-.lb-cap{position:absolute;left:0;right:0;bottom:22px;text-align:center;color:#fff;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.lb-cap{position:absolute;left:0;right:0;bottom:0;padding:18px 70px 22px;text-align:center;color:#fff;background:linear-gradient(transparent,rgba(21,21,21,.96) 34%);font-size:12px;letter-spacing:.14em;text-transform:uppercase;pointer-events:none}
+.lb-cap strong{font-weight:700}
 .lb-cap span{opacity:.6;margin-left:12px}
+.lb-cap p{max-width:820px;max-height:140px;margin:14px auto 10px;overflow:auto;color:#e8e4dc;font-size:13px;line-height:1.55;letter-spacing:0;text-align:left;text-transform:none;white-space:normal;pointer-events:auto;scrollbar-width:thin}
+.lb-cap a{display:inline-block;margin-top:4px;padding-bottom:3px;border-bottom:1px solid var(--orange);color:#fff;font-size:10px;letter-spacing:.12em;pointer-events:auto}
+.lb.has-long-caption{align-items:flex-start;padding-bottom:230px}
+.lb.has-long-caption img{max-height:calc(100vh - 280px)}
 .lb button{position:absolute;background:none;border:0;color:#fff;cursor:pointer;font-size:30px;line-height:1;padding:14px;opacity:.8}
 .lb button:hover{opacity:1}
 .lb-close{top:14px;right:14px}
@@ -324,3 +329,13 @@ a.card{display:block;cursor:pointer}
 a.card:hover .card-caption,a.card:focus-visible .card-caption{opacity:1}
 a.card:focus-visible{outline:3px solid var(--orange);outline-offset:4px}
 @media(max-width:560px){.card .card-caption{position:static;display:block;padding:10px;background:var(--ink);opacity:1;font-size:10px}.card .card-caption>span{font-size:9px}}
+
+
+@media (max-width:640px){
+  .lb{padding:12px}
+  .lb.has-long-caption{padding-bottom:42vh}
+  .lb.has-long-caption img{max-height:52vh}
+  .lb-cap{padding:16px 42px 18px}
+  .lb-cap span{display:block;margin:5px 0 0}
+  .lb-cap p{max-height:26vh;font-size:12px}
+}
