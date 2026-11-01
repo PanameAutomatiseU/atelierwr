@@ -5,4 +5,15 @@
 .other-watches-page .archive-copy small{color:#8d1f18}
 .hilal-project>img{max-height:none;object-fit:contain;background:#fff;border:1px solid var(--line)}
 .hilal-copy p+p{margin-top:16px}
-@media(max-width:820px){.other-watches-page .cartier-hero h1{font-size:clamp(48px,15vw,78px)}.other-watches-page .cartier-hero h1 span{font-size:.55em;line-height:1.05;margin-top:12px}}
+.pocket-watch-project{grid-template-columns:minmax(250px,.78fr) minmax(0,1.22fr);gap:clamp(34px,6vw,86px);margin-top:clamp(28px,5vw,64px);padding:clamp(38px,6vw,74px);background:#121212;color:#fff;border-top:0}
+.pocket-watch-heading small{display:block;margin:18px 0 12px;color:#d7b8b4;font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+.pocket-watch-heading h2{font-size:clamp(38px,5.5vw,76px);line-height:.92;text-transform:uppercase}
+.pocket-watch-heading h2 span{color:#c24b42}
+.pocket-watch-heading>p{max-width:340px;margin-top:24px;color:#c8c3bc;font-size:15px;line-height:1.65}
+.pocket-watch-copy .lead{margin-bottom:22px;color:#fff;font-size:clamp(19px,2vw,25px);line-height:1.42}
+.pocket-watch-copy>p:not(.lead){color:#d3cec6;font-size:15px;line-height:1.72}
+.pocket-watch-copy>p+p{margin-top:16px}
+.pocket-watch-facts{display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;margin-top:28px;padding:22px 0 0;border-top:1px solid #3b3b3b;list-style:none}
+.pocket-watch-facts li{position:relative;padding-left:17px;color:#eee9e2;font-size:12px;line-height:1.5}
+.pocket-watch-facts li::before{content:"";position:absolute;left:0;top:.65em;width:6px;height:6px;background:#c24b42}
+@media(max-width:820px){.other-watches-page .cartier-hero h1{font-size:clamp(48px,15vw,78px)}.other-watches-page .cartier-hero h1 span{font-size:.55em;line-height:1.05;margin-top:12px}.pocket-watch-project{grid-template-columns:1fr;padding:34px 24px}.pocket-watch-facts{grid-template-columns:1fr}}
