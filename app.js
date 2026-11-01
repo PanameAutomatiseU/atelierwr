@@ -17,8 +17,23 @@ const JEWELRY_GALLERY = [
   { src: 'assets/work/porte-cartes-securise-ambiance.jpg', title: 'Porte-cartes sécurisé', client: 'Mises en situation, variations vert profond et noir et blanc' },
 ];
 
+const MAROQUINERIE = [
+  { src: 'assets/work/maroquinerie-01.jpg', cat: 'maroquinerie', subcat: 'lunetterie', title: 'Collection Eyewear', client: 'Lunetterie' },
+  { src: 'assets/work/maroquinerie-02.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Collection Signature', client: 'Sacs et petite maroquinerie' },
+  { src: 'assets/work/maroquinerie-03.jpg', cat: 'maroquinerie', subcat: 'chaussures', title: 'Sandales en corde', client: 'Recherche de collection' },
+  { src: 'assets/work/maroquinerie-04.jpg', cat: 'maroquinerie', subcat: 'lunetterie', title: 'Lunettes haute joaillerie', client: 'Recherches de formes et finitions' },
+  { src: 'assets/work/maroquinerie-05.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sacs géométriques', client: 'Développement de collection' },
+  { src: 'assets/work/maroquinerie-06.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Maroquinerie féminine', client: 'Sacs et petite maroquinerie' },
+  { src: 'assets/work/maroquinerie-07.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Shoes Bag', client: 'Concept de sac modulable' },
+  { src: 'assets/work/maroquinerie-08.jpg', cat: 'maroquinerie', subcat: 'chaussures', title: 'Sneakers', client: 'Recherches et déclinaisons' },
+  { src: 'assets/work/maroquinerie-09.jpg', cat: 'maroquinerie', subcat: 'bagages', title: 'Trolley pliable', client: 'Bagage et accessoires de voyage' },
+  { src: 'assets/work/maroquinerie-10.jpg', cat: 'maroquinerie', subcat: 'recherches', title: 'Croquis de sacs', client: 'Exploration de volumes et usages' },
+  { src: 'assets/work/maroquinerie-11.jpg', cat: 'maroquinerie', subcat: 'recherches', title: 'Accessoires de collection', client: 'Croquis et intentions couleur' },
+  { src: 'assets/work/maroquinerie-12.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Collection de sacs', client: 'Formes, matières et détails' },
+];
+
 const DESIGN = [
-  ...W('maroquinerie', 12, ['Eyewear · Lunetterie', 'Collection Signature · Maroquinerie', 'Sandales cordes · Almé Paris', 'Lunettes haute joaillerie · Lunetterie', 'Sacs · Céline', 'Maroquinerie · Almé Paris', 'Shoes bag · Bally', 'Sneakers · Bally', 'Trolley pliable · Kipling', 'Croquis de sacs · Recherches', 'Croquis · Burberry', 'Sacs · Sonia Rykiel']),
+  ...MAROQUINERIE,
   ...W('mobilier', 8, ['Piano « Italy » · Carod', 'Piano en situation · Carod', 'Sofa · Grand Palais', 'Collection · Grand Palais', 'Ère de je · Mobilier modulable', 'Ego · Assise', 'Mobilier outdoor · Grand Palais', 'Croquis de collection · Grand Palais']),
   ...W('packaging', 10, ['Coffrets · Almé Paris', 'Édition Nouvel An chinois · Packaging', 'Étiquettes · Domaine de la Bégude', 'Pleine Nature · Étiquettes de vin', "L'Ernest · La Grange d'Ernest", 'Triplette · Cantarelle', 'Gamme · Jean-Étienne Chermette', 'Coffret Année du Lapin · Philips', 'Coffret montre · Maison Boanton', 'Écrin V · Packaging']),
   ...W('logo', 12, ['Vitrophanie · La Boutique du Rhum', 'Identité · Maison Célestine', 'Crozes-Hermitage · Domaine du Chêne Vert', 'Domaines & distilleries · Diva', 'Déclinaisons · Maison Célestine', 'Monogramme · Almé Paris', 'Caves parisiennes · Joséphine', 'Logo · Aurea Imaging', 'Motif · Lemarys', 'Identité · Exacode', 'Avocats · Louise Law', 'Logo · Owl Hair Salon']),
@@ -130,8 +145,11 @@ const LIMIT = 9;
 let lbList = [], lbIndex = 0;
 
 function renderGrid(gridEl, items, cat, moreBtn) {
-  const list = cat === 'all' ? items : items.filter(i => i.cat === cat);
-  const shown = gridEl.dataset.expanded === '1' ? list : list.slice(0, LIMIT);
+  let list = cat === 'all' ? items : items.filter(i => i.cat === cat);
+  const subcat = gridEl.dataset.subcat || 'all';
+  if (cat === 'maroquinerie' && subcat !== 'all') list = list.filter(i => i.subcat === subcat);
+  const showCompleteCategory = cat === 'maroquinerie';
+  const shown = showCompleteCategory || gridEl.dataset.expanded === '1' ? list : list.slice(0, LIMIT);
   gridEl.innerHTML = shown.map((it, i) => `
     ${it.projectHref ? `<a class="card project-card" href="${it.projectHref}" aria-label="Découvrir le projet ${it.client} : ${it.title}">` : `<figure class="card" data-i="${i}">`}
       <img src="${it.src}" alt="${it.title}${it.client ? ', ' + it.client : ''}" loading="lazy" decoding="async">
@@ -142,7 +160,7 @@ function renderGrid(gridEl, items, cat, moreBtn) {
   });
   observeCards(gridEl);
   if (moreBtn) {
-    moreBtn.style.display = list.length > LIMIT && gridEl.dataset.expanded !== '1' ? '' : 'none';
+    moreBtn.style.display = !showCompleteCategory && list.length > LIMIT && gridEl.dataset.expanded !== '1' ? '' : 'none';
     moreBtn.onclick = () => { gridEl.dataset.expanded = '1'; renderGrid(gridEl, items, cat, moreBtn); };
   }
 }
@@ -155,6 +173,11 @@ function setupTabs(sectionId, items) {
   const projectGroups = sec.querySelectorAll('[data-project-cat]');
   const categoryIntros = sec.querySelectorAll('[data-category-intro]');
   const categoryTitle = sec.querySelector('[data-category-title]');
+  const accessoryTabs = sec.querySelectorAll('[data-accessory-subcat]');
+  const resetAccessoryTabs = () => {
+    grid.dataset.subcat = 'all';
+    accessoryTabs.forEach(button => button.classList.toggle('active', button.dataset.accessorySubcat === 'all'));
+  };
   tabs.forEach(t => t.addEventListener('click', () => {
     tabs.forEach(x => x.classList.remove('active'));
     t.classList.add('active');
@@ -163,7 +186,15 @@ function setupTabs(sectionId, items) {
     if (categoryTitle) categoryTitle.textContent = t.textContent.trim();
     if (grid.hasAttribute('data-design-grid')) grid.hidden = t.dataset.cat === 'horlogerie';
     grid.dataset.expanded = '0';
+    if (t.dataset.cat === 'maroquinerie') resetAccessoryTabs();
     renderGrid(grid, items, t.dataset.cat, more);
+  }));
+  accessoryTabs.forEach(button => button.addEventListener('click', () => {
+    accessoryTabs.forEach(item => item.classList.remove('active'));
+    button.classList.add('active');
+    grid.dataset.subcat = button.dataset.accessorySubcat;
+    grid.dataset.expanded = '0';
+    renderGrid(grid, items, 'maroquinerie', more);
   }));
   const initialCat = sec.querySelector('.tab.active').dataset.cat;
   if (categoryTitle) categoryTitle.textContent = sec.querySelector('.tab.active').textContent.trim();

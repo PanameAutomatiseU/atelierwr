@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261101-5">
+<link rel="stylesheet" href="styles.css?v=20261101-6">
 <link rel="stylesheet" href="hero.css?v=20261031-2">
 </head>
 <body>
@@ -120,6 +120,24 @@
       <small>Spécialité design</small>
       <h3 data-category-title>Horlogerie</h3>
     </header>
+    <section class="category-intro accessories-intro" data-category-intro="maroquinerie" hidden aria-labelledby="accessories-title">
+      <div class="category-intro-copy">
+        <small>Portfolio complet · 12 planches</small>
+        <h3 id="accessories-title">Maroquinerie<br>&amp; accessoires.</h3>
+        <p>Une sélection de collections, recherches et développements couvrant le sac, la petite maroquinerie, la chaussure, la lunetterie et le bagage. Les planches réunissent dessins, intentions de collection, détails techniques et mises en situation.</p>
+      </div>
+      <div class="accessory-filter-panel">
+        <small>Classer les projets</small>
+        <div class="accessory-subtabs" role="group" aria-label="Sous-catégories de maroquinerie et accessoires">
+          <button class="accessory-subtab active" type="button" data-accessory-subcat="all">Toutes les créations <span>12</span></button>
+          <button class="accessory-subtab" type="button" data-accessory-subcat="sacs">Sacs &amp; maroquinerie <span>5</span></button>
+          <button class="accessory-subtab" type="button" data-accessory-subcat="chaussures">Chaussures <span>2</span></button>
+          <button class="accessory-subtab" type="button" data-accessory-subcat="lunetterie">Lunetterie <span>2</span></button>
+          <button class="accessory-subtab" type="button" data-accessory-subcat="bagages">Bagages <span>1</span></button>
+          <button class="accessory-subtab" type="button" data-accessory-subcat="recherches">Croquis &amp; recherches <span>2</span></button>
+        </div>
+      </div>
+    </section>
     <section class="category-intro" data-category-intro="joaillerie" hidden aria-labelledby="joaillerie-title">
       <div class="category-intro-copy">
         <small>Collection Interstice · Joaillerie</small>
@@ -317,6 +335,6 @@
   <div class="lb-cap"></div>
 </div>
 
-<script src="app.js?v=20261101-3"></script>
+<script src="app.js?v=20261101-4"></script>
 </body>
 </html>
