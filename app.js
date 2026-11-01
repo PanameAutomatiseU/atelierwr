@@ -13,7 +13,8 @@ const JEWELRY_GALLERY = [
   { src: 'joaillerie-mockup-06.png', title: 'Collection Interstice', client: 'Mockup 06' },
   { src: 'joaillerie-mockup-07.png', title: 'Collection Interstice', client: 'Mockup 07' },
   { src: 'joaillerie-mockup-08.png', title: 'Collection Interstice', client: 'Mockup 08' },
-  { src: document.querySelector('.jewelry-cardholder img')?.src || '', title: 'Porte-cartes sécurisé', client: 'Décors en laque, métal et diamants' },
+  { src: 'assets/work/porte-cartes-securise-nouveau.jpg', title: 'Porte-cartes sécurisé', client: 'Décors précieux en laque, métal et diamants' },
+  { src: 'assets/work/porte-cartes-securise-ambiance.jpg', title: 'Porte-cartes sécurisé', client: 'Mises en situation, variations vert profond et noir et blanc' },
 ];
 
 const DESIGN = [
