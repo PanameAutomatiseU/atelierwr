@@ -252,6 +252,20 @@ function setupTabs(sectionId, items) {
   if (grid.hasAttribute('data-design-grid')) grid.hidden = initialCat === 'horlogerie';
   categoryIntros.forEach(intro => { intro.hidden = intro.dataset.categoryIntro !== initialCat; });
   renderGrid(grid, items, initialCat, more);
+
+  if (sectionId === 'design') {
+    const requestedProject = new URLSearchParams(window.location.search).get('project');
+    const availableProjects = ['lemarys', 'lunetterie'];
+    if (availableProjects.includes(requestedProject)) {
+      const maroquinerieTab = sec.querySelector('[data-cat="maroquinerie"]');
+      const projectTab = sec.querySelector(`[data-accessory-subcat="${requestedProject}"]`);
+      maroquinerieTab?.click();
+      projectTab?.click();
+      window.setTimeout(() => {
+        sec.querySelector(`[data-accessory-project="${requestedProject}"]`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 120);
+    }
+  }
 }
 
 function observeCards(root) {
