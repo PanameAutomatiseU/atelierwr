@@ -18,26 +18,26 @@ const JEWELRY_GALLERY = [
 ];
 
 const MAROQUINERIE = [
-  { src: 'assets/work/maroquinerie-01.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'lemarys'], title: 'Lemarys Paris · Sac à chaîne', client: 'Collection de maroquinerie · Fermoir minéral' },
-  { src: 'assets/work/maroquinerie-02.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Déclinaisons de sacs souples', client: 'Sacs & maroquinerie' },
+  { src: 'assets/work/maroquinerie-01.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sac structuré à chaîne', client: 'Collection de maroquinerie' },
+  { src: 'assets/work/maroquinerie-02.jpg', cat: 'maroquinerie', subcat: 'lunetterie', tags: ['lunetterie', 'eyewear'], title: 'Collection Eyewear · Acétate architectural', client: 'Design de monture · Écaille et métal' },
   { src: 'assets/work/maroquinerie-03.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sac bandoulière à fermoir', client: 'Sacs & maroquinerie' },
-  { src: 'assets/work/maroquinerie-04.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'lemarys'], title: 'Lemarys Paris · Sac architectural', client: 'Collection de maroquinerie · Géométrie précieuse' },
+  { src: 'assets/work/maroquinerie-04.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'lemarys'], title: 'Lemarys Paris · Sac à chaîne', client: 'Collection de maroquinerie · Fermoir minéral' },
   { src: 'assets/work/logo-09.jpg', cat: 'maroquinerie', subcat: 'recherches', tags: ['recherches', 'lemarys'], title: 'Lemarys Paris · Identité visuelle', client: 'Direction artistique · Recherches de symbole' },
-  { src: 'assets/work/maroquinerie-05.jpg', cat: 'maroquinerie', subcat: 'lunetterie', title: 'Lunettes à branches ornementées', client: 'Lunetterie' },
+  { src: 'assets/work/maroquinerie-05.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Pochette structurée et détails tressés', client: 'Design de maroquinerie' },
   { src: 'assets/work/maroquinerie-06.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sac structuré à chaîne', client: 'Sacs & maroquinerie' },
-  { src: 'assets/work/maroquinerie-07.jpg', cat: 'maroquinerie', subcat: 'lunetterie', title: 'Collection de montures', client: 'Lunetterie' },
+  { src: 'assets/work/maroquinerie-07.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Cabas souple à détails métalliques', client: 'Design de maroquinerie' },
   { src: 'assets/work/maroquinerie-08.jpg', cat: 'maroquinerie', subcat: 'chaussures', title: 'Sandales et accessoires', client: 'Chaussures' },
   { src: 'assets/work/maroquinerie-09.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Petite maroquinerie nomade', client: 'Sacs & maroquinerie' },
   { src: 'assets/work/maroquinerie-10.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Accessoires connectés et étuis', client: 'Petite maroquinerie & accessoires' },
-  { src: 'assets/work/maroquinerie-11.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sacs souples et besaces', client: 'Sacs & maroquinerie' },
+  { src: 'assets/work/maroquinerie-11.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'lemarys'], title: 'Lemarys Paris · Sac architectural', client: 'Collection de maroquinerie · Géométrie précieuse' },
   { src: 'assets/work/maroquinerie-12.jpg', cat: 'maroquinerie', subcat: 'chaussures', title: 'Sandales graphiques', client: 'Chaussures' },
-  { src: 'assets/work/maroquinerie-13.jpg', cat: 'maroquinerie', subcat: 'lunetterie', title: 'Montures joaillières', client: 'Lunetterie' },
+  { src: 'assets/work/maroquinerie-13.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sac demi-lune et porté épaule', client: 'Design de maroquinerie' },
   { src: 'assets/work/maroquinerie-14.jpg', cat: 'maroquinerie', subcat: 'chaussures', title: 'Sandales et détails de semelle', client: 'Chaussures' },
   { src: 'assets/work/maroquinerie-15.jpg', cat: 'maroquinerie', subcat: 'recherches', title: 'Moodboard et recherches de collection', client: 'Croquis & recherches' },
-  { src: 'assets/work/maroquinerie-16.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sacs compacts à bandoulière', client: 'Sacs & maroquinerie' },
+  { src: 'assets/work/maroquinerie-16.jpg', cat: 'maroquinerie', subcat: 'lunetterie', tags: ['lunetterie', 'eyewear'], title: 'Lunetterie haute joaillerie · Études de branches', client: 'Design précieux · Pierres et structures métalliques' },
   { src: 'assets/work/maroquinerie-17.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Bijoux de sac et porte-clés', client: 'Petite maroquinerie & accessoires' },
   { src: 'assets/work/maroquinerie-18.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Cabas et petite maroquinerie', client: 'Sacs & maroquinerie' },
-  { src: 'assets/work/maroquinerie-19.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Porte-chaussures et accessoires de voyage', client: 'Petite maroquinerie & accessoires' },
+  { src: 'assets/work/maroquinerie-19.jpg', cat: 'maroquinerie', subcat: 'lunetterie', tags: ['lunetterie', 'eyewear'], title: 'Lunetterie haute joaillerie · Modèle floral', client: 'Monture ronde · Or et sertissage' },
   { src: 'assets/work/maroquinerie-20.jpg', cat: 'maroquinerie', subcat: 'recherches', title: 'Recherche de souliers', client: 'Croquis & recherches' },
   { src: 'assets/work/maroquinerie-21.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sacs à rabat', client: 'Sacs & maroquinerie' },
   { src: 'assets/work/maroquinerie-22.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Ceintures et boucleries', client: 'Petite maroquinerie & accessoires' },
@@ -54,14 +54,14 @@ const MAROQUINERIE = [
   { src: 'assets/work/maroquinerie-33.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sac à rabat compact', client: 'Sacs & maroquinerie' },
   { src: 'assets/work/maroquinerie-34.jpg', cat: 'maroquinerie', subcat: 'recherches', title: 'Croquis de sacs et volumes', client: 'Croquis & recherches' },
   { src: 'assets/work/maroquinerie-35.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Systèmes de portage et construction', client: 'Sacs & maroquinerie' },
-  { src: 'assets/work/maroquinerie-36.jpg', cat: 'maroquinerie', subcat: 'lunetterie', title: 'Lunettes et détails de branches', client: 'Lunetterie' },
+  { src: 'assets/work/maroquinerie-36.jpg', cat: 'maroquinerie', subcat: 'recherches', title: 'Recherche de collection · Sacs et silhouettes', client: 'Croquis, volumes et univers couleur' },
   { src: 'assets/work/maroquinerie-37.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Étuis et accessoires nomades', client: 'Petite maroquinerie & accessoires' },
   { src: 'assets/work/maroquinerie-38.jpg', cat: 'maroquinerie', subcat: 'recherches', title: 'Recherche matière et couleur', client: 'Croquis & recherches' },
   { src: 'assets/work/maroquinerie-39.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Collection de ceintures', client: 'Petite maroquinerie & accessoires' },
   { src: 'assets/work/maroquinerie-40.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Petite maroquinerie graphique', client: 'Petite maroquinerie & accessoires' },
   { src: 'assets/work/maroquinerie-41.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sacs de voyage et systèmes de portage', client: 'Sacs & maroquinerie' },
   { src: 'assets/work/maroquinerie-42.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Accessoires audio et objets nomades', client: 'Petite maroquinerie & accessoires' },
-  { src: 'assets/work/maroquinerie-43.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Portefeuilles et détails matière', client: 'Petite maroquinerie & accessoires' },
+  { src: 'assets/work/maroquinerie-43.jpg', cat: 'maroquinerie', subcat: 'lunetterie', tags: ['lunetterie', 'eyewear'], title: 'Collection de montures · Formes et proportions', client: 'Recherche de gamme · Acétate et métal' },
   { src: 'assets/work/maroquinerie-44.jpg', cat: 'maroquinerie', subcat: 'chaussures', title: 'Chaussures et détails de construction', client: 'Chaussures' },
   { src: 'assets/work/maroquinerie-45.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sacs souples et recherche de volume', client: 'Sacs & maroquinerie' }
 ];
@@ -182,12 +182,15 @@ function renderGrid(gridEl, items, cat, moreBtn) {
   let list = cat === 'all' ? items : items.filter(i => i.cat === cat);
   const subcat = gridEl.dataset.subcat || 'all';
   if (cat === 'maroquinerie') {
-    const isLemarys = item => (item.tags || []).includes('lemarys');
+    const tagsFor = item => item.tags || [item.subcat];
+    const isStandaloneProject = item => tagsFor(item).some(tag => tag === 'lemarys' || tag === 'eyewear');
     if (subcat === 'lemarys') {
-      list = list.filter(isLemarys);
+      list = list.filter(item => tagsFor(item).includes('lemarys'));
+    } else if (subcat === 'lunetterie') {
+      list = list.filter(item => tagsFor(item).includes('eyewear'));
     } else {
-      list = list.filter(item => !isLemarys(item));
-      if (subcat !== 'all') list = list.filter(item => (item.tags || [item.subcat]).includes(subcat));
+      list = list.filter(item => !isStandaloneProject(item));
+      if (subcat !== 'all') list = list.filter(item => tagsFor(item).includes(subcat));
     }
   }
   const showCompleteCategory = cat === 'maroquinerie';
@@ -216,9 +219,9 @@ function setupTabs(sectionId, items) {
   const categoryIntros = sec.querySelectorAll('[data-category-intro]');
   const categoryTitle = sec.querySelector('[data-category-title]');
   const accessoryTabs = sec.querySelectorAll('[data-accessory-subcat]');
-  const accessoryProject = sec.querySelector('[data-accessory-project]');
+  const accessoryProjects = sec.querySelectorAll('[data-accessory-project]');
   const showAccessoryProject = key => {
-    if (accessoryProject) accessoryProject.hidden = key !== accessoryProject.dataset.accessoryProject;
+    accessoryProjects.forEach(project => { project.hidden = key !== project.dataset.accessoryProject; });
   };
   const resetAccessoryTabs = () => {
     grid.dataset.subcat = 'all';
