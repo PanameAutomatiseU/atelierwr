@@ -417,3 +417,29 @@ a.card:focus-visible{outline:3px solid var(--orange);outline-offset:4px}
   .design-tabs .tab{min-height:46px;padding:7px 6px;font-size:10px}
 }
 
+/* Traitement uniforme des raccourcis Design & création */
+.design-tabs .tab,
+.design-tabs .tab:visited{
+  display:flex;
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+  background:#7b1328;
+  color:#fff;
+  -webkit-text-fill-color:#fff;
+  border:1px solid #7b1328;
+}
+.design-tabs .tab:hover{
+  background:#65101f;
+  color:#fff;
+  -webkit-text-fill-color:#fff;
+  border-color:#65101f;
+}
+.design-tabs .tab.active{
+  background:#4f0b19;
+  color:#fff;
+  -webkit-text-fill-color:#fff;
+  border-color:#4f0b19;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.82),0 10px 24px rgba(88,10,25,.22);
+}
+
