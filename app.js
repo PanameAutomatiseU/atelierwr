@@ -181,7 +181,15 @@ let lbList = [], lbIndex = 0;
 function renderGrid(gridEl, items, cat, moreBtn) {
   let list = cat === 'all' ? items : items.filter(i => i.cat === cat);
   const subcat = gridEl.dataset.subcat || 'all';
-  if (cat === 'maroquinerie' && subcat !== 'all') list = list.filter(i => (i.tags || [i.subcat]).includes(subcat));
+  if (cat === 'maroquinerie') {
+    const isLemarys = item => (item.tags || []).includes('lemarys');
+    if (subcat === 'lemarys') {
+      list = list.filter(isLemarys);
+    } else {
+      list = list.filter(item => !isLemarys(item));
+      if (subcat !== 'all') list = list.filter(item => (item.tags || [item.subcat]).includes(subcat));
+    }
+  }
   const showCompleteCategory = cat === 'maroquinerie';
   const shown = showCompleteCategory || gridEl.dataset.expanded === '1' ? list : list.slice(0, LIMIT);
   gridEl.innerHTML = shown.map((it, i) => `
@@ -208,9 +216,14 @@ function setupTabs(sectionId, items) {
   const categoryIntros = sec.querySelectorAll('[data-category-intro]');
   const categoryTitle = sec.querySelector('[data-category-title]');
   const accessoryTabs = sec.querySelectorAll('[data-accessory-subcat]');
+  const accessoryProject = sec.querySelector('[data-accessory-project]');
+  const showAccessoryProject = key => {
+    if (accessoryProject) accessoryProject.hidden = key !== accessoryProject.dataset.accessoryProject;
+  };
   const resetAccessoryTabs = () => {
     grid.dataset.subcat = 'all';
     accessoryTabs.forEach(button => button.classList.toggle('active', button.dataset.accessorySubcat === 'all'));
+    showAccessoryProject('all');
   };
   tabs.forEach(t => t.addEventListener('click', () => {
     tabs.forEach(x => x.classList.remove('active'));
@@ -228,6 +241,7 @@ function setupTabs(sectionId, items) {
     button.classList.add('active');
     grid.dataset.subcat = button.dataset.accessorySubcat;
     grid.dataset.expanded = '0';
+    showAccessoryProject(button.dataset.accessorySubcat);
     renderGrid(grid, items, 'maroquinerie', more);
   }));
   const initialCat = sec.querySelector('.tab.active').dataset.cat;
