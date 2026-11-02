@@ -22,6 +22,7 @@ const MAROQUINERIE = [
   { src: 'assets/work/maroquinerie-02.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Déclinaisons de sacs souples', client: 'Sacs & maroquinerie' },
   { src: 'assets/work/maroquinerie-03.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sac bandoulière à fermoir', client: 'Sacs & maroquinerie' },
   { src: 'assets/work/maroquinerie-04.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'lemarys'], title: 'Lemarys Paris · Sac architectural', client: 'Collection de maroquinerie · Géométrie précieuse' },
+  { src: 'assets/work/logo-09.jpg', cat: 'maroquinerie', subcat: 'recherches', tags: ['recherches', 'lemarys'], title: 'Lemarys Paris · Identité visuelle', client: 'Direction artistique · Recherches de symbole' },
   { src: 'assets/work/maroquinerie-05.jpg', cat: 'maroquinerie', subcat: 'lunetterie', title: 'Lunettes à branches ornementées', client: 'Lunetterie' },
   { src: 'assets/work/maroquinerie-06.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sac structuré à chaîne', client: 'Sacs & maroquinerie' },
   { src: 'assets/work/maroquinerie-07.jpg', cat: 'maroquinerie', subcat: 'lunetterie', title: 'Collection de montures', client: 'Lunetterie' },
