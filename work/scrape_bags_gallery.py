@@ -15,6 +15,7 @@ PAGE_URL = "https://www.atelierwr.net/bags-accessories"
 OUT_DIR = Path("work")
 INVENTORY_PATH = OUT_DIR / "bags-gallery-inventory.json"
 CONTACT_PATH = OUT_DIR / "bags-gallery-contact.jpg"
+ASSET_DIR = Path("assets/work")
 
 media_order: list[str] = []
 media_seen: set[str] = set()
@@ -121,6 +122,30 @@ with sync_playwright() as playwright:
 
 print("Media candidates:", len(media_order))
 
+OUT_DIR.mkdir(parents=True, exist_ok=True)
+ASSET_DIR.mkdir(parents=True, exist_ok=True)
+
+def export_asset(image: Image.Image, index: int) -> tuple[str, int]:
+    target = ASSET_DIR / f"maroquinerie-{index:02d}.jpg"
+    working = image.convert("RGB")
+    working.thumbnail((1400, 1400), Image.Resampling.LANCZOS)
+
+    encoded = BytesIO()
+    for quality in (84, 80, 76, 72, 68, 64, 60):
+        encoded = BytesIO()
+        working.save(encoded, "JPEG", quality=quality, optimize=True, progressive=True)
+        if encoded.tell() <= 500_000:
+            break
+
+    if encoded.tell() > 500_000:
+        working.thumbnail((1200, 1200), Image.Resampling.LANCZOS)
+        encoded = BytesIO()
+        working.save(encoded, "JPEG", quality=64, optimize=True, progressive=True)
+
+    target.write_bytes(encoded.getvalue())
+    return str(target), encoded.tell()
+
+
 items = []
 thumbs = []
 for identifier in media_order:
@@ -134,6 +159,7 @@ for identifier in media_order:
         image = Image.open(BytesIO(data)).convert("RGB")
     except Exception:
         continue
+    asset_path, asset_bytes = export_asset(image, len(items) + 1)
     item = {
         "index": len(items) + 1,
         "uri": identifier,
@@ -143,6 +169,8 @@ for identifier in media_order:
         "height": height,
         "format": fmt,
         "bytes": len(data),
+        "asset": asset_path,
+        "asset_bytes": asset_bytes,
     }
     items.append(item)
 
@@ -156,7 +184,6 @@ for identifier in media_order:
     draw.text((42, 196), title, fill=(20, 20, 20))
     thumbs.append(tile)
 
-OUT_DIR.mkdir(parents=True, exist_ok=True)
 INVENTORY_PATH.write_text(
     json.dumps({"source": PAGE_URL, "count": len(items), "items": items}, ensure_ascii=False, indent=2),
     encoding="utf-8",
