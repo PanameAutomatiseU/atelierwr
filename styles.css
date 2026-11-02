@@ -372,3 +372,47 @@ a.card:focus-visible{outline:3px solid var(--orange);outline-offset:4px}
   .lb-cap span{display:block;margin:5px 0 0}
   .lb-cap p{max-height:26vh;font-size:12px}
 }
+
+/* Bandeau permanent des domaines Design & création */
+.design-tabs{
+  position:sticky;
+  top:78px;
+  z-index:70;
+  display:grid;
+  grid-template-columns:repeat(7,minmax(0,1fr));
+  max-width:100%;
+  overflow:visible;
+  opacity:1;
+  visibility:visible;
+}
+.design-tabs .tab{display:flex;opacity:1;visibility:visible}
+@media(max-width:1050px){
+  .design-tabs{
+    position:sticky;
+    top:68px;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:7px;
+    padding:8px 0 10px;
+    background:rgba(255,255,255,.97);
+    border-bottom:1px solid var(--line);
+    box-shadow:0 10px 20px -20px rgba(21,21,21,.55);
+    backdrop-filter:blur(10px);
+  }
+  .design-tabs .tab{min-height:56px;padding:11px 9px;font-size:12px}
+}
+@media(max-width:720px){
+  .design-tabs{
+    position:sticky;
+    top:60px;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:6px;
+    margin:18px 0 26px;
+    padding:7px 0 9px;
+  }
+  .design-tabs .tab{min-height:48px;padding:8px 7px;font-size:10.5px;line-height:1.12;letter-spacing:.01em}
+}
+@media(max-width:420px){
+  .design-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .design-tabs .tab{min-height:46px;padding:7px 6px;font-size:10px}
+}
+
