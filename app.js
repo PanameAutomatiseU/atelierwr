@@ -18,18 +18,18 @@ const JEWELRY_GALLERY = [
 ];
 
 const MAROQUINERIE = [
-  { src: 'assets/work/maroquinerie-01.jpg', cat: 'maroquinerie', subcat: 'lunetterie', title: 'Collection Eyewear', client: 'Lunetterie' },
-  { src: 'assets/work/maroquinerie-02.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Collection Signature', client: 'Sacs et petite maroquinerie' },
-  { src: 'assets/work/maroquinerie-03.jpg', cat: 'maroquinerie', subcat: 'chaussures', title: 'Sandales en corde', client: 'Recherche de collection' },
-  { src: 'assets/work/maroquinerie-04.jpg', cat: 'maroquinerie', subcat: 'lunetterie', title: 'Lunettes haute joaillerie', client: 'Recherches de formes et finitions' },
-  { src: 'assets/work/maroquinerie-05.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sacs géométriques', client: 'Développement de collection' },
-  { src: 'assets/work/maroquinerie-06.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Maroquinerie féminine', client: 'Sacs et petite maroquinerie' },
-  { src: 'assets/work/maroquinerie-07.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Shoes Bag', client: 'Concept de sac modulable' },
-  { src: 'assets/work/maroquinerie-08.jpg', cat: 'maroquinerie', subcat: 'chaussures', title: 'Sneakers', client: 'Recherches et déclinaisons' },
-  { src: 'assets/work/maroquinerie-09.jpg', cat: 'maroquinerie', subcat: 'bagages', title: 'Trolley pliable', client: 'Bagage et accessoires de voyage' },
-  { src: 'assets/work/maroquinerie-10.jpg', cat: 'maroquinerie', subcat: 'recherches', title: 'Croquis de sacs', client: 'Exploration de volumes et usages' },
-  { src: 'assets/work/maroquinerie-11.jpg', cat: 'maroquinerie', subcat: 'recherches', title: 'Accessoires de collection', client: 'Croquis et intentions couleur' },
-  { src: 'assets/work/maroquinerie-12.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Collection de sacs', client: 'Formes, matières et détails' },
+  { src: 'assets/work/maroquinerie-01.jpg', cat: 'maroquinerie', subcat: 'lunetterie', title: 'Eyewear', client: 'Design de lunettes' },
+  { src: 'assets/work/maroquinerie-02.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Place Vendôme', client: 'Collection de maroquinerie' },
+  { src: 'assets/work/maroquinerie-03.jpg', cat: 'maroquinerie', subcat: 'chaussures', title: 'Sandales en corde', client: 'Almé Paris' },
+  { src: 'assets/work/maroquinerie-04.jpg', cat: 'maroquinerie', subcat: 'lunetterie', title: 'Lunettes haute joaillerie', client: 'Recherche de collection' },
+  { src: 'assets/work/maroquinerie-05.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Cabas géométriques', client: 'Céline' },
+  { src: 'assets/work/maroquinerie-06.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Collection de maroquinerie', client: 'Almé Paris' },
+  { src: 'assets/work/maroquinerie-07.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Shoes Bag', client: 'Bally' },
+  { src: 'assets/work/maroquinerie-08.jpg', cat: 'maroquinerie', subcat: 'chaussures', title: 'Sneakers', client: 'Bally' },
+  { src: 'assets/work/maroquinerie-09.jpg', cat: 'maroquinerie', subcat: 'bagages', title: 'Trolley pliable', client: 'Kipling' },
+  { src: 'assets/work/maroquinerie-10.jpg', cat: 'maroquinerie', subcat: 'recherches', title: 'Croquis de sacs', client: 'Recherches de collection' },
+  { src: 'assets/work/maroquinerie-11.jpg', cat: 'maroquinerie', subcat: 'recherches', title: 'Accessoires de collection', client: 'Burberry' },
+  { src: 'assets/work/maroquinerie-12.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Collection de sacs', client: 'Sonia Rykiel' },
 ];
 
 const DESIGN = [
