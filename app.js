@@ -18,10 +18,10 @@ const JEWELRY_GALLERY = [
 ];
 
 const MAROQUINERIE = [
-  { src: 'assets/work/maroquinerie-01.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sacs sculpturaux', client: 'Sacs & maroquinerie' },
+  { src: 'assets/work/maroquinerie-01.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'lemarys'], title: 'Lemarys Paris · Sac à chaîne', client: 'Collection de maroquinerie · Fermoir minéral' },
   { src: 'assets/work/maroquinerie-02.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Déclinaisons de sacs souples', client: 'Sacs & maroquinerie' },
   { src: 'assets/work/maroquinerie-03.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sac bandoulière à fermoir', client: 'Sacs & maroquinerie' },
-  { src: 'assets/work/maroquinerie-04.jpg', cat: 'maroquinerie', subcat: 'recherches', title: 'Étude de formes et de fonctions', client: 'Croquis & recherches' },
+  { src: 'assets/work/maroquinerie-04.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'lemarys'], title: 'Lemarys Paris · Sac architectural', client: 'Collection de maroquinerie · Géométrie précieuse' },
   { src: 'assets/work/maroquinerie-05.jpg', cat: 'maroquinerie', subcat: 'lunetterie', title: 'Lunettes à branches ornementées', client: 'Lunetterie' },
   { src: 'assets/work/maroquinerie-06.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sac structuré à chaîne', client: 'Sacs & maroquinerie' },
   { src: 'assets/work/maroquinerie-07.jpg', cat: 'maroquinerie', subcat: 'lunetterie', title: 'Collection de montures', client: 'Lunetterie' },
@@ -180,7 +180,7 @@ let lbList = [], lbIndex = 0;
 function renderGrid(gridEl, items, cat, moreBtn) {
   let list = cat === 'all' ? items : items.filter(i => i.cat === cat);
   const subcat = gridEl.dataset.subcat || 'all';
-  if (cat === 'maroquinerie' && subcat !== 'all') list = list.filter(i => i.subcat === subcat);
+  if (cat === 'maroquinerie' && subcat !== 'all') list = list.filter(i => (i.tags || [i.subcat]).includes(subcat));
   const showCompleteCategory = cat === 'maroquinerie';
   const shown = showCompleteCategory || gridEl.dataset.expanded === '1' ? list : list.slice(0, LIMIT);
   gridEl.innerHTML = shown.map((it, i) => `
