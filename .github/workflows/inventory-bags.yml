@@ -25,17 +25,17 @@ jobs:
           python -m pip install pillow playwright
           python -m playwright install --with-deps chromium
 
-      - name: Inventorier les 46 planches
+      - name: Importer toutes les planches
         run: python work/scrape_bags_gallery.py
 
       - name: Enregistrer l’inventaire
         run: |
           git config user.name "Atelier WR — inventaire automatique"
           git config user.email "actions@users.noreply.github.com"
-          git add work/bags-gallery-inventory.json work/bags-gallery-contact.jpg
+          git add work/bags-gallery-inventory.json work/bags-gallery-contact.jpg assets/work/maroquinerie-*.jpg
           if git diff --cached --quiet; then
             echo "Inventaire inchangé."
             exit 0
           fi
-          git commit -m "Inventorier les planches Maroquinerie et accessoires"
+          git commit -m "Importer les planches Maroquinerie et accessoires"
           git push origin main
