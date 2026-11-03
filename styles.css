@@ -185,10 +185,15 @@ p{margin:0}
 .alme-project-gallery figure:first-child{grid-column:1/-1}
 .alme-project-gallery figure:first-child img{aspect-ratio:auto;max-height:760px;object-fit:contain}
 .accessory-project-feature__gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,2vw,24px);width:100%;margin-top:clamp(12px,2vw,24px)}
-.accessory-project-feature__gallery figure{margin:0;background:#fff;overflow:hidden}
+.accessory-project-feature__gallery figure{position:relative;margin:0;background:#fff;overflow:hidden}
 .accessory-project-feature__gallery a{display:block}
 .accessory-project-feature__gallery img{display:block;width:100%;height:auto;aspect-ratio:1.5/1;object-fit:cover}
-@media(max-width:760px){.accessory-project-feature__gallery{grid-template-columns:1fr}.accessory-project-feature__gallery img{aspect-ratio:auto;object-fit:contain}.alme-project-gallery figure:first-child{grid-column:auto}}
+.accessory-project-feature__gallery figcaption{position:absolute;right:0;bottom:0;left:0;z-index:2;padding:clamp(18px,2.4vw,30px);background:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.9) 72%);color:#fff;opacity:0;transform:translateY(18px);transition:opacity .28s ease,transform .28s ease;pointer-events:none}
+.accessory-project-feature__gallery figcaption strong{display:block;margin-bottom:6px;font-family:var(--font-display);font-size:clamp(16px,1.5vw,22px);line-height:1;text-transform:uppercase}
+.accessory-project-feature__gallery figcaption span{display:block;max-width:620px;color:#e4e4e4;font-size:13px;line-height:1.5}
+.accessory-project-feature__gallery figure:hover figcaption,.accessory-project-feature__gallery figure:focus-within figcaption{opacity:1;transform:translateY(0)}
+.eyewear-project-gallery{grid-column:1/-1}
+@media(max-width:760px){.accessory-project-feature__gallery{grid-template-columns:1fr}.accessory-project-feature__gallery img{aspect-ratio:auto;object-fit:contain}.alme-project-gallery figure:first-child{grid-column:auto}.accessory-project-feature__gallery figcaption{position:static;padding:16px;background:#181818;opacity:1;transform:none}}
 .accessory-project-feature__details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-content:start;gap:1px;margin:0;padding:0;list-style:none;background:#353535}
 .accessory-project-feature__details li{min-height:150px;padding:24px;background:#181818}
 .accessory-project-feature__details strong{display:block;margin-bottom:12px;color:#fff;font-family:var(--font-display);font-size:15px;letter-spacing:.03em;text-transform:uppercase}
