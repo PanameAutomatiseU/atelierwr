@@ -170,6 +170,9 @@ p{margin:0}
 .accessory-project-feature__intro small{display:block;margin-bottom:18px;color:#df3041;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
 .accessory-project-feature__intro h4{margin:0 0 24px;font-family:var(--font-display);font-size:clamp(40px,5.8vw,76px);font-weight:900;line-height:.9;letter-spacing:-.055em;text-transform:uppercase}
 .accessory-project-feature__intro p{max-width:570px;color:#d7d7d7;font-size:15px;line-height:1.75}
+.accessory-project-feature[data-accessory-project="lemarys"]{grid-template-columns:1fr}
+.accessory-project-feature[data-accessory-project="lemarys"] .accessory-project-feature__intro{max-width:980px}
+.accessory-project-feature[data-accessory-project="lemarys"] .accessory-project-feature__intro p{max-width:840px;font-size:clamp(15px,1.45vw,18px);line-height:1.72}
 .accessory-project-feature__details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-content:start;gap:1px;margin:0;padding:0;list-style:none;background:#353535}
 .accessory-project-feature__details li{min-height:150px;padding:24px;background:#181818}
 .accessory-project-feature__details strong{display:block;margin-bottom:12px;color:#fff;font-family:var(--font-display);font-size:15px;letter-spacing:.03em;text-transform:uppercase}
