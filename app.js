@@ -226,8 +226,10 @@ function setupTabs(sectionId, items) {
   const categoryTitle = sec.querySelector('[data-category-title]');
   const accessoryTabs = sec.querySelectorAll('[data-accessory-subcat]');
   const accessoryProjects = sec.querySelectorAll('[data-accessory-project]');
+  const standaloneAccessoryProjects = ['lemarys', 'mulberry', 'alme', 'lunetterie'];
   const showAccessoryProject = key => {
     accessoryProjects.forEach(project => { project.hidden = key !== project.dataset.accessoryProject; });
+    grid.hidden = standaloneAccessoryProjects.includes(key);
   };
   const resetAccessoryTabs = () => {
     grid.dataset.subcat = 'all';
