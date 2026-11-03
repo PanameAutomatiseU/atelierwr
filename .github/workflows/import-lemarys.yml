@@ -1,0 +1,38 @@
+name: Importer les visuels Lemarys
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/import-lemarys.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: import-lemarys
+  cancel-in-progress: true
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+
+      - name: Installer Pillow
+        run: python -m pip install pillow
+
+      - name: Redimensionner et compresser les trois visuels
+        run: python work/import_lemarys.py
+
+      - name: Enregistrer les visuels optimisés
+        run: |
+          git config user.name "Atelier WR — import Lemarys"
+          git config user.email "actions@users.noreply.github.com"
+          git add assets/work/lemarys-01.jpg assets/work/lemarys-02.jpg assets/work/lemarys-03.jpg
+          git rm -r work/lemarys-upload
+          git commit -m "Ajouter les trois visuels Lemarys optimisés"
+          git push origin main
