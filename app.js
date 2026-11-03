@@ -25,10 +25,10 @@ const MAROQUINERIE = [
   { src: 'assets/work/lemarys-02.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'lemarys'], title: 'Lemarys Paris · Sac architectural', client: 'Collection de maroquinerie · Fermoir polygonal et feuille d’or' },
   { src: 'assets/work/lemarys-03.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'lemarys'], title: 'Lemarys Paris · Sac graphique', client: 'Collection de maroquinerie · Signature métallique verticale' },
   { src: 'assets/work/lemarys-04.png', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'lemarys'], title: 'Lemarys Paris · Sac structuré', client: 'Collection de maroquinerie · Fermoir vertical en pierre' },
-  { src: 'assets/work/maroquinerie-05.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Pochette structurée et détails tressés', client: 'Design de maroquinerie' },
-  { src: 'assets/work/maroquinerie-06.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sac structuré à chaîne', client: 'Sacs & maroquinerie' },
-  { src: 'assets/work/maroquinerie-07.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Cabas souple à détails métalliques', client: 'Design de maroquinerie' },
-  { src: 'assets/work/maroquinerie-08.jpg', cat: 'maroquinerie', subcat: 'chaussures', title: 'Sandales et accessoires', client: 'Chaussures' },
+  { src: 'assets/work/maroquinerie-05.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'mulberry'], title: 'Mulberry · Pochette structurée', client: 'Direction artistique · Tressage et nœuds de cuir' },
+  { src: 'assets/work/maroquinerie-06.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'mulberry'], title: 'Mulberry · Sac selle compact', client: 'Design de collection · Bouclerie équestre' },
+  { src: 'assets/work/maroquinerie-07.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'mulberry'], title: 'Mulberry · Cabas souple', client: 'Design de collection · Construction sellier' },
+  { src: 'assets/work/maroquinerie-08.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'mulberry'], title: 'Mulberry · Petit porté main', client: 'Design de collection · Bandoulière tressée' },
   { src: 'assets/work/maroquinerie-09.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Petite maroquinerie nomade', client: 'Sacs & maroquinerie' },
   { src: 'assets/work/maroquinerie-10.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Accessoires connectés et étuis', client: 'Petite maroquinerie & accessoires' },
   { src: 'assets/work/maroquinerie-12.jpg', cat: 'maroquinerie', subcat: 'chaussures', title: 'Sandales graphiques', client: 'Chaussures' },
@@ -184,11 +184,13 @@ function renderGrid(gridEl, items, cat, moreBtn) {
   const subcat = gridEl.dataset.subcat || 'all';
   if (cat === 'maroquinerie') {
     const tagsFor = item => item.tags || [item.subcat];
-    const isStandaloneProject = item => tagsFor(item).some(tag => tag === 'lemarys' || tag === 'eyewear');
+    const isStandaloneProject = item => tagsFor(item).some(tag => tag === 'lemarys' || tag === 'eyewear' || tag === 'mulberry');
     if (subcat === 'lemarys') {
       list = list.filter(item => tagsFor(item).includes('lemarys'));
     } else if (subcat === 'lunetterie') {
       list = list.filter(item => tagsFor(item).includes('eyewear'));
+    } else if (subcat === 'mulberry') {
+      list = list.filter(item => tagsFor(item).includes('mulberry'));
     } else {
       list = list.filter(item => !isStandaloneProject(item));
       if (subcat !== 'all') list = list.filter(item => tagsFor(item).includes(subcat));
@@ -256,7 +258,7 @@ function setupTabs(sectionId, items) {
 
   if (sectionId === 'design') {
     const requestedProject = new URLSearchParams(window.location.search).get('project');
-    const availableProjects = ['lemarys', 'lunetterie'];
+    const availableProjects = ['lemarys', 'mulberry', 'lunetterie'];
     if (availableProjects.includes(requestedProject)) {
       const maroquinerieTab = sec.querySelector('[data-cat="maroquinerie"]');
       const projectTab = sec.querySelector(`[data-accessory-subcat="${requestedProject}"]`);
