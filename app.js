@@ -23,6 +23,7 @@ const MAROQUINERIE = [
   { src: 'assets/work/maroquinerie-03.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sac bandoulière à fermoir', client: 'Sacs & maroquinerie' },
   { src: 'assets/work/lemarys-02.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'lemarys'], title: 'Lemarys Paris · Sac à chaîne', client: 'Collection de maroquinerie · Fermoir minéral superposé' },
   { src: 'assets/work/lemarys-03.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'lemarys'], title: 'Lemarys Paris · Sac graphique', client: 'Collection de maroquinerie · Signature métallique verticale' },
+  { src: 'assets/work/lemarys-04.png', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'lemarys'], title: 'Lemarys Paris · Sac structuré', client: 'Collection de maroquinerie · Fermoir vertical en pierre' },
   { src: 'assets/work/maroquinerie-05.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Pochette structurée et détails tressés', client: 'Design de maroquinerie' },
   { src: 'assets/work/maroquinerie-06.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sac structuré à chaîne', client: 'Sacs & maroquinerie' },
   { src: 'assets/work/maroquinerie-07.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Cabas souple à détails métalliques', client: 'Design de maroquinerie' },
