@@ -179,11 +179,18 @@ p{margin:0}
 .accessory-project-feature[data-accessory-project="mulberry"]{grid-template-columns:1fr}
 .accessory-project-feature[data-accessory-project="mulberry"] .accessory-project-feature__intro{max-width:980px}
 .accessory-project-feature[data-accessory-project="mulberry"] .accessory-project-feature__intro p{max-width:840px;font-size:clamp(15px,1.45vw,18px);line-height:1.72}
+.accessory-project-feature[data-accessory-project="alme"]{grid-template-columns:1fr}
+.accessory-project-feature[data-accessory-project="alme"] .accessory-project-feature__intro{max-width:980px}
+.accessory-project-feature[data-accessory-project="alme"] .accessory-project-feature__intro p{max-width:880px;font-size:clamp(15px,1.45vw,18px);line-height:1.72}
+.alme-project-gallery figure:first-child{grid-column:1/-1}
+.alme-project-gallery figure:first-child img{aspect-ratio:auto;max-height:760px;object-fit:contain}
+.alme-project-gallery figure:nth-child(3){grid-column:1/-1}
+.alme-project-gallery figure:nth-child(3) img{aspect-ratio:1.414/1;object-fit:contain}
 .accessory-project-feature__gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,2vw,24px);width:100%;margin-top:clamp(12px,2vw,24px)}
 .accessory-project-feature__gallery figure{margin:0;background:#fff;overflow:hidden}
 .accessory-project-feature__gallery a{display:block}
 .accessory-project-feature__gallery img{display:block;width:100%;height:auto;aspect-ratio:1.5/1;object-fit:cover}
-@media(max-width:760px){.accessory-project-feature__gallery{grid-template-columns:1fr}.accessory-project-feature__gallery img{aspect-ratio:auto;object-fit:contain}}
+@media(max-width:760px){.accessory-project-feature__gallery{grid-template-columns:1fr}.accessory-project-feature__gallery img{aspect-ratio:auto;object-fit:contain}.alme-project-gallery figure:first-child,.alme-project-gallery figure:nth-child(3){grid-column:auto}}
 .accessory-project-feature__details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-content:start;gap:1px;margin:0;padding:0;list-style:none;background:#353535}
 .accessory-project-feature__details li{min-height:150px;padding:24px;background:#181818}
 .accessory-project-feature__details strong{display:block;margin-bottom:12px;color:#fff;font-family:var(--font-display);font-size:15px;letter-spacing:.03em;text-transform:uppercase}
