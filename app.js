@@ -45,7 +45,6 @@ const MAROQUINERIE = [
   { src: 'assets/work/maroquinerie-23.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Gamme chromatique de ceintures', client: 'Petite maroquinerie & accessoires' },
   { src: 'assets/work/maroquinerie-24.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'alme'], title: 'Almé · Collection de maroquinerie', client: 'Sacs, petite maroquinerie et fermoir signature' },
   { src: 'assets/work/logo-06.jpg', cat: 'maroquinerie', subcat: 'accessoires', tags: ['accessoires', 'alme'], title: 'Almé · Identité double A', client: 'Monogramme, applications et territoire de marque' },
-  { src: 'https://static.wixstatic.com/media/223f51_bb996e5114484b3a823d7605a25093b0~mv2_d_8910_6300_s_4_2.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'alme'], title: 'Almé · Développement du cabas', client: 'Construction, perforation du logo et pochette détachable' },
   { src: 'assets/work/maroquinerie-25.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sac architectural à fermoir', client: 'Sacs & maroquinerie' },
   { src: 'assets/work/maroquinerie-26.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Étude de fermoir et construction', client: 'Sacs & maroquinerie' },
   { src: 'assets/work/maroquinerie-27.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Bijoux de sac modulaires', client: 'Petite maroquinerie & accessoires' },
