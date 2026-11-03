@@ -31,19 +31,21 @@ const MAROQUINERIE = [
   { src: 'assets/work/maroquinerie-08.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'mulberry'], title: 'Mulberry · Petit porté main', client: 'Design de collection · Bandoulière tressée' },
   { src: 'assets/work/maroquinerie-09.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Petite maroquinerie nomade', client: 'Sacs & maroquinerie' },
   { src: 'assets/work/maroquinerie-10.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Accessoires connectés et étuis', client: 'Petite maroquinerie & accessoires' },
-  { src: 'assets/work/maroquinerie-12.jpg', cat: 'maroquinerie', subcat: 'chaussures', title: 'Sandales graphiques', client: 'Chaussures' },
-  { src: 'assets/work/maroquinerie-13.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sac demi-lune et porté épaule', client: 'Design de maroquinerie' },
-  { src: 'assets/work/maroquinerie-14.jpg', cat: 'maroquinerie', subcat: 'chaussures', title: 'Sandales et détails de semelle', client: 'Chaussures' },
-  { src: 'assets/work/maroquinerie-15.jpg', cat: 'maroquinerie', subcat: 'recherches', title: 'Moodboard et recherches de collection', client: 'Croquis & recherches' },
+  { src: 'assets/work/maroquinerie-12.jpg', cat: 'maroquinerie', subcat: 'chaussures', tags: ['chaussures', 'alme'], title: 'Almé · Sandales graphiques', client: 'Direction artistique · Détails dorés et identité double A' },
+  { src: 'assets/work/maroquinerie-13.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'alme'], title: 'Almé · Sac demi-lune', client: 'Maroquinerie · Monogramme double A en métal doré' },
+  { src: 'assets/work/maroquinerie-14.jpg', cat: 'maroquinerie', subcat: 'chaussures', tags: ['chaussures', 'alme'], title: 'Almé · Soulier tressé', client: 'Design de chaussure · Bride, tressage et talon en bois' },
+  { src: 'assets/work/maroquinerie-15.jpg', cat: 'maroquinerie', subcat: 'chaussures', tags: ['chaussures', 'alme'], title: 'Almé · Sandales en corde naturelle', client: 'Design de chaussure · Tressage artisanal et nubuck' },
   { src: 'assets/work/maroquinerie-16.jpg', cat: 'maroquinerie', subcat: 'lunetterie', tags: ['lunetterie', 'eyewear'], title: 'Lunetterie haute joaillerie · Études de branches', client: 'Design précieux · Pierres et structures métalliques' },
   { src: 'assets/work/maroquinerie-17.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Bijoux de sac et porte-clés', client: 'Petite maroquinerie & accessoires' },
-  { src: 'assets/work/maroquinerie-18.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Cabas et petite maroquinerie', client: 'Sacs & maroquinerie' },
+  { src: 'assets/work/maroquinerie-18.jpg', cat: 'maroquinerie', subcat: 'accessoires', tags: ['accessoires', 'alme'], title: 'Almé · Ceintures et boucleries', client: 'Déclinaisons du monogramme double A' },
   { src: 'assets/work/maroquinerie-19.jpg', cat: 'maroquinerie', subcat: 'lunetterie', tags: ['lunetterie', 'eyewear'], title: 'Lunetterie haute joaillerie · Modèle floral', client: 'Monture ronde · Or et sertissage' },
   { src: 'assets/work/maroquinerie-20.jpg', cat: 'maroquinerie', subcat: 'recherches', title: 'Recherche de souliers', client: 'Croquis & recherches' },
   { src: 'assets/work/maroquinerie-21.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sacs à rabat', client: 'Sacs & maroquinerie' },
   { src: 'assets/work/maroquinerie-22.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Ceintures et boucleries', client: 'Petite maroquinerie & accessoires' },
   { src: 'assets/work/maroquinerie-23.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Gamme chromatique de ceintures', client: 'Petite maroquinerie & accessoires' },
-  { src: 'assets/work/maroquinerie-24.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sacs structurés et détails précieux', client: 'Sacs & maroquinerie' },
+  { src: 'assets/work/maroquinerie-24.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'alme'], title: 'Almé · Collection de maroquinerie', client: 'Sacs, petite maroquinerie et fermoir signature' },
+  { src: 'assets/work/logo-06.jpg', cat: 'maroquinerie', subcat: 'accessoires', tags: ['accessoires', 'alme'], title: 'Almé · Identité double A', client: 'Monogramme, applications et territoire de marque' },
+  { src: 'https://static.wixstatic.com/media/223f51_bb996e5114484b3a823d7605a25093b0~mv2_d_8910_6300_s_4_2.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'alme'], title: 'Almé · Développement du cabas', client: 'Construction, perforation du logo et pochette détachable' },
   { src: 'assets/work/maroquinerie-25.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sac architectural à fermoir', client: 'Sacs & maroquinerie' },
   { src: 'assets/work/maroquinerie-26.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Étude de fermoir et construction', client: 'Sacs & maroquinerie' },
   { src: 'assets/work/maroquinerie-27.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Bijoux de sac modulaires', client: 'Petite maroquinerie & accessoires' },
@@ -184,13 +186,15 @@ function renderGrid(gridEl, items, cat, moreBtn) {
   const subcat = gridEl.dataset.subcat || 'all';
   if (cat === 'maroquinerie') {
     const tagsFor = item => item.tags || [item.subcat];
-    const isStandaloneProject = item => tagsFor(item).some(tag => tag === 'lemarys' || tag === 'eyewear' || tag === 'mulberry');
+    const isStandaloneProject = item => tagsFor(item).some(tag => tag === 'lemarys' || tag === 'eyewear' || tag === 'mulberry' || tag === 'alme');
     if (subcat === 'lemarys') {
       list = list.filter(item => tagsFor(item).includes('lemarys'));
     } else if (subcat === 'lunetterie') {
       list = list.filter(item => tagsFor(item).includes('eyewear'));
     } else if (subcat === 'mulberry') {
       list = list.filter(item => tagsFor(item).includes('mulberry'));
+    } else if (subcat === 'alme') {
+      list = list.filter(item => tagsFor(item).includes('alme'));
     } else {
       list = list.filter(item => !isStandaloneProject(item));
       if (subcat !== 'all') list = list.filter(item => tagsFor(item).includes(subcat));
@@ -258,7 +262,7 @@ function setupTabs(sectionId, items) {
 
   if (sectionId === 'design') {
     const requestedProject = new URLSearchParams(window.location.search).get('project');
-    const availableProjects = ['lemarys', 'mulberry', 'lunetterie'];
+    const availableProjects = ['lemarys', 'mulberry', 'alme', 'lunetterie'];
     if (availableProjects.includes(requestedProject)) {
       const maroquinerieTab = sec.querySelector('[data-cat="maroquinerie"]');
       const projectTab = sec.querySelector(`[data-accessory-subcat="${requestedProject}"]`);
