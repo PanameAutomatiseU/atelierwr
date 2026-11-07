@@ -1127,3 +1127,26 @@ a.card:focus-visible .card-caption {
     scroll-margin-top: 138px;
   }
 }
+
+
+/* Sept boutons de disciplines — gris 60 % */
+.design-tabs .tab,
+.design-tabs .tab:visited,
+.design-tabs-floating .tab,
+.design-tabs-floating .tab:visited {
+  background: #666666 !important;
+  border-color: #666666 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+.design-tabs .tab:hover,
+.design-tabs-floating .tab:hover {
+  background: #555555 !important;
+  border-color: #555555 !important;
+}
+.design-tabs .tab.active,
+.design-tabs-floating .tab.active {
+  background: #333333 !important;
+  border-color: #333333 !important;
+  box-shadow: inset 0 -3px 0 #ffffff !important;
+}
