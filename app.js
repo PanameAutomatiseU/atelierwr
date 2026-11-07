@@ -64,7 +64,7 @@ const MAROQUINERIE = [
   { src: 'assets/work/maroquinerie-41.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'alme'], title: 'Almé · Cabas signature', client: 'Monogramme double A perforé et pochette amovible' },
   { src: 'assets/work/maroquinerie-42.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Accessoires audio et objets nomades', client: 'Petite maroquinerie & accessoires' },
   { src: 'assets/work/maroquinerie-43.jpg', cat: 'maroquinerie', subcat: 'lunetterie', tags: ['lunetterie', 'eyewear'], title: 'Collection de montures · Formes et proportions', client: 'Recherche de gamme · Acétate et métal' },
-  { src: 'assets/work/maroquinerie-44.jpg', cat: 'maroquinerie', subcat: 'chaussures', title: 'Chaussures et détails de construction', client: 'Chaussures' },
+  { src: 'assets/work/maroquinerie-44.jpg', cat: 'maroquinerie', subcat: 'chaussures', tags: ['chaussures', 'bally'], title: 'Bally Sport · Recherche sneakers S/S 2006', client: 'Design de collection · Silhouettes et détails sportifs' },
   { src: 'assets/work/maroquinerie-45.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'fendi'], title: 'Fendi Dandy · Étuis technologiques', client: 'Housses pour ordinateur et accessoires numériques' }
 ];
 
@@ -75,7 +75,7 @@ const DESIGN = [
     { src: 'assets/work/mobilier-02.jpg', cat: 'mobilier', tags: ['carod'], title: 'Piano en situation', client: 'Carod · Piano connecté' },
     { src: 'assets/work/mobilier-03.jpg', cat: 'mobilier', tags: ['grand-palais'], title: 'Grand Palais · Sofa', client: 'Mobilier & assises' },
     { src: 'assets/work/mobilier-04.jpg', cat: 'mobilier', tags: ['grand-palais'], title: 'Grand Palais · Collection', client: 'Mobilier & assises' },
-    { src: 'assets/work/mobilier-05.jpg', cat: 'mobilier', title: 'Ère de je', client: 'Mobilier modulable' },
+    { src: 'assets/work/mobilier-05.jpg', cat: 'mobilier', tags: ['ere-de-je'], title: 'Ère de je · Aire de jeu', client: 'Mobilier modulable · Studio étudiant' },
     { src: 'assets/work/mobilier-06.jpg', cat: 'mobilier', title: 'Ego', client: 'Assise' },
     { src: 'assets/work/mobilier-07.jpg', cat: 'mobilier', tags: ['grand-palais'], title: 'Grand Palais · Mobilier outdoor', client: 'Mobilier & assises' },
     { src: 'assets/work/mobilier-08.jpg', cat: 'mobilier', tags: ['grand-palais'], title: 'Grand Palais · Croquis de collection', client: 'Mobilier & assises' }
@@ -198,7 +198,7 @@ let lbList = [], lbIndex = 0;
 function renderGrid(gridEl, items, cat, moreBtn) {
   let list = cat === 'all' ? items : items.filter(i => i.cat === cat);
   const subcat = gridEl.dataset.subcat || 'all';
-  if (cat === 'mobilier') list = list.filter(item => !(item.tags || []).some(tag => tag === 'grand-palais' || tag === 'carod'));
+  if (cat === 'mobilier') list = list.filter(item => !(item.tags || []).some(tag => tag === 'grand-palais' || tag === 'carod' || tag === 'ere-de-je'));
   if (cat === 'maroquinerie') {
     const tagsFor = item => item.tags || [item.subcat];
     const isStandaloneProject = item => tagsFor(item).some(tag => tag === 'lemarys' || tag === 'eyewear' || tag === 'mulberry' || tag === 'alme' || tag === 'bally' || tag === 'fendi' || tag === 'place-vendome' || tag === 'maison-rinceau' || tag === 'celine' || tag === 'croquis-recherches');
@@ -284,7 +284,7 @@ function setupTabs(sectionId, items) {
       const entries = [
         ['Grand Palais · Mobilier & assises', '.grand-palais-project-feature'],
         ['Piano Carod · Le son prend forme', '.carod-project-feature'],
-        ['Ère de je · Mobilier modulable', '[data-project-key="mobilier-modulable"]'],
+        ['Ère de je · Mobilier modulable', '.ere-de-je-project-feature'],
         ['Ego · Assise', '[data-project-key="assise"]']
       ];
       disciplineProjectLinks.innerHTML = entries.map((entry, index) => '<button class="discipline-project-link" type="button" data-project-target="' + entry[1] + '"><span>' + String(index + 1).padStart(2, '0') + '</span><strong>' + entry[0] + '</strong><b aria-hidden="true">↓</b></button>').join('');
