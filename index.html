@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261107-celine-project">
+<link rel="stylesheet" href="styles.css?v=20261107-permanent-project-navigation">
 <link rel="stylesheet" href="hero.css?v=20261031-2">
 </head>
 <body>
@@ -121,6 +121,13 @@
       <small>Spécialité design</small>
       <h3 data-category-title>Horlogerie</h3>
     </header>
+    <nav class="discipline-project-nav" data-discipline-project-nav aria-label="Accès direct aux projets de la discipline">
+      <div class="discipline-project-nav__head">
+        <small>Accès direct aux projets</small>
+        <span>Choisir un projet pour accéder directement à son contenu.</span>
+      </div>
+      <div class="discipline-project-links" data-discipline-project-links></div>
+    </nav>
     <section class="category-intro accessories-intro" data-category-intro="maroquinerie" hidden aria-labelledby="accessories-title">
       <div class="category-intro-copy">
         <small>Galerie Atelier WR · 46 planches</small>
@@ -139,6 +146,7 @@
           <button class="accessory-project-quicklink" type="button" data-accessory-subcat="bally"><strong>Bally Sport</strong><span aria-hidden="true">↗</span></button>
           <button class="accessory-project-quicklink" type="button" data-accessory-subcat="fendi"><strong>Fendi Dandy</strong><span aria-hidden="true">↗</span></button>
           <button class="accessory-project-quicklink" type="button" data-accessory-subcat="lunetterie"><strong>Lunetterie</strong><span aria-hidden="true">↗</span></button>
+          <button class="accessory-project-quicklink" type="button" data-accessory-subcat="croquis-recherches"><strong>Croquis &amp; recherches</strong><span aria-hidden="true">↗</span></button>
         </div>
         <small class="accessory-filter-panel__secondary">Explorer par typologie</small>
         <div class="accessory-subtabs accessory-subtabs--types" role="group" aria-label="Filtres des sous-catégories de maroquinerie et accessoires">
@@ -152,7 +160,7 @@
       <section class="accessory-project-directory" aria-labelledby="accessory-projects-title">
         <div class="accessory-project-directory__head">
           <small>Projets à découvrir</small>
-          <h4 id="accessory-projects-title">Neuf projets,<br>neuf démarches.</h4>
+          <h4 id="accessory-projects-title">Dix projets,<br>dix démarches.</h4>
         </div>
         <div class="accessory-project-directory__grid">
           <a class="accessory-project-card" href="?project=lemarys#design">
@@ -209,6 +217,13 @@
               <small>Design de collection · Lunetterie</small>
               <strong>Projet Lunetterie</strong>
               <em>Formes, ergonomie, matières et quatre planches de projet →</em>
+            </span>
+          </a>
+          <a class="accessory-project-card accessory-project-card--text" href="?project=croquis-recherches#design">
+            <span>
+              <small>Recherche transversale · Accessoires</small>
+              <strong>Croquis &amp; recherches</strong>
+              <em>Sacs, chaussures, vêtement et bagagerie en six planches uniques →</em>
             </span>
           </a>
         </div>
@@ -347,6 +362,54 @@
           <figure><a href="assets/work/maroquinerie-19.jpg" target="_blank" rel="noopener"><img src="assets/work/maroquinerie-19.jpg" alt="Monture ronde en or sertie et présentée en situation" loading="lazy" decoding="async"></a><figcaption><strong>Modèle rond serti</strong><span>Monture en or, sertissage délicat et mise en situation du porté.</span></figcaption></figure>
         </div>
       </article>
+    <article class="accessory-project-feature research-project-feature" data-accessory-project="croquis-recherches" hidden aria-labelledby="research-project-title">
+      <div class="accessory-project-feature__intro">
+        <small>Projet transversal · Accessoires</small>
+        <h4 id="research-project-title">Croquis &amp;<br>recherches.</h4>
+        <p>Une sélection de recherches consacrées au dessin d’accessoires : exploration de silhouettes de sacs et de chaussures, conception de bagagerie nomade, développement de vêtements techniques et études de collections. Chaque planche montre une étape distincte du processus, du croquis spontané au rendu détaillé.</p>
+      </div>
+      <div class="accessory-project-feature__gallery research-project-gallery" aria-label="Six planches uniques de croquis et recherches accessoires">
+        <figure><a href="assets/work/maroquinerie-37.jpg" target="_blank" rel="noopener"><img src="assets/work/maroquinerie-37.jpg" alt="Planche de recherches de volumes et silhouettes de sacs" loading="lazy" decoding="async"></a><figcaption><strong>Recherches de volumes</strong><span>Sacs · silhouettes, proportions et systèmes de porté.</span></figcaption></figure>
+        <figure><a href="assets/work/maroquinerie-39.jpg" target="_blank" rel="noopener"><img src="assets/work/maroquinerie-39.jpg" alt="Planche de croquis de chaussures et recherches de silhouettes" loading="lazy" decoding="async"></a><figcaption><strong>Recherches de silhouettes</strong><span>Chaussures · lignes, talons et constructions.</span></figcaption></figure>
+        <figure><a href="assets/work/maroquinerie-38.jpg" target="_blank" rel="noopener"><img src="assets/work/maroquinerie-38.jpg" alt="Projet Jingo de vêtement technique pour le voyage" loading="lazy" decoding="async"></a><figcaption><strong>Jingo</strong><span>Vêtement technique de voyage · détails fonctionnels et gamme.</span></figcaption></figure>
+        <figure><a href="assets/work/maroquinerie-36.jpg" target="_blank" rel="noopener"><img src="assets/work/maroquinerie-36.jpg" alt="Recherche personnelle Burberry mêlant mode et accessoires" loading="lazy" decoding="async"></a><figcaption><strong>Burberry</strong><span>Recherche personnelle · mode, sacs et accessoires.</span></figcaption></figure>
+        <figure><a href="assets/work/maroquinerie-40.jpg" target="_blank" rel="noopener"><img src="assets/work/maroquinerie-40.jpg" alt="Projet de bagagerie nomade pour ordinateur et appareil photo" loading="lazy" decoding="async"></a><figcaption><strong>Bagagerie nomade</strong><span>Laptop &amp; camera case · organisation et portage.</span></figcaption></figure>
+        <figure><a href="assets/work/maroquinerie-23.jpg" target="_blank" rel="noopener"><img src="assets/work/maroquinerie-23.jpg" alt="Recherche personnelle de maroquinerie pour Sonia Rykiel" loading="lazy" decoding="async"></a><figcaption><strong>Sonia Rykiel</strong><span>Recherche personnelle · volumes et décors de maroquinerie.</span></figcaption></figure>
+      </div>
+    </article>
+    </section>
+    <section class="category-intro furniture-intro" data-category-intro="mobilier" hidden aria-labelledby="furniture-projects-title">
+      <div class="category-intro-copy">
+        <small>Mobilier &amp; objets · Projets</small>
+        <h3 id="furniture-projects-title">La forme,<br>l’usage &amp; le lieu.</h3>
+        <p>Deux projets réunissent ici des objets pensés à partir de leur contexte : une collection de mobilier pour le Grand Palais et un piano connecté Carod, entre héritage architectural et technologie.</p>
+      </div>
+      <div class="furniture-projects">
+        <article class="accessory-project-feature grand-palais-project-feature" aria-labelledby="grand-palais-project-heading">
+          <div class="accessory-project-feature__intro">
+            <small>Direction artistique · Design mobilier</small>
+            <h4 id="grand-palais-project-heading">Grand Palais.<br>Mobilier &amp; assises.</h4>
+            <p>Cette recherche réunit une famille de mobilier pensée pour accompagner les usages d’un lieu monumental. Assises, sofa et mobilier extérieur dialoguent avec l’architecture du Grand Palais par des lignes sobres, des volumes généreux et une présence graphique maîtrisée. Du dessin de collection aux mises en situation, le projet construit un ensemble cohérent, confortable et adaptable aux différents espaces et événements.</p>
+          </div>
+          <div class="accessory-project-feature__gallery grand-palais-project-gallery" aria-label="Quatre visuels du projet mobilier Grand Palais">
+            <figure><a href="assets/work/mobilier-03.jpg" target="_blank" rel="noopener"><img src="assets/work/mobilier-03.jpg" alt="Sofa dessiné pour le Grand Palais" loading="lazy" decoding="async"></a><figcaption><strong>Sofa Grand Palais</strong><span>Une assise généreuse aux lignes architecturales.</span></figcaption></figure>
+            <figure><a href="assets/work/mobilier-04.jpg" target="_blank" rel="noopener"><img src="assets/work/mobilier-04.jpg" alt="Collection de mobilier développée pour le Grand Palais" loading="lazy" decoding="async"></a><figcaption><strong>Collection</strong><span>Déclinaison d’un langage formel commun.</span></figcaption></figure>
+            <figure><a href="assets/work/mobilier-07.jpg" target="_blank" rel="noopener"><img src="assets/work/mobilier-07.jpg" alt="Mobilier extérieur pour le Grand Palais" loading="lazy" decoding="async"></a><figcaption><strong>Mobilier outdoor</strong><span>Des pièces adaptées aux espaces extérieurs et événementiels.</span></figcaption></figure>
+            <figure><a href="assets/work/mobilier-08.jpg" target="_blank" rel="noopener"><img src="assets/work/mobilier-08.jpg" alt="Croquis de la collection de mobilier Grand Palais" loading="lazy" decoding="async"></a><figcaption><strong>Croquis de collection</strong><span>Recherche de proportions, d’usages et de cohérence d’ensemble.</span></figcaption></figure>
+          </div>
+        </article>
+        <article class="accessory-project-feature carod-project-feature" aria-labelledby="carod-project-heading">
+          <div class="accessory-project-feature__intro">
+            <small>Design d’objet · Piano connecté</small>
+            <h4 id="carod-project-heading">Piano Carod.<br>Le son prend forme.</h4>
+            <p>Carod est un piano connecté issu d’une manufacture chinoise, inspiré par l’architecture gothique italienne et ses codes esthétiques. Ses lignes verticales, ses rythmes et ses détails évoquent la structure d’une nef, tandis que l’intégration numérique inscrit l’instrument dans un usage contemporain. Quand le son prend forme, et que la forme évoque l’harmonie du son, l’objet trouve son équilibre entre héritage et technologie.</p>
+          </div>
+          <div class="accessory-project-feature__gallery carod-project-gallery" aria-label="Deux visuels du projet de piano connecté Carod">
+            <figure><a href="assets/work/mobilier-01.jpg" target="_blank" rel="noopener"><img src="assets/work/mobilier-01.jpg" alt="Piano connecté Carod inspiré de l’architecture gothique italienne" loading="lazy" decoding="async"></a><figcaption><strong>Piano « Italy »</strong><span>Une silhouette verticale inspirée des rythmes de l’architecture gothique italienne.</span></figcaption></figure>
+            <figure><a href="assets/work/mobilier-02.jpg" target="_blank" rel="noopener"><img src="assets/work/mobilier-02.jpg" alt="Piano Carod connecté présenté en situation" loading="lazy" decoding="async"></a><figcaption><strong>Le piano en situation</strong><span>Un objet connecté qui relie présence sculpturale, musique et usage contemporain.</span></figcaption></figure>
+          </div>
+        </article>
+      </div>
     </section>
     <section class="category-intro" data-category-intro="joaillerie" hidden aria-labelledby="joaillerie-title">
       <div class="category-intro-copy">
@@ -473,7 +536,7 @@
     </div>
     <div class="ig-grid rv"></div>
     <div class="ig-cta rv">
-      <p>Mes derniers dessins à l'encre bleue. J'en publie plusieurs par semaine sur Instagram.</p>
+      <p>Mes dernières encres et illustrations, mises à jour depuis le compte Instagram @wrigoulet.</p>
       <a class="link-arrow" href="https://www.instagram.com/wrigoulet/" target="_blank" rel="noopener">Suivre @wrigoulet <span aria-hidden="true">↗</span></a>
     </div>
   </div>
@@ -545,6 +608,6 @@
   <div class="lb-cap"></div>
 </div>
 
-<script src="app.js?v=20261107-celine-project"></script>
+<script src="app.js?v=20261107-permanent-project-navigation"></script>
 </body>
 </html>
