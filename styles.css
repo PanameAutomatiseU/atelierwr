@@ -789,3 +789,40 @@ a.card:focus-visible{outline:3px solid var(--orange);outline-offset:4px}
 .ere-de-je-project-gallery figure { background: #fff; }
 .ere-de-je-project-gallery img { width: 100%; height: auto; object-fit: contain; background: #fff; }
 @media (max-width: 760px) { .ere-de-je-project-gallery { grid-template-columns: 1fr; } }
+
+/* Sept spécialités visibles en un seul coup d'œil, sur tous les écrans */
+.design-tabs {
+  grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+}
+.design-tabs .tab::before { content: none; }
+@media (max-width: 720px) {
+  .design-tabs {
+    display: grid !important;
+    grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+    gap: 2px;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 4px 0 5px;
+  }
+  .design-tabs .tab,
+  .design-tabs .tab:visited {
+    min-width: 0;
+    min-height: 40px;
+    padding: 5px 1px;
+    font-size: 0 !important;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .design-tabs .tab::before {
+    content: attr(data-specialty-short);
+    display: block;
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: clamp(6px, 1.8vw, 8px);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+  .design-tabs .tab::after { display: none !important; }
+}
