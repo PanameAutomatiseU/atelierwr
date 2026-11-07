@@ -564,3 +564,90 @@ a.card:focus-visible{outline:3px solid var(--orange);outline-offset:4px}
 }
 
 @media(max-width:520px){.accessory-project-quicklinks{grid-template-columns:1fr}.accessory-project-quicklink{min-height:46px}}
+
+
+/* Permanent discipline and project navigation · 2026-11-07 */
+.design-tabs{position:sticky!important;top:74px!important;z-index:40!important;display:grid!important;grid-template-columns:repeat(7,minmax(0,1fr))!important;gap:6px!important;width:100%!important;overflow:visible!important;padding:8px 0 10px!important}
+.design-tabs .tab{display:flex!important;align-items:center!important;justify-content:center!important;min-width:0!important;min-height:48px!important;padding:9px 8px!important;opacity:1!important;visibility:visible!important;color:#fff!important;-webkit-text-fill-color:#fff!important;background:var(--red-deep)!important;border:1px solid var(--red-deep)!important;border-radius:3px!important;font-family:var(--font-body)!important;font-size:clamp(9px,.7vw,11px)!important;font-weight:800!important;line-height:1.15!important;letter-spacing:.035em!important;white-space:normal!important;text-wrap:balance;transform:none;box-shadow:none!important}
+.design-tabs .tab:hover{background:#741526!important;transform:translateY(-1px)!important}
+.design-tabs .tab.active{background:#111!important;border-color:#111!important;box-shadow:inset 0 -3px 0 #c4203c!important}
+.design-category-title{scroll-margin-top:150px}
+.discipline-project-nav{display:grid;grid-template-columns:minmax(180px,.34fr) minmax(0,1.66fr);gap:clamp(18px,3vw,40px);align-items:start;margin:0 0 clamp(28px,4vw,52px);padding:clamp(18px,2.5vw,28px);border:1px solid var(--line);background:#f7f4ef;scroll-margin-top:150px}
+.discipline-project-nav[hidden]{display:none!important}
+.discipline-project-nav__head small{display:block;margin-bottom:7px;color:var(--red-deep);font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}
+.discipline-project-nav__head span{display:block;max-width:260px;color:#5f5b55;font-size:12px;line-height:1.45}
+.discipline-project-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+.discipline-project-link{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:9px;align-items:center;min-width:0;min-height:44px;padding:9px 11px;border:1px solid var(--red-deep);border-radius:3px;background:var(--red-deep);color:#fff;-webkit-text-fill-color:#fff;text-align:left;text-decoration:none;cursor:pointer;opacity:1!important;visibility:visible!important;transition:background .18s,transform .18s}
+.discipline-project-link span{color:#f0a6b2;-webkit-text-fill-color:#f0a6b2;font-size:9px;font-weight:800;letter-spacing:.08em}
+.discipline-project-link strong{display:block!important;min-width:0;color:#fff!important;-webkit-text-fill-color:#fff!important;font:700 10px/1.2 var(--font-body);letter-spacing:.035em;text-transform:uppercase;opacity:1!important;visibility:visible!important;overflow-wrap:anywhere}
+.discipline-project-link b{color:#fff;-webkit-text-fill-color:#fff;font-size:13px;font-weight:600}
+.discipline-project-link:hover,.discipline-project-link:focus-visible{background:#6b1423;transform:translateY(-1px)}
+.discipline-project-link:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.accessory-project-quicklink,.accessory-project-quicklink strong,.accessory-project-quicklink span{opacity:1!important;visibility:visible!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+.accessory-project-quicklink strong{display:block!important}
+.accessory-project-feature,.jewelry-work,.grid{scroll-margin-top:145px}
+@media(max-width:1050px){.design-tabs{position:static!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;background:transparent!important}.discipline-project-nav{grid-template-columns:1fr}.discipline-project-links{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:720px){.design-tabs{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:5px!important}.design-tabs .tab{min-height:42px!important;padding:7px 6px!important;font-size:9px!important}.design-tabs .tab:last-child{grid-column:1/-1}.discipline-project-nav{padding:16px;gap:14px}.discipline-project-links{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:440px){.design-tabs{grid-template-columns:repeat(2,minmax(0,1fr))!important}.discipline-project-links{grid-template-columns:1fr}.discipline-project-link{min-height:42px}}
+
+/* Projets Croquis & recherches et Grand Palais */
+.accessory-project-card--text {
+  min-height: 280px;
+  padding: clamp(24px, 3vw, 42px);
+  display: flex;
+  align-items: flex-end;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.98), rgba(236,232,224,.96)),
+    repeating-linear-gradient(0deg, transparent 0 23px, rgba(18,18,18,.07) 24px);
+}
+.accessory-project-card--text::before {
+  content: "✎";
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  font: 400 clamp(44px, 7vw, 84px)/1 var(--serif);
+  color: var(--ink);
+  opacity: .16;
+}
+.accessory-project-card--text span { position: relative; z-index: 1; }
+.research-project-gallery,
+.grand-palais-project-gallery {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.research-project-gallery figure,
+.grand-palais-project-gallery figure { background: #fff; }
+.research-project-gallery img,
+.grand-palais-project-gallery img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  background: #fff;
+}
+.furniture-intro { grid-template-columns: minmax(250px,.72fr) minmax(0,1.65fr); }
+.furniture-intro > .category-intro-copy { position: sticky; top: 120px; align-self: start; }
+.grand-palais-project-feature { margin-top: 0; }
+@media (max-width: 820px) {
+  .research-project-gallery,
+  .grand-palais-project-gallery { grid-template-columns: 1fr; }
+  .furniture-intro { grid-template-columns: 1fr; }
+  .furniture-intro > .category-intro-copy { position: static; }
+}
+
+.furniture-projects {
+  min-width: 0;
+  display: grid;
+  gap: clamp(54px, 8vw, 112px);
+}
+.furniture-projects .accessory-project-feature { margin: 0; }
+.carod-project-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.carod-project-gallery figure { background: #fff; }
+.carod-project-gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: #fff;
+}
+@media (max-width: 820px) {
+  .carod-project-gallery { grid-template-columns: 1fr; }
+}
