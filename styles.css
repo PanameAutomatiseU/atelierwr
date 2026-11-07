@@ -1158,3 +1158,89 @@ a.card:focus-visible .card-caption {
 .design-continuous .accessory-subtabs--types {
   display: none !important;
 }
+
+
+/* Mobilier & objets : organisation par projets */
+.furniture-intro {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+.furniture-intro > .category-intro-copy {
+  position: static;
+  top: auto;
+  align-self: stretch;
+  min-width: 0;
+  background: #fff;
+}
+.furniture-intro .category-intro-copy h3 {
+  max-width: 100%;
+  font-size: clamp(34px, 4.3vw, 58px);
+  line-height: .95;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+.furniture-intro .category-intro-copy > p {
+  max-width: 500px;
+  margin-top: 22px;
+  font-size: 14px;
+  line-height: 1.65;
+}
+.furniture-filter-panel {
+  min-width: 0;
+}
+.furniture-projects {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 0;
+  min-width: 0;
+}
+.furniture-projects .accessory-project-feature {
+  grid-template-columns: 1fr;
+  margin: 0;
+}
+.furniture-projects .accessory-project-feature[hidden] {
+  display: none;
+}
+.furniture-projects .accessory-project-feature__intro {
+  max-width: 980px;
+}
+.furniture-projects .accessory-project-feature__intro p {
+  max-width: 820px;
+  font-size: clamp(15px, 1.45vw, 18px);
+  line-height: 1.72;
+}
+.furniture-project-directory__grid .accessory-project-card img {
+  object-position: center;
+}
+.grand-palais-project-gallery,
+.carod-project-gallery,
+.ere-de-je-project-gallery {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.ego-project-gallery {
+  grid-template-columns: 1fr;
+}
+.ego-project-gallery figure {
+  background: #fff;
+}
+.ego-project-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 980px;
+  object-fit: contain;
+  background: #fff;
+}
+@media (max-width: 820px) {
+  .furniture-intro {
+    grid-template-columns: 1fr;
+  }
+  .furniture-intro > .category-intro-copy {
+    border-right: 0;
+    border-bottom: 1px solid var(--ink);
+  }
+  .grand-palais-project-gallery,
+  .carod-project-gallery,
+  .ere-de-je-project-gallery {
+    grid-template-columns: 1fr;
+  }
+}
