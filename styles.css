@@ -1244,3 +1244,80 @@ a.card:focus-visible .card-caption {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Accès direct aux projets : boutons lisibles et survol rouge */
+.accessory-project-quicklinks,
+.discipline-project-links {
+  display: grid !important;
+  max-height: none !important;
+  overflow: visible !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.accessory-project-quicklink,
+.discipline-project-link {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 1 !important;
+  visibility: visible !important;
+  background: #fff !important;
+  border: 1px solid #171717 !important;
+  color: #171717 !important;
+  -webkit-text-fill-color: #171717 !important;
+  box-shadow: none !important;
+}
+.accessory-project-quicklink strong,
+.accessory-project-quicklink span,
+.discipline-project-link strong,
+.discipline-project-link span,
+.discipline-project-link b {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  color: #171717 !important;
+  -webkit-text-fill-color: #171717 !important;
+}
+.accessory-project-quicklink:hover,
+.accessory-project-quicklink:focus-visible,
+.accessory-project-quicklink.active,
+.discipline-project-link:hover,
+.discipline-project-link:focus-visible,
+.discipline-project-link.active {
+  background: var(--red-deep) !important;
+  border-color: var(--red-deep) !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  transform: translateY(-2px);
+}
+.accessory-project-quicklink:hover strong,
+.accessory-project-quicklink:hover span,
+.accessory-project-quicklink:focus-visible strong,
+.accessory-project-quicklink:focus-visible span,
+.accessory-project-quicklink.active strong,
+.accessory-project-quicklink.active span,
+.discipline-project-link:hover strong,
+.discipline-project-link:hover span,
+.discipline-project-link:hover b,
+.discipline-project-link:focus-visible strong,
+.discipline-project-link:focus-visible span,
+.discipline-project-link:focus-visible b,
+.discipline-project-link.active strong,
+.discipline-project-link.active span,
+.discipline-project-link.active b {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+@media (max-width: 720px) {
+  .accessory-project-quicklinks,
+  .discipline-project-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 420px) {
+  .accessory-project-quicklinks,
+  .discipline-project-links {
+    grid-template-columns: 1fr !important;
+  }
+}
