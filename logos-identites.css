@@ -1,0 +1,39 @@
+.logos-page{background:#fff}
+.logos-hero{padding:clamp(54px,9vw,120px) 0 clamp(44px,7vw,84px);border-bottom:1px solid var(--line)}
+.logos-kicker{color:var(--blue);font-size:12px;font-weight:700;letter-spacing:.17em;text-transform:uppercase;margin-bottom:24px}
+.logos-hero h1{font-size:clamp(54px,10vw,136px);line-height:.88;text-transform:uppercase;max-width:1100px}
+.logos-hero h1 span{display:block;color:var(--blue)}
+.logos-context{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,6vw,90px);margin-top:clamp(38px,6vw,72px);align-items:start}
+.logos-context .lead{font-size:clamp(20px,2.2vw,29px);line-height:1.35}
+.logos-context-copy{font-size:16px;color:#37332e}
+.logos-context-copy p+p{margin-top:18px}
+.logos-nav{position:sticky;top:68px;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.logos-nav .wrap{display:flex;gap:22px;overflow-x:auto;padding-top:16px;padding-bottom:16px;scrollbar-width:none}
+.logos-nav a{white-space:nowrap;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.logos-nav a:hover{color:var(--blue)}
+.logos-projects{padding:clamp(64px,9vw,120px) 0}
+.logos-intro{display:grid;grid-template-columns:auto 1fr;gap:24px 40px;align-items:end;margin-bottom:52px}
+.logos-intro h2{font-size:clamp(38px,6vw,82px);text-transform:uppercase}
+.logos-intro h2 em{font-style:normal;color:var(--blue)}
+.logo-project{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(300px,.75fr);gap:clamp(24px,5vw,70px);margin:0;padding:clamp(38px,6vw,78px) 0;border-top:1px solid var(--line);align-items:center;scroll-margin-top:130px}
+.logo-project:nth-of-type(even){grid-template-columns:minmax(300px,.75fr) minmax(0,1.25fr)}
+.logo-project:nth-of-type(even)>.logo-project-media{order:2}
+.logo-project-media{display:grid;gap:14px;width:100%;background:#f5f5f5}
+.logo-project-media--duo{grid-template-columns:repeat(2,minmax(0,1fr))}
+.logo-project-media--trio{grid-template-columns:repeat(3,minmax(0,1fr))}
+.logo-project-media img{display:block;width:100%;height:100%;min-height:240px;max-height:700px;object-fit:contain;background:#f5f5f5}
+.logo-project-copy{display:grid;grid-template-columns:auto 1fr;gap:16px 22px;align-items:start}
+.logo-project-number{color:var(--orange);font-size:12px;font-weight:700;letter-spacing:.16em;padding-top:8px}
+.logo-project-copy h2{font-size:clamp(26px,3.3vw,48px);line-height:1.02;margin-bottom:15px}
+.logo-project-copy p{color:var(--muted);font-size:15px;line-height:1.65}
+.logo-project-copy small{display:block;color:var(--blue);font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;margin-bottom:10px}
+@media(max-width:920px){.logo-project-media--trio{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:820px){
+ .logos-context,.logo-project,.logo-project:nth-of-type(even),.logos-intro{grid-template-columns:1fr}
+ .logo-project:nth-of-type(even)>.logo-project-media{order:0}
+ .logos-nav{top:68px}
+}
+@media(max-width:560px){
+ .logo-project-media--duo,.logo-project-media--trio{grid-template-columns:1fr}
+ .logo-project-media img{min-height:0}
+}

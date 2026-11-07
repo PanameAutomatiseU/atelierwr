@@ -294,7 +294,7 @@ function setupContinuousDesign(sec, items) {
       section.appendChild(group);
     });
 
-    if (cat === 'logo' || cat === 'affiches') {
+    if (cat === 'affiches') {
       const disciplineGrid = document.createElement('div');
       disciplineGrid.className = 'grid design-continuous-grid';
       disciplineGrid.dataset.expanded = '1';
