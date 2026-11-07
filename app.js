@@ -329,6 +329,28 @@ function setupContinuousDesign(sec, items) {
   }));
   accessoryProjects.forEach(project => { project.hidden = true; });
 
+  const furnitureSection = sections.get('mobilier');
+  const standaloneFurnitureProjects = ['grand-palais', 'carod', 'ere-de-je', 'ego'];
+  const furnitureProjects = [...furnitureSection.querySelectorAll('[data-furniture-project]')];
+  const furnitureButtons = [...furnitureSection.querySelectorAll('[data-furniture-project-key]')];
+  const showFurnitureSelection = (key, shouldScroll = true) => {
+    if (!standaloneFurnitureProjects.includes(key)) return;
+    furnitureProjects.forEach(project => {
+      project.hidden = project.dataset.furnitureProject !== key;
+    });
+    furnitureButtons.forEach(button => {
+      const active = button.dataset.furnitureProjectKey === key;
+      button.classList.toggle('active', active);
+      button.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+    const target = furnitureSection.querySelector('[data-furniture-project="' + key + '"]');
+    if (shouldScroll && target) window.setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 70);
+  };
+  furnitureButtons.forEach(button => button.addEventListener('click', () => {
+    showFurnitureSelection(button.dataset.furnitureProjectKey);
+  }));
+  furnitureProjects.forEach(project => { project.hidden = true; });
+
   const allBars = [sourceBar];
   let floatingBar = document.querySelector('.design-tabs-floating');
   if (!floatingBar) {
@@ -386,6 +408,11 @@ function setupContinuousDesign(sec, items) {
     showAccessorySelection(requestedProject, false);
     window.setTimeout(() => {
       accessorySection.querySelector('[data-accessory-project="' + requestedProject + '"]')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 180);
+  } else if (standaloneFurnitureProjects.includes(requestedProject)) {
+    showFurnitureSelection(requestedProject, false);
+    window.setTimeout(() => {
+      furnitureSection.querySelector('[data-furniture-project="' + requestedProject + '"]')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 180);
   }
 }
