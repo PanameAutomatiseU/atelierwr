@@ -377,6 +377,41 @@ function setupTabs(sectionId, items) {
   }
 }
 
+function renderFineArtSeries() {
+  const root = document.querySelector('[data-fineart-series]');
+  if (!root) return;
+  const series = [
+    { key: 'sea', title: 'By the sea', intro: 'Marseille, la mer, les corps au soleil et la lumière méditerranéenne.' },
+    { key: 'voyage', title: 'Carnets de voyage', intro: 'Scènes, visages et paysages rapportés d’Asie, d’Inde et d’ailleurs.' },
+    { key: 'animales', title: 'Lignes animales', intro: 'Bestiaire graphique en acrylique et plâtre, entre mouvement et matière.' },
+    { key: 'nus', title: 'Nus', intro: 'Études du corps à l’encre et à l’aquarelle.' }
+  ];
+  root.innerHTML = series.map((serie, seriesIndex) => {
+    const works = ART.filter(item => item.cat === serie.key);
+    return `
+      <section class="fineart-series" aria-labelledby="fineart-series-${serie.key}">
+        <header class="fineart-series__head">
+          <span>${String(seriesIndex + 1).padStart(2, '0')}</span>
+          <div><h3 id="fineart-series-${serie.key}">${serie.title}</h3><p>${serie.intro}</p></div>
+          <small>${works.length} œuvres</small>
+        </header>
+        <div class="grid fineart-series__grid" data-fineart-series-grid="${serie.key}">
+          ${works.map((item, index) => `
+            <figure class="card" data-i="${index}">
+              <img src="${item.src}" alt="${item.title}${item.client ? ', ' + item.client : ''}" loading="lazy" decoding="async">
+              <figcaption><b>${item.title}</b><span>${item.client}</span></figcaption>
+            </figure>`).join('')}
+        </div>
+      </section>`;
+  }).join('');
+  series.forEach(serie => {
+    const works = ART.filter(item => item.cat === serie.key);
+    const grid = root.querySelector('[data-fineart-series-grid="' + serie.key + '"]');
+    grid.querySelectorAll('figure.card').forEach(card => card.addEventListener('click', () => openLb(works, +card.dataset.i)));
+    observeCards(grid);
+  });
+}
+
 function observeCards(root) {
   const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -5% 0px' });
   root.querySelectorAll('.card').forEach(c => io.observe(c));
@@ -443,4 +478,4 @@ const ro = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting
 document.querySelectorAll('.rv').forEach(el => ro.observe(el));
 
 setupTabs('design', DESIGN);
-setupTabs('fineart', ART);
+renderFineArtSeries();
