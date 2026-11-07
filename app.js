@@ -285,13 +285,13 @@ function setupContinuousDesign(sec, items) {
     continuousRoot.appendChild(section);
     sections.set(cat, section);
 
-    projectGroups.filter(group => group.dataset.projectCat === cat).forEach(group => {
-      group.hidden = false;
-      section.appendChild(group);
-    });
     intros.filter(intro => intro.dataset.categoryIntro === cat).forEach(intro => {
       intro.hidden = false;
       section.appendChild(intro);
+    });
+    projectGroups.filter(group => group.dataset.projectCat === cat).forEach(group => {
+      group.hidden = false;
+      section.appendChild(group);
     });
 
     if (cat === 'packaging' || cat === 'logo' || cat === 'affiches') {
