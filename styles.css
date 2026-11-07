@@ -179,6 +179,10 @@ p{margin:0}
 .accessory-project-feature[data-accessory-project="mulberry"]{grid-template-columns:1fr}
 .accessory-project-feature[data-accessory-project="mulberry"] .accessory-project-feature__intro{max-width:980px}
 .accessory-project-feature[data-accessory-project="mulberry"] .accessory-project-feature__intro p{max-width:840px;font-size:clamp(15px,1.45vw,18px);line-height:1.72}
+.accessory-project-feature[data-accessory-project="fendi"]{grid-template-columns:1fr}
+.accessory-project-feature[data-accessory-project="fendi"] .accessory-project-feature__intro{max-width:980px}
+.accessory-project-feature[data-accessory-project="fendi"] .accessory-project-feature__intro p{max-width:760px;font-size:clamp(15px,1.45vw,18px);line-height:1.72}
+.project-description-pending{color:#a8a8a8}
 .accessory-project-feature[data-accessory-project="bally"]{grid-template-columns:1fr}
 .accessory-project-feature[data-accessory-project="bally"] .accessory-project-feature__intro{max-width:980px}
 .accessory-project-feature[data-accessory-project="bally"] .accessory-project-feature__intro p{max-width:880px;font-size:clamp(15px,1.45vw,18px);line-height:1.72}
