@@ -179,6 +179,9 @@ p{margin:0}
 .accessory-project-feature[data-accessory-project="mulberry"]{grid-template-columns:1fr}
 .accessory-project-feature[data-accessory-project="mulberry"] .accessory-project-feature__intro{max-width:980px}
 .accessory-project-feature[data-accessory-project="mulberry"] .accessory-project-feature__intro p{max-width:840px;font-size:clamp(15px,1.45vw,18px);line-height:1.72}
+.accessory-project-feature[data-accessory-project="bally"]{grid-template-columns:1fr}
+.accessory-project-feature[data-accessory-project="bally"] .accessory-project-feature__intro{max-width:980px}
+.accessory-project-feature[data-accessory-project="bally"] .accessory-project-feature__intro p{max-width:880px;font-size:clamp(15px,1.45vw,18px);line-height:1.72}
 .accessory-project-feature[data-accessory-project="alme"]{grid-template-columns:1fr}
 .accessory-project-feature[data-accessory-project="alme"] .accessory-project-feature__intro{max-width:980px}
 .accessory-project-feature[data-accessory-project="alme"] .accessory-project-feature__intro p{max-width:880px;font-size:clamp(15px,1.45vw,18px);line-height:1.72}
@@ -186,6 +189,7 @@ p{margin:0}
 .alme-project-gallery figure:first-child img{aspect-ratio:auto;max-height:760px;object-fit:contain}
 .accessory-project-feature__gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,2vw,24px);width:100%;margin-top:clamp(12px,2vw,24px)}
 .accessory-project-feature__gallery figure{position:relative;margin:0;background:#fff;overflow:hidden}
+.bally-project-gallery img{aspect-ratio:auto;object-fit:contain}
 .accessory-project-feature__gallery a{display:block}
 .accessory-project-feature__gallery img{display:block;width:100%;height:auto;aspect-ratio:1.5/1;object-fit:cover}
 .accessory-project-feature__gallery figcaption{position:absolute;right:0;bottom:0;left:0;z-index:2;padding:clamp(18px,2.4vw,30px);background:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.9) 72%);color:#fff;opacity:0;transform:translateY(18px);transition:opacity .28s ease,transform .28s ease;pointer-events:none}
