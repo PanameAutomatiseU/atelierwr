@@ -722,3 +722,50 @@ a.card:focus-visible{outline:3px solid var(--orange);outline-offset:4px}
   }
   .design-tabs .tab::after { font-size: 7.5px; }
 }
+
+/* Bandeau Design & création : vue complète sans défilement horizontal */
+.design-tabs {
+  grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+  overflow: visible !important;
+  max-width: none;
+}
+.design-tabs .tab {
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+@media (min-width: 721px) {
+  .design-tabs {
+    grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+  }
+  .design-tabs .tab,
+  .design-tabs .tab:visited {
+    min-height: 52px;
+    font-size: clamp(8.5px, .72vw, 11px);
+    line-height: 1.08;
+  }
+}
+@media (max-width: 720px) {
+  .design-tabs {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    max-height: none !important;
+  }
+  .design-tabs .tab,
+  .design-tabs .tab:visited {
+    min-height: 48px;
+    padding: 5px 3px 4px;
+    font-size: 7.5px;
+    line-height: 1.06;
+  }
+  .design-tabs .tab::after {
+    font-size: 6.5px;
+    letter-spacing: 0;
+  }
+}
+@media (max-width: 410px) {
+  .design-tabs .tab,
+  .design-tabs .tab:visited {
+    font-size: 7px;
+  }
+}
