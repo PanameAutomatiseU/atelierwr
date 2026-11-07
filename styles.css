@@ -927,3 +927,19 @@ a.card:focus-visible .card-caption {
     font-size: 8px !important;
   }
 }
+
+/* Bandeau Design & création : uniquement les sept intitulés complets */
+.design-tabs {
+  grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+}
+.design-tabs .tab::before,
+.design-tabs .tab::after {
+  content: none !important;
+  display: none !important;
+}
+.design-tabs .tab,
+.design-tabs .tab:visited {
+  opacity: 1 !important;
+  visibility: visible !important;
+  white-space: normal !important;
+}
