@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261107-processus-maroquinerie">
+<link rel="stylesheet" href="styles.css?v=20261107-mobilier-organise">
 <link rel="stylesheet" href="hero.css?v=20261031-2">
 </head>
 <body>
@@ -383,14 +383,48 @@
       </div>
     </article>
     </section>
-    <section class="category-intro furniture-intro" data-category-intro="mobilier" hidden aria-labelledby="furniture-projects-title">
+    <section class="category-intro accessories-intro furniture-intro" data-category-intro="mobilier" hidden aria-labelledby="furniture-projects-title">
       <div class="category-intro-copy">
-        <small>Mobilier &amp; objets · Projets</small>
-        <h3 id="furniture-projects-title">La forme,<br>l’usage &amp; le lieu.</h3>
-        <p>Trois projets réunissent ici des objets pensés à partir de leur contexte : une collection de mobilier pour le Grand Palais, un piano connecté Carod entre héritage et technologie, et le mobilier modulable Ère de je conçu pour les nouveaux usages de l’habitat.</p>
+        <small>Direction créative · Design produit · Développement</small>
+        <h3 id="furniture-projects-title">Mobilier &amp; objets</h3>
+        <p>Je conçois des objets et des collections de mobilier à partir de leur contexte, de leurs usages et de l’identité du lieu ou de la marque. Le processus associe analyse, recherches de formes et de volumes, croquis, mise au point fonctionnelle, choix des matériaux, rendus et préparation des éléments nécessaires au développement.</p>
+        <p>Chaque projet cherche un équilibre entre présence esthétique, confort, faisabilité et expérience d’usage, du concept initial jusqu’à la définition d’une proposition cohérente et identifiable.</p>
       </div>
+      <div class="accessory-filter-panel furniture-filter-panel">
+        <small class="accessory-filter-panel__title">Accès direct aux projets</small>
+        <div class="accessory-project-quicklinks furniture-project-quicklinks" role="group" aria-label="Raccourcis vers les projets de mobilier et objets">
+          <button class="accessory-project-quicklink furniture-project-quicklink" type="button" data-furniture-project-key="grand-palais"><strong>Grand Palais</strong><span aria-hidden="true">↗</span></button>
+          <button class="accessory-project-quicklink furniture-project-quicklink" type="button" data-furniture-project-key="carod"><strong>Piano Carod</strong><span aria-hidden="true">↗</span></button>
+          <button class="accessory-project-quicklink furniture-project-quicklink" type="button" data-furniture-project-key="ere-de-je"><strong>Ère de je</strong><span aria-hidden="true">↗</span></button>
+          <button class="accessory-project-quicklink furniture-project-quicklink" type="button" data-furniture-project-key="ego"><strong>Ego</strong><span aria-hidden="true">↗</span></button>
+        </div>
+      </div>
+      <section class="accessory-project-directory furniture-project-directory" aria-labelledby="furniture-directory-title">
+        <div class="accessory-project-directory__head">
+          <small>Projets à découvrir</small>
+          <h4 id="furniture-directory-title">Quatre projets,<br>quatre échelles.</h4>
+        </div>
+        <div class="accessory-project-directory__grid furniture-project-directory__grid">
+          <a class="accessory-project-card" href="?project=grand-palais#design">
+            <img src="assets/work/mobilier-03.jpg" alt="Projet de mobilier et d’assises pour le Grand Palais" loading="lazy">
+            <span><small>Mobilier &amp; assises</small><strong>Grand Palais</strong><em>Une famille de mobilier pensée pour accompagner un lieu monumental.</em></span>
+          </a>
+          <a class="accessory-project-card" href="?project=carod#design">
+            <img src="assets/work/mobilier-01.jpg" alt="Piano connecté Carod inspiré de l’architecture gothique italienne" loading="lazy">
+            <span><small>Objet connecté</small><strong>Piano Carod</strong><em>Quand le son prend forme, entre héritage architectural et technologie.</em></span>
+          </a>
+          <a class="accessory-project-card" href="?project=ere-de-je#design">
+            <img src="assets/work/mobilier-05.jpg" alt="Projet de mobilier modulable Ère de je" loading="lazy">
+            <span><small>Mobilier modulable</small><strong>Ère de je</strong><em>Un ensemble compact qui accompagne les nouveaux usages de l’habitat.</em></span>
+          </a>
+          <a class="accessory-project-card" href="?project=ego#design">
+            <img src="assets/work/mobilier-06.jpg" alt="Projet d’assise sculpturale Ego" loading="lazy">
+            <span><small>Recherche d’assise</small><strong>Ego</strong><em>Une silhouette expressive pensée comme un objet dans l’espace.</em></span>
+          </a>
+        </div>
+      </section>
       <div class="furniture-projects">
-        <article class="accessory-project-feature grand-palais-project-feature" aria-labelledby="grand-palais-project-heading">
+        <article class="accessory-project-feature grand-palais-project-feature" data-furniture-project="grand-palais" hidden aria-labelledby="grand-palais-project-heading">
           <div class="accessory-project-feature__intro">
             <small>Direction artistique · Design mobilier</small>
             <h4 id="grand-palais-project-heading">Grand Palais.<br>Mobilier &amp; assises.</h4>
@@ -403,7 +437,7 @@
             <figure><a href="assets/work/mobilier-08.jpg" target="_blank" rel="noopener"><img src="assets/work/mobilier-08.jpg" alt="Croquis de la collection de mobilier Grand Palais" loading="lazy" decoding="async"></a><figcaption><strong>Croquis de collection</strong><span>Recherche de proportions, d’usages et de cohérence d’ensemble.</span></figcaption></figure>
           </div>
         </article>
-        <article class="accessory-project-feature carod-project-feature" aria-labelledby="carod-project-heading">
+        <article class="accessory-project-feature carod-project-feature" data-furniture-project="carod" hidden aria-labelledby="carod-project-heading">
           <div class="accessory-project-feature__intro">
             <small>Design d’objet · Piano connecté</small>
             <h4 id="carod-project-heading">Piano Carod.<br>Le son prend forme.</h4>
@@ -414,7 +448,7 @@
             <figure><a href="assets/work/mobilier-02.jpg" target="_blank" rel="noopener"><img src="assets/work/mobilier-02.jpg" alt="Piano Carod connecté présenté en situation" loading="lazy" decoding="async"></a><figcaption><strong>Le piano en situation</strong><span>Un objet connecté qui relie présence sculpturale, musique et usage contemporain.</span></figcaption></figure>
           </div>
         </article>
-        <article class="accessory-project-feature ere-de-je-project-feature" aria-labelledby="ere-de-je-project-heading">
+        <article class="accessory-project-feature ere-de-je-project-feature" data-furniture-project="ere-de-je" hidden aria-labelledby="ere-de-je-project-heading">
           <div class="accessory-project-feature__intro">
             <small>Design mobilier · Habitat compact</small>
             <h4 id="ere-de-je-project-heading">Ère de je.<br>Aire de jeu.</h4>
@@ -423,6 +457,17 @@
           <div class="accessory-project-feature__gallery ere-de-je-project-gallery" aria-label="Deux visuels du projet de mobilier modulable Ère de je">
             <figure><a href="assets/work/mobilier-05.jpg" target="_blank" rel="noopener"><img src="assets/work/mobilier-05.jpg" alt="Ère de je, mobilier modulable pour studio étudiant, du croquis aux usages" loading="lazy" decoding="async"></a><figcaption><strong>Du croquis à l’usage</strong><span>Volume compact, ouverture intuitive, espace d’accueil et transformation en lit deux places.</span></figcaption></figure>
             <figure><a href="https://static.wixstatic.com/media/223f51_301c7a7aa1164901b1b815f87a48f1ae~mv2_d_3508_2480_s_4_2.png" target="_blank" rel="noopener"><img src="https://static.wixstatic.com/media/223f51_301c7a7aa1164901b1b815f87a48f1ae~mv2_d_3508_2480_s_4_2.png/v1/fill/w_1600,h_1131,al_c,q_90,enc_auto/223f51_301c7a7aa1164901b1b815f87a48f1ae~mv2_d_3508_2480_s_4_2.png" alt="Planche originale de recherche du mobilier Ère de je" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a><figcaption><strong>Recherche originale</strong><span>Exploration de la modularité, des positions et des différents scénarios de vie dans un studio.</span></figcaption></figure>
+          </div>
+        </article>
+
+        <article class="accessory-project-feature ego-project-feature" data-furniture-project="ego" hidden aria-labelledby="ego-project-heading">
+          <div class="accessory-project-feature__intro">
+            <small>Design mobilier · Recherche d’assise</small>
+            <h4 id="ego-project-heading">Ego.<br>Assise sculpturale.</h4>
+            <p>Ego explore l’assise comme un volume autonome, expressif et immédiatement identifiable. Le projet associe recherche de silhouette, présence sculpturale et réflexion sur le confort afin de transformer un objet fonctionnel en élément fort de l’espace intérieur.</p>
+          </div>
+          <div class="accessory-project-feature__gallery ego-project-gallery" aria-label="Visuel du projet d’assise Ego">
+            <figure><a href="assets/work/mobilier-06.jpg" target="_blank" rel="noopener"><img src="assets/work/mobilier-06.jpg" alt="Ego, recherche d’assise sculpturale" loading="lazy" decoding="async"></a><figcaption><strong>Ego</strong><span>Recherche de silhouette, de volume et de présence dans l’espace.</span></figcaption></figure>
           </div>
         </article>
       </div>
@@ -617,6 +662,6 @@
   <div class="lb-cap"></div>
 </div>
 
-<script src="app.js?v=20261107-processus-maroquinerie"></script>
+<script src="app.js?v=20261107-mobilier-organise"></script>
 </body>
 </html>
