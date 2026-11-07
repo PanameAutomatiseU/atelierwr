@@ -1150,3 +1150,11 @@ a.card:focus-visible .card-caption {
   border-color: #333333 !important;
   box-shadow: inset 0 -3px 0 #ffffff !important;
 }
+
+
+/* La section Maroquinerie se termine après le répertoire des dix projets. */
+.design-continuous .design-continuous-grid--accessories,
+.design-continuous .accessory-filter-panel__secondary,
+.design-continuous .accessory-subtabs--types {
+  display: none !important;
+}
