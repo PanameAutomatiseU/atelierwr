@@ -179,6 +179,11 @@ p{margin:0}
 .accessory-project-feature[data-accessory-project="mulberry"]{grid-template-columns:1fr}
 .accessory-project-feature[data-accessory-project="mulberry"] .accessory-project-feature__intro{max-width:980px}
 .accessory-project-feature[data-accessory-project="mulberry"] .accessory-project-feature__intro p{max-width:840px;font-size:clamp(15px,1.45vw,18px);line-height:1.72}
+.accessory-project-feature[data-accessory-project="place-vendome"]{grid-template-columns:1fr}
+.accessory-project-feature[data-accessory-project="place-vendome"] .accessory-project-feature__intro{max-width:1040px}
+.accessory-project-feature[data-accessory-project="place-vendome"] .accessory-project-feature__intro p{max-width:900px;font-size:clamp(15px,1.45vw,18px);line-height:1.72}
+.place-vendome-project-gallery{grid-template-columns:1fr}
+.place-vendome-project-gallery img{aspect-ratio:auto;max-height:1180px;object-fit:contain}
 .accessory-project-feature[data-accessory-project="fendi"]{grid-template-columns:1fr}
 .accessory-project-feature[data-accessory-project="fendi"] .accessory-project-feature__intro{max-width:980px}
 .accessory-project-feature[data-accessory-project="fendi"] .accessory-project-feature__intro p{max-width:760px;font-size:clamp(15px,1.45vw,18px);line-height:1.72}
