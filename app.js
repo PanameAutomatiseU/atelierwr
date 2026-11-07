@@ -242,8 +242,169 @@ function renderGrid(gridEl, items, cat, moreBtn) {
   }
 }
 
+
+function setupContinuousDesign(sec, items) {
+  const categories = [
+    ['horlogerie', 'Horlogerie'],
+    ['joaillerie', 'Joaillerie'],
+    ['maroquinerie', 'Maroquinerie & accessoires'],
+    ['mobilier', 'Mobilier & objets'],
+    ['packaging', 'Packaging & vins'],
+    ['logo', 'Logo & identité'],
+    ['affiches', 'Affiches & illustrations']
+  ];
+  const standaloneAccessoryProjects = ['lemarys', 'mulberry', 'alme', 'celine', 'bally', 'fendi', 'place-vendome', 'maison-rinceau', 'lunetterie', 'croquis-recherches'];
+  const sourceBar = sec.querySelector('.design-tabs');
+  const originalTitle = sec.querySelector('.design-category-title');
+  const originalProjectNav = sec.querySelector('[data-discipline-project-nav]');
+  const originalGrid = sec.querySelector('[data-design-grid]');
+  const originalMore = sec.querySelector('.more');
+  const intros = [...sec.querySelectorAll('[data-category-intro]')];
+  const projectGroups = [...sec.querySelectorAll('[data-project-cat]')];
+
+  if (!sourceBar || sec.querySelector('.design-continuous')) return;
+
+  originalTitle?.setAttribute('hidden', '');
+  originalProjectNav?.setAttribute('hidden', '');
+  if (originalGrid) originalGrid.hidden = true;
+  if (originalMore) originalMore.hidden = true;
+
+  const continuousRoot = document.createElement('div');
+  continuousRoot.className = 'design-continuous';
+  sourceBar.insertAdjacentElement('afterend', continuousRoot);
+
+  const sections = new Map();
+  categories.forEach(([cat, label], index) => {
+    const section = document.createElement('section');
+    section.className = 'design-discipline-section';
+    section.id = 'design-discipline-' + cat;
+    section.dataset.discipline = cat;
+    section.innerHTML = '<header class="design-discipline-heading"><small>' +
+      String(index + 1).padStart(2, '0') + ' · Spécialité design</small><h3>' +
+      label + '</h3></header>';
+    continuousRoot.appendChild(section);
+    sections.set(cat, section);
+
+    projectGroups.filter(group => group.dataset.projectCat === cat).forEach(group => {
+      group.hidden = false;
+      section.appendChild(group);
+    });
+    intros.filter(intro => intro.dataset.categoryIntro === cat).forEach(intro => {
+      intro.hidden = false;
+      section.appendChild(intro);
+    });
+
+    if (cat === 'packaging' || cat === 'logo' || cat === 'affiches') {
+      const disciplineGrid = document.createElement('div');
+      disciplineGrid.className = 'grid design-continuous-grid';
+      disciplineGrid.dataset.expanded = '1';
+      section.appendChild(disciplineGrid);
+      renderGrid(disciplineGrid, items, cat, null);
+    }
+  });
+
+  const accessorySection = sections.get('maroquinerie');
+  const accessoryGrid = document.createElement('div');
+  accessoryGrid.className = 'grid design-continuous-grid design-continuous-grid--accessories';
+  accessoryGrid.dataset.expanded = '1';
+  accessoryGrid.dataset.subcat = 'all';
+  accessorySection.appendChild(accessoryGrid);
+  renderGrid(accessoryGrid, items, 'maroquinerie', null);
+
+  const accessoryProjects = [...accessorySection.querySelectorAll('[data-accessory-project]')];
+  const accessoryButtons = [...accessorySection.querySelectorAll('[data-accessory-subcat]')];
+  const showAccessorySelection = (key, shouldScroll = true) => {
+    const isProject = standaloneAccessoryProjects.includes(key);
+    accessoryProjects.forEach(project => {
+      project.hidden = !isProject || project.dataset.accessoryProject !== key;
+    });
+    accessoryGrid.hidden = isProject;
+    accessoryButtons.forEach(button => {
+      const active = button.dataset.accessorySubcat === key;
+      button.classList.toggle('active', active);
+      button.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+    if (isProject) {
+      const target = accessorySection.querySelector('[data-accessory-project="' + key + '"]');
+      if (shouldScroll && target) window.setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 70);
+      return;
+    }
+    accessoryGrid.dataset.subcat = key;
+    renderGrid(accessoryGrid, items, 'maroquinerie', null);
+    if (shouldScroll) window.setTimeout(() => accessoryGrid.scrollIntoView({ behavior: 'smooth', block: 'start' }), 70);
+  };
+  accessoryButtons.forEach(button => button.addEventListener('click', () => {
+    showAccessorySelection(button.dataset.accessorySubcat);
+  }));
+  showAccessorySelection('all', false);
+
+  const allBars = [sourceBar];
+  let floatingBar = document.querySelector('.design-tabs-floating');
+  if (!floatingBar) {
+    floatingBar = sourceBar.cloneNode(true);
+    floatingBar.classList.add('design-tabs-floating');
+    floatingBar.setAttribute('aria-label', 'Accès permanent aux sept disciplines de Design et création');
+    document.body.appendChild(floatingBar);
+  }
+  allBars.push(floatingBar);
+
+  const setActiveDiscipline = cat => {
+    allBars.forEach(bar => bar.querySelectorAll('[data-cat]').forEach(button => {
+      const active = button.dataset.cat === cat;
+      button.classList.toggle('active', active);
+      button.setAttribute('aria-pressed', active ? 'true' : 'false');
+    }));
+  };
+  allBars.forEach(bar => bar.querySelectorAll('[data-cat]').forEach(button => {
+    button.addEventListener('click', () => {
+      const target = sections.get(button.dataset.cat);
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setActiveDiscipline(button.dataset.cat);
+    });
+  }));
+
+  let scrollTick = false;
+  const updateContinuousNavigation = () => {
+    const bounds = sec.getBoundingClientRect();
+    const visible = bounds.top <= 76 && bounds.bottom > 150;
+    floatingBar.classList.toggle('is-visible', visible);
+    floatingBar.setAttribute('aria-hidden', visible ? 'false' : 'true');
+
+    let activeCat = categories[0][0];
+    categories.forEach(([cat]) => {
+      const discipline = sections.get(cat);
+      if (discipline && discipline.getBoundingClientRect().top <= 180) activeCat = cat;
+    });
+    setActiveDiscipline(activeCat);
+  };
+  const requestContinuousUpdate = () => {
+    if (scrollTick) return;
+    scrollTick = true;
+    requestAnimationFrame(() => {
+      updateContinuousNavigation();
+      scrollTick = false;
+    });
+  };
+  window.addEventListener('scroll', requestContinuousUpdate, { passive: true });
+  window.addEventListener('resize', requestContinuousUpdate);
+  updateContinuousNavigation();
+  window.setTimeout(updateContinuousNavigation, 180);
+
+  const requestedProject = new URLSearchParams(window.location.search).get('project');
+  if (standaloneAccessoryProjects.includes(requestedProject)) {
+    showAccessorySelection(requestedProject, false);
+    window.setTimeout(() => {
+      accessorySection.querySelector('[data-accessory-project="' + requestedProject + '"]')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 180);
+  }
+}
+
 function setupTabs(sectionId, items) {
   const sec = document.getElementById(sectionId);
+  if (sectionId === 'design') {
+    setupContinuousDesign(sec, items);
+    return;
+  }
   const grid = sec.querySelector('.grid');
   const more = sec.querySelector('.more button');
   const tabs = sec.querySelectorAll('.tab');
