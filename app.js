@@ -47,12 +47,12 @@ const MAROQUINERIE = [
   { src: 'assets/work/logo-06.jpg', cat: 'maroquinerie', subcat: 'accessoires', tags: ['accessoires', 'alme'], title: 'Almé · Identité double A', client: 'Monogramme, applications et territoire de marque' },
   { src: 'assets/work/maroquinerie-25.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'mulberry'], title: 'Mulberry · Recherche de collection', client: 'Croquis, volumes, tressages et cordons' },
   { src: 'assets/work/maroquinerie-26.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'bally'], title: 'Bally · Sac à chaussures', client: 'Partenariat Vogue US · Anna Wintour' },
-  { src: 'assets/work/maroquinerie-27.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Bijoux de sac modulaires', client: 'Petite maroquinerie & accessoires' },
-  { src: 'assets/work/maroquinerie-28.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sacs souples et portés', client: 'Sacs & maroquinerie' },
-  { src: 'assets/work/maroquinerie-29.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sacs compacts et variantes', client: 'Sacs & maroquinerie' },
-  { src: 'assets/work/maroquinerie-30.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Cabas de ville', client: 'Sacs & maroquinerie' },
+  { src: 'assets/work/maroquinerie-27.jpg', cat: 'maroquinerie', subcat: 'accessoires', tags: ['accessoires', 'fendi'], title: 'Fendi Dandy · Ceintures et boucleries', client: 'Design d’accessoires' },
+  { src: 'assets/work/maroquinerie-28.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'fendi'], title: 'Fendi Dandy · Petite maroquinerie', client: 'Portefeuilles compacts et matières colorées' },
+  { src: 'assets/work/maroquinerie-29.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'fendi'], title: 'Fendi Dandy · Porte-cartes', client: 'Systèmes coulissants et motifs de surface' },
+  { src: 'assets/work/maroquinerie-30.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'fendi'], title: 'Fendi Dandy · Portefeuilles graphiques', client: 'Formats, constructions et identités visuelles' },
   { src: 'assets/work/maroquinerie-31.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'bally'], title: 'Bally Sport · Collection de sacs', client: 'Archives graphiques et design sportif' },
-  { src: 'assets/work/maroquinerie-32.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sacs et variations colorées', client: 'Sacs & maroquinerie' },
+  { src: 'assets/work/maroquinerie-32.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'fendi'], title: 'Fendi Dandy · Bijoux de sac', client: 'Porte-clés, charms et mousquetons' },
   { src: 'assets/work/maroquinerie-33.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sac à rabat compact', client: 'Sacs & maroquinerie' },
   { src: 'assets/work/maroquinerie-34.jpg', cat: 'maroquinerie', subcat: 'recherches', title: 'Croquis de sacs et volumes', client: 'Croquis & recherches' },
   { src: 'assets/work/maroquinerie-35.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Systèmes de portage et construction', client: 'Sacs & maroquinerie' },
@@ -65,7 +65,7 @@ const MAROQUINERIE = [
   { src: 'assets/work/maroquinerie-42.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Accessoires audio et objets nomades', client: 'Petite maroquinerie & accessoires' },
   { src: 'assets/work/maroquinerie-43.jpg', cat: 'maroquinerie', subcat: 'lunetterie', tags: ['lunetterie', 'eyewear'], title: 'Collection de montures · Formes et proportions', client: 'Recherche de gamme · Acétate et métal' },
   { src: 'assets/work/maroquinerie-44.jpg', cat: 'maroquinerie', subcat: 'chaussures', title: 'Chaussures et détails de construction', client: 'Chaussures' },
-  { src: 'assets/work/maroquinerie-45.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sacs souples et recherche de volume', client: 'Sacs & maroquinerie' }
+  { src: 'assets/work/maroquinerie-45.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'fendi'], title: 'Fendi Dandy · Étuis technologiques', client: 'Housses pour ordinateur et accessoires numériques' }
 ];
 
 const DESIGN = [
@@ -185,7 +185,7 @@ function renderGrid(gridEl, items, cat, moreBtn) {
   const subcat = gridEl.dataset.subcat || 'all';
   if (cat === 'maroquinerie') {
     const tagsFor = item => item.tags || [item.subcat];
-    const isStandaloneProject = item => tagsFor(item).some(tag => tag === 'lemarys' || tag === 'eyewear' || tag === 'mulberry' || tag === 'alme' || tag === 'bally');
+    const isStandaloneProject = item => tagsFor(item).some(tag => tag === 'lemarys' || tag === 'eyewear' || tag === 'mulberry' || tag === 'alme' || tag === 'bally' || tag === 'fendi');
     if (subcat === 'lemarys') {
       list = list.filter(item => tagsFor(item).includes('lemarys'));
     } else if (subcat === 'lunetterie') {
@@ -196,6 +196,8 @@ function renderGrid(gridEl, items, cat, moreBtn) {
       list = list.filter(item => tagsFor(item).includes('alme'));
     } else if (subcat === 'bally') {
       list = list.filter(item => tagsFor(item).includes('bally'));
+    } else if (subcat === 'fendi') {
+      list = list.filter(item => tagsFor(item).includes('fendi'));
     } else {
       list = list.filter(item => !isStandaloneProject(item));
       if (subcat !== 'all') list = list.filter(item => tagsFor(item).includes(subcat));
@@ -228,7 +230,7 @@ function setupTabs(sectionId, items) {
   const categoryTitle = sec.querySelector('[data-category-title]');
   const accessoryTabs = sec.querySelectorAll('[data-accessory-subcat]');
   const accessoryProjects = sec.querySelectorAll('[data-accessory-project]');
-  const standaloneAccessoryProjects = ['lemarys', 'mulberry', 'alme', 'bally', 'lunetterie'];
+  const standaloneAccessoryProjects = ['lemarys', 'mulberry', 'alme', 'bally', 'fendi', 'lunetterie'];
   const showAccessoryProject = key => {
     accessoryProjects.forEach(project => { project.hidden = key !== project.dataset.accessoryProject; });
     grid.hidden = standaloneAccessoryProjects.includes(key);
@@ -265,7 +267,7 @@ function setupTabs(sectionId, items) {
 
   if (sectionId === 'design') {
     const requestedProject = new URLSearchParams(window.location.search).get('project');
-    const availableProjects = ['lemarys', 'mulberry', 'alme', 'bally', 'lunetterie'];
+    const availableProjects = ['lemarys', 'mulberry', 'alme', 'bally', 'fendi', 'lunetterie'];
     if (availableProjects.includes(requestedProject)) {
       const maroquinerieTab = sec.querySelector('[data-cat="maroquinerie"]');
       const projectTab = sec.querySelector(`[data-accessory-subcat="${requestedProject}"]`);
