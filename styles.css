@@ -878,3 +878,52 @@ a.card:focus-visible{outline:3px solid var(--orange);outline-offset:4px}
     display: none !important;
   }
 }
+
+/* Tous les titres restent visibles, sans survol */
+.design-tabs .tab,
+.design-tabs .tab:visited,
+.discipline-project-link,
+.discipline-project-link strong,
+.accessory-project-quicklink,
+.accessory-project-quicklink strong {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.accessory-project-feature__gallery figcaption,
+.accessory-project-feature__gallery figure:hover figcaption,
+.accessory-project-feature__gallery figure:focus-within figcaption {
+  opacity: 1 !important;
+  transform: none !important;
+}
+.card figcaption,
+.card .card-caption,
+.card:hover figcaption,
+a.card:hover .card-caption,
+a.card:focus-visible .card-caption {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.jewelry-tile > span,
+.jewelry-tile:hover > span,
+.jewelry-tile:focus-visible > span {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+@media (max-width: 560px) {
+  .card figcaption,
+  .card .card-caption {
+    position: static !important;
+    display: block !important;
+    padding: 10px !important;
+    background: var(--ink) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    font-size: 9px !important;
+  }
+  .card figcaption span,
+  .card .card-caption > span {
+    display: block;
+    margin-top: 3px;
+    font-size: 8px !important;
+  }
+}
