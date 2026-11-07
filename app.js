@@ -42,7 +42,7 @@ const MAROQUINERIE = [
   { src: 'assets/work/maroquinerie-20.jpg', cat: 'maroquinerie', subcat: 'recherches', tags: ['recherches', 'celine'], title: 'Céline · Volume facetté', client: 'Candidature · Design architectural' },
   { src: 'assets/work/maroquinerie-21.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'celine'], title: 'Céline · Géométrie circulaire', client: 'Candidature · Design minimaliste' },
   { src: 'assets/work/maroquinerie-22.jpg', cat: 'maroquinerie', subcat: 'accessoires', tags: ['accessoires', 'celine'], title: 'Céline · Ligne courbe', client: 'Candidature · Design de maroquinerie' },
-  { src: 'assets/work/maroquinerie-23.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Gamme chromatique de ceintures', client: 'Petite maroquinerie & accessoires' },
+  { src: 'assets/work/maroquinerie-23.jpg', cat: 'maroquinerie', subcat: 'recherches', tags: ['recherches', 'croquis-recherches'], title: 'Sonia Rykiel · Recherche personnelle', client: 'Volumes et décors de maroquinerie' },
   { src: 'assets/work/maroquinerie-24.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'alme'], title: 'Almé · Collection de maroquinerie', client: 'Sacs, petite maroquinerie et fermoir signature' },
   { src: 'assets/work/logo-06.jpg', cat: 'maroquinerie', subcat: 'accessoires', tags: ['accessoires', 'alme'], title: 'Almé · Identité double A', client: 'Monogramme, applications et territoire de marque' },
   { src: 'assets/work/maroquinerie-25.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'mulberry'], title: 'Mulberry · Recherche de collection', client: 'Croquis, volumes, tressages et cordons' },
@@ -56,11 +56,11 @@ const MAROQUINERIE = [
   { src: 'assets/work/maroquinerie-33.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sac à rabat compact', client: 'Sacs & maroquinerie' },
   { src: 'assets/work/maroquinerie-34.jpg', cat: 'maroquinerie', subcat: 'recherches', title: 'Croquis de sacs et volumes', client: 'Croquis & recherches' },
   { src: 'assets/work/maroquinerie-35.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Systèmes de portage et construction', client: 'Sacs & maroquinerie' },
-  { src: 'assets/work/maroquinerie-36.jpg', cat: 'maroquinerie', subcat: 'recherches', title: 'Recherche de collection · Sacs et silhouettes', client: 'Croquis, volumes et univers couleur' },
-  { src: 'assets/work/maroquinerie-37.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Étuis et accessoires nomades', client: 'Petite maroquinerie & accessoires' },
-  { src: 'assets/work/maroquinerie-38.jpg', cat: 'maroquinerie', subcat: 'recherches', title: 'Recherche matière et couleur', client: 'Croquis & recherches' },
-  { src: 'assets/work/maroquinerie-39.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Collection de ceintures', client: 'Petite maroquinerie & accessoires' },
-  { src: 'assets/work/maroquinerie-40.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Petite maroquinerie graphique', client: 'Petite maroquinerie & accessoires' },
+  { src: 'assets/work/maroquinerie-36.jpg', cat: 'maroquinerie', subcat: 'recherches', tags: ['recherches', 'croquis-recherches'], title: 'Burberry · Recherche personnelle', client: 'Mode, sacs et accessoires' },
+  { src: 'assets/work/maroquinerie-37.jpg', cat: 'maroquinerie', subcat: 'recherches', tags: ['recherches', 'croquis-recherches'], title: 'Recherches de volumes · Sacs', client: 'Silhouettes, proportions et systèmes de porté' },
+  { src: 'assets/work/maroquinerie-38.jpg', cat: 'maroquinerie', subcat: 'recherches', tags: ['recherches', 'croquis-recherches'], title: 'Jingo · Vêtement technique de voyage', client: 'Détails fonctionnels et gamme' },
+  { src: 'assets/work/maroquinerie-39.jpg', cat: 'maroquinerie', subcat: 'recherches', tags: ['recherches', 'croquis-recherches'], title: 'Recherches de silhouettes · Chaussures', client: 'Lignes, talons et constructions' },
+  { src: 'assets/work/maroquinerie-40.jpg', cat: 'maroquinerie', subcat: 'recherches', tags: ['recherches', 'croquis-recherches'], title: 'Bagagerie nomade · Laptop & camera case', client: 'Organisation et portage' },
   { src: 'assets/work/maroquinerie-41.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'alme'], title: 'Almé · Cabas signature', client: 'Monogramme double A perforé et pochette amovible' },
   { src: 'assets/work/maroquinerie-42.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Accessoires audio et objets nomades', client: 'Petite maroquinerie & accessoires' },
   { src: 'assets/work/maroquinerie-43.jpg', cat: 'maroquinerie', subcat: 'lunetterie', tags: ['lunetterie', 'eyewear'], title: 'Collection de montures · Formes et proportions', client: 'Recherche de gamme · Acétate et métal' },
@@ -70,7 +70,16 @@ const MAROQUINERIE = [
 
 const DESIGN = [
   ...MAROQUINERIE,
-  ...W('mobilier', 8, ['Piano « Italy » · Carod', 'Piano en situation · Carod', 'Sofa · Grand Palais', 'Collection · Grand Palais', 'Ère de je · Mobilier modulable', 'Ego · Assise', 'Mobilier outdoor · Grand Palais', 'Croquis de collection · Grand Palais']),
+  ...[
+    { src: 'assets/work/mobilier-01.jpg', cat: 'mobilier', tags: ['carod'], title: 'Piano « Italy »', client: 'Carod · Piano connecté' },
+    { src: 'assets/work/mobilier-02.jpg', cat: 'mobilier', tags: ['carod'], title: 'Piano en situation', client: 'Carod · Piano connecté' },
+    { src: 'assets/work/mobilier-03.jpg', cat: 'mobilier', tags: ['grand-palais'], title: 'Grand Palais · Sofa', client: 'Mobilier & assises' },
+    { src: 'assets/work/mobilier-04.jpg', cat: 'mobilier', tags: ['grand-palais'], title: 'Grand Palais · Collection', client: 'Mobilier & assises' },
+    { src: 'assets/work/mobilier-05.jpg', cat: 'mobilier', title: 'Ère de je', client: 'Mobilier modulable' },
+    { src: 'assets/work/mobilier-06.jpg', cat: 'mobilier', title: 'Ego', client: 'Assise' },
+    { src: 'assets/work/mobilier-07.jpg', cat: 'mobilier', tags: ['grand-palais'], title: 'Grand Palais · Mobilier outdoor', client: 'Mobilier & assises' },
+    { src: 'assets/work/mobilier-08.jpg', cat: 'mobilier', tags: ['grand-palais'], title: 'Grand Palais · Croquis de collection', client: 'Mobilier & assises' }
+  ],
   ...W('packaging', 10, ['Coffrets · Almé Paris', 'Édition Nouvel An chinois · Packaging', 'Étiquettes · Domaine de la Bégude', 'Pleine Nature · Étiquettes de vin', "L'Ernest · La Grange d'Ernest", 'Triplette · Cantarelle', 'Gamme · Jean-Étienne Chermette', 'Coffret Année du Lapin · Philips', 'Coffret montre · Maison Boanton', 'Écrin V · Packaging']),
   ...W('logo', 12, ['Vitrophanie · La Boutique du Rhum', 'Identité · Maison Célestine', 'Crozes-Hermitage · Domaine du Chêne Vert', 'Domaines & distilleries · Diva', 'Déclinaisons · Maison Célestine', 'Monogramme · Almé Paris', 'Caves parisiennes · Joséphine', 'Logo · Aurea Imaging', 'Motif · Lemarys', 'Identité · Exacode', 'Avocats · Louise Law', 'Logo · Owl Hair Salon']),
   ...W('affiches', 12, ['Vent de sable · Affiche', 'Affiche · Joséphine', 'Les dimanches Pleine Mer · Cannibale', 'Jazz classique · Comptoir du Live', 'Coupe du monde 2018 · Cannibale Café', 'Click & Collect · Cannibale', 'Hugo · Faire-part', 'La Circulade · Larzac', 'Les Chapeaux de Beaupré · Château de Beaupré', 'Héron · Illustration', 'Marseille · Encre et soleil', 'Joyeux Noël · Fama']),
@@ -178,14 +187,21 @@ const IG_LATEST = [
 ];
 
 const LIMIT = 9;
+const projectKey = value => String(value || 'projet')
+  .normalize('NFD')
+  .replace(/[\u0300-\u036f]/g, '')
+  .toLowerCase()
+  .replace(/[^a-z0-9]+/g, '-')
+  .replace(/(^-|-$)/g, '');
 let lbList = [], lbIndex = 0;
 
 function renderGrid(gridEl, items, cat, moreBtn) {
   let list = cat === 'all' ? items : items.filter(i => i.cat === cat);
   const subcat = gridEl.dataset.subcat || 'all';
+  if (cat === 'mobilier') list = list.filter(item => !(item.tags || []).some(tag => tag === 'grand-palais' || tag === 'carod'));
   if (cat === 'maroquinerie') {
     const tagsFor = item => item.tags || [item.subcat];
-    const isStandaloneProject = item => tagsFor(item).some(tag => tag === 'lemarys' || tag === 'eyewear' || tag === 'mulberry' || tag === 'alme' || tag === 'bally' || tag === 'fendi' || tag === 'place-vendome' || tag === 'maison-rinceau' || tag === 'celine');
+    const isStandaloneProject = item => tagsFor(item).some(tag => tag === 'lemarys' || tag === 'eyewear' || tag === 'mulberry' || tag === 'alme' || tag === 'bally' || tag === 'fendi' || tag === 'place-vendome' || tag === 'maison-rinceau' || tag === 'celine' || tag === 'croquis-recherches');
     if (subcat === 'lemarys') {
       list = list.filter(item => tagsFor(item).includes('lemarys'));
     } else if (subcat === 'lunetterie') {
@@ -212,7 +228,7 @@ function renderGrid(gridEl, items, cat, moreBtn) {
   const showCompleteCategory = cat === 'maroquinerie';
   const shown = showCompleteCategory || gridEl.dataset.expanded === '1' ? list : list.slice(0, LIMIT);
   gridEl.innerHTML = shown.map((it, i) => `
-    ${it.projectHref ? `<a class="card project-card" href="${it.projectHref}" aria-label="Découvrir le projet ${it.client} : ${it.title}">` : `<figure class="card" data-i="${i}">`}
+    ${it.projectHref ? `<a class="card project-card" data-project-key="${projectKey(it.client || it.title)}" href="${it.projectHref}" aria-label="Découvrir le projet ${it.client} : ${it.title}">` : `<figure class="card" data-i="${i}" data-project-key="${projectKey(it.client || it.title)}">`}
       <img src="${it.src}" alt="${it.title}${it.client ? ', ' + it.client : ''}" loading="lazy" decoding="async">
       ${it.projectHref ? '<span class="card-caption">' : '<figcaption>'}<b>${it.title}</b><span>${it.client}${it.projectHref ? ' · Découvrir le projet →' : ''}</span>${it.projectHref ? '</span>' : '</figcaption>'}
     ${it.projectHref ? '</a>' : '</figure>'}`).join('');
@@ -236,7 +252,66 @@ function setupTabs(sectionId, items) {
   const categoryTitle = sec.querySelector('[data-category-title]');
   const accessoryTabs = sec.querySelectorAll('[data-accessory-subcat]');
   const accessoryProjects = sec.querySelectorAll('[data-accessory-project]');
-  const standaloneAccessoryProjects = ['lemarys', 'mulberry', 'alme', 'celine', 'bally', 'fendi', 'place-vendome', 'maison-rinceau', 'lunetterie'];
+  const disciplineProjectNav = sec.querySelector('[data-discipline-project-nav]');
+  const disciplineProjectLinks = sec.querySelector('[data-discipline-project-links]');
+  const standaloneAccessoryProjects = ['lemarys', 'mulberry', 'alme', 'celine', 'bally', 'fendi', 'place-vendome', 'maison-rinceau', 'lunetterie', 'croquis-recherches'];
+  const scrollTo = target => {
+    if (!target) return;
+    window.setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 70);
+  };
+  const updateProjectNav = cat => {
+    if (!disciplineProjectNav || !disciplineProjectLinks) return;
+    if (cat === 'maroquinerie') {
+      disciplineProjectNav.hidden = true;
+      return;
+    }
+    disciplineProjectNav.hidden = false;
+    if (cat === 'horlogerie') {
+      const links = [...projectGroups].filter(group => group.dataset.projectCat === 'horlogerie');
+      disciplineProjectLinks.innerHTML = links.map((link, index) => {
+        const label = link.querySelector('.project-group-copy strong')?.textContent.trim() || 'Projet ' + (index + 1);
+        return '<a class="discipline-project-link" href="' + link.getAttribute('href') + '"><span>' + String(index + 1).padStart(2, '0') + '</span><strong>' + label + '</strong><b aria-hidden="true">↗</b></a>';
+      }).join('');
+      return;
+    }
+    if (cat === 'joaillerie') {
+      const entries = [
+        ['Collection Interstice', '.jewelry-work'],
+        ['Porte-cartes sécurisé', '.jewelry-cardholder-gallery']
+      ];
+      disciplineProjectLinks.innerHTML = entries.map((entry, index) => '<button class="discipline-project-link" type="button" data-project-target="' + entry[1] + '"><span>' + String(index + 1).padStart(2, '0') + '</span><strong>' + entry[0] + '</strong><b aria-hidden="true">↓</b></button>').join('');
+    } else if (cat === 'mobilier') {
+      const entries = [
+        ['Grand Palais · Mobilier & assises', '.grand-palais-project-feature'],
+        ['Piano Carod · Le son prend forme', '.carod-project-feature'],
+        ['Ère de je · Mobilier modulable', '[data-project-key="mobilier-modulable"]'],
+        ['Ego · Assise', '[data-project-key="assise"]']
+      ];
+      disciplineProjectLinks.innerHTML = entries.map((entry, index) => '<button class="discipline-project-link" type="button" data-project-target="' + entry[1] + '"><span>' + String(index + 1).padStart(2, '0') + '</span><strong>' + entry[0] + '</strong><b aria-hidden="true">↓</b></button>').join('');
+    } else {
+      const seen = new Set();
+      const entries = items.filter(item => item.cat === cat).filter(item => {
+        const key = projectKey(item.client || item.title);
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+      disciplineProjectLinks.innerHTML = entries.map((item, index) => {
+        const label = item.client || item.title;
+        return '<button class="discipline-project-link" type="button" data-project-key="' + projectKey(label) + '"><span>' + String(index + 1).padStart(2, '0') + '</span><strong>' + label + '</strong><b aria-hidden="true">↓</b></button>';
+      }).join('');
+    }
+    disciplineProjectLinks.querySelectorAll('button').forEach(button => button.addEventListener('click', () => {
+      const selector = button.dataset.projectTarget;
+      if (selector) {
+        scrollTo(sec.querySelector(selector));
+        return;
+      }
+      grid.dataset.expanded = '1';
+      renderGrid(grid, items, cat, more);
+      scrollTo(grid.querySelector('[data-project-key="' + button.dataset.projectKey + '"]'));
+    }));
+  };
   const showAccessoryProject = key => {
     accessoryProjects.forEach(project => { project.hidden = key !== project.dataset.accessoryProject; });
     grid.hidden = standaloneAccessoryProjects.includes(key);
@@ -247,8 +322,12 @@ function setupTabs(sectionId, items) {
     showAccessoryProject('all');
   };
   tabs.forEach(t => t.addEventListener('click', () => {
-    tabs.forEach(x => x.classList.remove('active'));
+    tabs.forEach(x => {
+      x.classList.remove('active');
+      x.setAttribute('aria-pressed', 'false');
+    });
     t.classList.add('active');
+    t.setAttribute('aria-pressed', 'true');
     projectGroups.forEach(group => { group.hidden = group.dataset.projectCat !== t.dataset.cat; });
     categoryIntros.forEach(intro => { intro.hidden = intro.dataset.categoryIntro !== t.dataset.cat; });
     if (categoryTitle) categoryTitle.textContent = t.textContent.trim();
@@ -256,24 +335,36 @@ function setupTabs(sectionId, items) {
     grid.dataset.expanded = '0';
     if (t.dataset.cat === 'maroquinerie') resetAccessoryTabs();
     renderGrid(grid, items, t.dataset.cat, more);
+    updateProjectNav(t.dataset.cat);
+    scrollTo(categoryTitle?.closest('.design-category-title'));
   }));
   accessoryTabs.forEach(button => button.addEventListener('click', () => {
-    accessoryTabs.forEach(item => item.classList.remove('active'));
+    accessoryTabs.forEach(item => {
+      item.classList.remove('active');
+      item.setAttribute('aria-pressed', 'false');
+    });
     button.classList.add('active');
+    button.setAttribute('aria-pressed', 'true');
     grid.dataset.subcat = button.dataset.accessorySubcat;
     grid.dataset.expanded = '0';
     showAccessoryProject(button.dataset.accessorySubcat);
     renderGrid(grid, items, 'maroquinerie', more);
+    if (button.classList.contains('accessory-project-quicklink')) {
+      scrollTo(sec.querySelector('[data-accessory-project="' + button.dataset.accessorySubcat + '"]'));
+    }
   }));
   const initialCat = sec.querySelector('.tab.active').dataset.cat;
   if (categoryTitle) categoryTitle.textContent = sec.querySelector('.tab.active').textContent.trim();
   if (grid.hasAttribute('data-design-grid')) grid.hidden = initialCat === 'horlogerie';
   categoryIntros.forEach(intro => { intro.hidden = intro.dataset.categoryIntro !== initialCat; });
+  tabs.forEach(tab => tab.setAttribute('aria-pressed', tab.classList.contains('active') ? 'true' : 'false'));
+  accessoryTabs.forEach(tab => tab.setAttribute('aria-pressed', tab.classList.contains('active') ? 'true' : 'false'));
   renderGrid(grid, items, initialCat, more);
+  updateProjectNav(initialCat);
 
   if (sectionId === 'design') {
     const requestedProject = new URLSearchParams(window.location.search).get('project');
-    const availableProjects = ['lemarys', 'mulberry', 'alme', 'celine', 'bally', 'fendi', 'place-vendome', 'maison-rinceau', 'lunetterie'];
+    const availableProjects = ['lemarys', 'mulberry', 'alme', 'celine', 'bally', 'fendi', 'place-vendome', 'maison-rinceau', 'lunetterie', 'croquis-recherches'];
     if (availableProjects.includes(requestedProject)) {
       const maroquinerieTab = sec.querySelector('[data-cat="maroquinerie"]');
       const projectTab = sec.querySelector(`[data-accessory-subcat="${requestedProject}"]`);
@@ -322,7 +413,7 @@ document.addEventListener('keydown', e => {
 /* instagram strip */
 const igGrid = document.querySelector('.ig-grid');
 const archivedIgItems = IG_FILES.map((f, i) => { const [title, client] = IG_ARCHIVE[i].split(' · '); return { src: `assets/ig/${f}.jpg`, title, client }; });
-const igItems = [...IG_LATEST, ...archivedIgItems];
+const igItems = [...new Map(IG_LATEST.map(item => [item.postUrl || item.src, item])).values()];
 igGrid.innerHTML = igItems.map((it, i) => `<a href="#" data-i="${i}" aria-label="Voir ${escapeHtml(it.title)}"><img src="${it.src}" alt="${escapeHtml(it.title)}" loading="lazy" referrerpolicy="no-referrer"></a>`).join('');
 igGrid.querySelectorAll('a').forEach(a => a.addEventListener('click', e => { e.preventDefault(); openLb(igItems, +a.dataset.i); }));
 
