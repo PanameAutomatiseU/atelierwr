@@ -61,7 +61,7 @@ const MAROQUINERIE = [
   { src: 'assets/work/maroquinerie-38.jpg', cat: 'maroquinerie', subcat: 'recherches', title: 'Recherche matière et couleur', client: 'Croquis & recherches' },
   { src: 'assets/work/maroquinerie-39.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Collection de ceintures', client: 'Petite maroquinerie & accessoires' },
   { src: 'assets/work/maroquinerie-40.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Petite maroquinerie graphique', client: 'Petite maroquinerie & accessoires' },
-  { src: 'assets/work/maroquinerie-41.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sacs de voyage et systèmes de portage', client: 'Sacs & maroquinerie' },
+  { src: 'assets/work/maroquinerie-41.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'alme'], title: 'Almé · Cabas signature', client: 'Monogramme double A perforé et pochette amovible' },
   { src: 'assets/work/maroquinerie-42.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Accessoires audio et objets nomades', client: 'Petite maroquinerie & accessoires' },
   { src: 'assets/work/maroquinerie-43.jpg', cat: 'maroquinerie', subcat: 'lunetterie', tags: ['lunetterie', 'eyewear'], title: 'Collection de montures · Formes et proportions', client: 'Recherche de gamme · Acétate et métal' },
   { src: 'assets/work/maroquinerie-44.jpg', cat: 'maroquinerie', subcat: 'chaussures', title: 'Chaussures et détails de construction', client: 'Chaussures' },
