@@ -943,3 +943,50 @@ a.card:focus-visible .card-caption {
   visibility: visible !important;
   white-space: normal !important;
 }
+
+/* Bandeau des spécialités fixé pendant toute la navigation Design */
+.design-tabs {
+  position: sticky !important;
+  top: 68px !important;
+  z-index: 100 !important;
+  display: grid !important;
+  grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+  width: 100% !important;
+  max-height: none !important;
+  overflow: visible !important;
+  background: rgba(243,238,227,.98) !important;
+  border-bottom: 1px solid rgba(21,21,21,.18) !important;
+  box-shadow: 0 12px 24px -22px rgba(21,21,21,.75) !important;
+  backdrop-filter: blur(12px);
+}
+@media (max-width: 1050px) {
+  .design-tabs {
+    position: sticky !important;
+    top: 68px !important;
+    z-index: 100 !important;
+    display: grid !important;
+    grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+    width: 100% !important;
+    max-height: none !important;
+    overflow: visible !important;
+    background: rgba(243,238,227,.98) !important;
+    border-bottom: 1px solid rgba(21,21,21,.18) !important;
+    box-shadow: 0 12px 24px -22px rgba(21,21,21,.75) !important;
+    backdrop-filter: blur(12px);
+  }
+}
+@media (max-width: 720px) {
+  .design-tabs {
+    position: sticky !important;
+    top: 58px !important;
+    grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+  }
+  .design-tabs .tab,
+  .design-tabs .tab:visited {
+    display: flex !important;
+    min-width: 0 !important;
+    min-height: 64px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
