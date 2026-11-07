@@ -30,7 +30,7 @@ const MAROQUINERIE = [
   { src: 'assets/work/maroquinerie-07.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'mulberry'], title: 'Mulberry · Cabas souple', client: 'Design de collection · Construction sellier' },
   { src: 'assets/work/maroquinerie-08.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'mulberry'], title: 'Mulberry · Petit porté main', client: 'Design de collection · Bandoulière tressée' },
   { src: 'assets/work/maroquinerie-09.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'place-vendome'], title: 'Place Vendôme · Collection Signature', client: 'Carré à pans coupés et architecture parisienne' },
-  { src: 'assets/work/maroquinerie-10.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Accessoires connectés et étuis', client: 'Petite maroquinerie & accessoires' },
+  { src: 'assets/work/maroquinerie-10.jpg', cat: 'maroquinerie', subcat: 'accessoires', tags: ['accessoires', 'maison-rinceau'], title: 'Maison Rinceau · Identité et collection', client: 'Monogramme, fermoir signature et maroquinerie' },
   { src: 'assets/work/maroquinerie-12.jpg', cat: 'maroquinerie', subcat: 'chaussures', tags: ['chaussures', 'alme'], title: 'Almé · Sandales graphiques', client: 'Direction artistique · Détails dorés et identité double A' },
   { src: 'assets/work/maroquinerie-13.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'alme'], title: 'Almé · Sac demi-lune', client: 'Maroquinerie · Monogramme double A en métal doré' },
   { src: 'assets/work/maroquinerie-14.jpg', cat: 'maroquinerie', subcat: 'chaussures', tags: ['chaussures', 'alme'], title: 'Almé · Soulier tressé', client: 'Design de chaussure · Bride, tressage et talon en bois' },
@@ -185,7 +185,7 @@ function renderGrid(gridEl, items, cat, moreBtn) {
   const subcat = gridEl.dataset.subcat || 'all';
   if (cat === 'maroquinerie') {
     const tagsFor = item => item.tags || [item.subcat];
-    const isStandaloneProject = item => tagsFor(item).some(tag => tag === 'lemarys' || tag === 'eyewear' || tag === 'mulberry' || tag === 'alme' || tag === 'bally' || tag === 'fendi' || tag === 'place-vendome');
+    const isStandaloneProject = item => tagsFor(item).some(tag => tag === 'lemarys' || tag === 'eyewear' || tag === 'mulberry' || tag === 'alme' || tag === 'bally' || tag === 'fendi' || tag === 'place-vendome' || tag === 'maison-rinceau');
     if (subcat === 'lemarys') {
       list = list.filter(item => tagsFor(item).includes('lemarys'));
     } else if (subcat === 'lunetterie') {
@@ -200,6 +200,8 @@ function renderGrid(gridEl, items, cat, moreBtn) {
       list = list.filter(item => tagsFor(item).includes('fendi'));
     } else if (subcat === 'place-vendome') {
       list = list.filter(item => tagsFor(item).includes('place-vendome'));
+    } else if (subcat === 'maison-rinceau') {
+      list = list.filter(item => tagsFor(item).includes('maison-rinceau'));
     } else {
       list = list.filter(item => !isStandaloneProject(item));
       if (subcat !== 'all') list = list.filter(item => tagsFor(item).includes(subcat));
@@ -232,7 +234,7 @@ function setupTabs(sectionId, items) {
   const categoryTitle = sec.querySelector('[data-category-title]');
   const accessoryTabs = sec.querySelectorAll('[data-accessory-subcat]');
   const accessoryProjects = sec.querySelectorAll('[data-accessory-project]');
-  const standaloneAccessoryProjects = ['lemarys', 'mulberry', 'alme', 'bally', 'fendi', 'place-vendome', 'lunetterie'];
+  const standaloneAccessoryProjects = ['lemarys', 'mulberry', 'alme', 'bally', 'fendi', 'place-vendome', 'maison-rinceau', 'lunetterie'];
   const showAccessoryProject = key => {
     accessoryProjects.forEach(project => { project.hidden = key !== project.dataset.accessoryProject; });
     grid.hidden = standaloneAccessoryProjects.includes(key);
@@ -269,7 +271,7 @@ function setupTabs(sectionId, items) {
 
   if (sectionId === 'design') {
     const requestedProject = new URLSearchParams(window.location.search).get('project');
-    const availableProjects = ['lemarys', 'mulberry', 'alme', 'bally', 'fendi', 'place-vendome', 'lunetterie'];
+    const availableProjects = ['lemarys', 'mulberry', 'alme', 'bally', 'fendi', 'place-vendome', 'maison-rinceau', 'lunetterie'];
     if (availableProjects.includes(requestedProject)) {
       const maroquinerieTab = sec.querySelector('[data-cat="maroquinerie"]');
       const projectTab = sec.querySelector(`[data-accessory-subcat="${requestedProject}"]`);
