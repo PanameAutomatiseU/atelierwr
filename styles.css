@@ -143,6 +143,14 @@ p{margin:0}
 .accessories-intro .category-intro-copy>p{max-width:460px;margin-top:22px;font-size:14px;line-height:1.6}
 .accessory-filter-panel{display:flex;min-width:0;flex-direction:column;justify-content:center;padding:clamp(26px,4vw,52px)}
 .accessory-filter-panel>small{display:block;margin-bottom:18px;color:var(--red-deep);font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.accessory-project-quicklinks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.accessory-project-quicklink{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:50px;padding:12px 14px;border:1px solid var(--red-deep);border-radius:3px;background:var(--red-deep);color:#fff;font:700 11px/1.25 var(--font-body);letter-spacing:.045em;text-align:left;text-transform:uppercase;cursor:pointer;transition:background .2s,color .2s,transform .2s}
+.accessory-project-quicklink strong{font:inherit}
+.accessory-project-quicklink span{flex:0 0 auto;font-size:16px;line-height:1;transition:transform .2s}
+.accessory-project-quicklink:hover,.accessory-project-quicklink.active{background:#65151f;color:#fff;transform:translateY(-2px)}
+.accessory-project-quicklink:hover span,.accessory-project-quicklink.active span{transform:translate(2px,-2px)}
+.accessory-project-quicklink:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.accessory-filter-panel__secondary{margin-top:24px}
 .accessory-subtabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 .accessory-subtab{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:58px;padding:13px 15px;border:1px solid var(--red-deep);border-radius:4px;background:#fff;color:var(--red-deep);font:700 12px/1.25 var(--font-body);letter-spacing:.035em;text-align:left;text-transform:uppercase;cursor:pointer;transition:background .2s,color .2s,transform .2s}
 .accessory-subtab span{display:grid;place-items:center;flex:0 0 26px;width:26px;height:26px;border-radius:50%;background:var(--red-deep);color:#fff;font-size:10px}
@@ -549,3 +557,5 @@ a.card:focus-visible{outline:3px solid var(--orange);outline-offset:4px}
 @media(max-width:420px){
   .design-tabs .tab,.design-tabs .tab:visited{min-height:36px;padding:4px 5px;font-size:9px}
 }
+
+@media(max-width:520px){.accessory-project-quicklinks{grid-template-columns:1fr}.accessory-project-quicklink{min-height:46px}}
