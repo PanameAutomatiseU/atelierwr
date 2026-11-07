@@ -39,9 +39,9 @@ const MAROQUINERIE = [
   { src: 'assets/work/maroquinerie-17.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Bijoux de sac et porte-clés', client: 'Petite maroquinerie & accessoires' },
   { src: 'assets/work/maroquinerie-18.jpg', cat: 'maroquinerie', subcat: 'accessoires', tags: ['accessoires', 'alme'], title: 'Almé · Ceintures et boucleries', client: 'Déclinaisons du monogramme double A' },
   { src: 'assets/work/maroquinerie-19.jpg', cat: 'maroquinerie', subcat: 'lunetterie', tags: ['lunetterie', 'eyewear'], title: 'Lunetterie haute joaillerie · Modèle floral', client: 'Monture ronde · Or et sertissage' },
-  { src: 'assets/work/maroquinerie-20.jpg', cat: 'maroquinerie', subcat: 'recherches', title: 'Recherche de souliers', client: 'Croquis & recherches' },
-  { src: 'assets/work/maroquinerie-21.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sacs à rabat', client: 'Sacs & maroquinerie' },
-  { src: 'assets/work/maroquinerie-22.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Ceintures et boucleries', client: 'Petite maroquinerie & accessoires' },
+  { src: 'assets/work/maroquinerie-20.jpg', cat: 'maroquinerie', subcat: 'recherches', tags: ['recherches', 'celine'], title: 'Céline · Volume facetté', client: 'Candidature · Design architectural' },
+  { src: 'assets/work/maroquinerie-21.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'celine'], title: 'Céline · Géométrie circulaire', client: 'Candidature · Design minimaliste' },
+  { src: 'assets/work/maroquinerie-22.jpg', cat: 'maroquinerie', subcat: 'accessoires', tags: ['accessoires', 'celine'], title: 'Céline · Ligne courbe', client: 'Candidature · Design de maroquinerie' },
   { src: 'assets/work/maroquinerie-23.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Gamme chromatique de ceintures', client: 'Petite maroquinerie & accessoires' },
   { src: 'assets/work/maroquinerie-24.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'alme'], title: 'Almé · Collection de maroquinerie', client: 'Sacs, petite maroquinerie et fermoir signature' },
   { src: 'assets/work/logo-06.jpg', cat: 'maroquinerie', subcat: 'accessoires', tags: ['accessoires', 'alme'], title: 'Almé · Identité double A', client: 'Monogramme, applications et territoire de marque' },
@@ -185,7 +185,7 @@ function renderGrid(gridEl, items, cat, moreBtn) {
   const subcat = gridEl.dataset.subcat || 'all';
   if (cat === 'maroquinerie') {
     const tagsFor = item => item.tags || [item.subcat];
-    const isStandaloneProject = item => tagsFor(item).some(tag => tag === 'lemarys' || tag === 'eyewear' || tag === 'mulberry' || tag === 'alme' || tag === 'bally' || tag === 'fendi' || tag === 'place-vendome' || tag === 'maison-rinceau');
+    const isStandaloneProject = item => tagsFor(item).some(tag => tag === 'lemarys' || tag === 'eyewear' || tag === 'mulberry' || tag === 'alme' || tag === 'bally' || tag === 'fendi' || tag === 'place-vendome' || tag === 'maison-rinceau' || tag === 'celine');
     if (subcat === 'lemarys') {
       list = list.filter(item => tagsFor(item).includes('lemarys'));
     } else if (subcat === 'lunetterie') {
@@ -202,6 +202,8 @@ function renderGrid(gridEl, items, cat, moreBtn) {
       list = list.filter(item => tagsFor(item).includes('place-vendome'));
     } else if (subcat === 'maison-rinceau') {
       list = list.filter(item => tagsFor(item).includes('maison-rinceau'));
+    } else if (subcat === 'celine') {
+      list = list.filter(item => tagsFor(item).includes('celine'));
     } else {
       list = list.filter(item => !isStandaloneProject(item));
       if (subcat !== 'all') list = list.filter(item => tagsFor(item).includes(subcat));
@@ -234,7 +236,7 @@ function setupTabs(sectionId, items) {
   const categoryTitle = sec.querySelector('[data-category-title]');
   const accessoryTabs = sec.querySelectorAll('[data-accessory-subcat]');
   const accessoryProjects = sec.querySelectorAll('[data-accessory-project]');
-  const standaloneAccessoryProjects = ['lemarys', 'mulberry', 'alme', 'bally', 'fendi', 'place-vendome', 'maison-rinceau', 'lunetterie'];
+  const standaloneAccessoryProjects = ['lemarys', 'mulberry', 'alme', 'celine', 'bally', 'fendi', 'place-vendome', 'maison-rinceau', 'lunetterie'];
   const showAccessoryProject = key => {
     accessoryProjects.forEach(project => { project.hidden = key !== project.dataset.accessoryProject; });
     grid.hidden = standaloneAccessoryProjects.includes(key);
@@ -271,7 +273,7 @@ function setupTabs(sectionId, items) {
 
   if (sectionId === 'design') {
     const requestedProject = new URLSearchParams(window.location.search).get('project');
-    const availableProjects = ['lemarys', 'mulberry', 'alme', 'bally', 'fendi', 'place-vendome', 'maison-rinceau', 'lunetterie'];
+    const availableProjects = ['lemarys', 'mulberry', 'alme', 'celine', 'bally', 'fendi', 'place-vendome', 'maison-rinceau', 'lunetterie'];
     if (availableProjects.includes(requestedProject)) {
       const maroquinerieTab = sec.querySelector('[data-cat="maroquinerie"]');
       const projectTab = sec.querySelector(`[data-accessory-subcat="${requestedProject}"]`);
