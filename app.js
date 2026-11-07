@@ -45,7 +45,7 @@ const MAROQUINERIE = [
   { src: 'assets/work/maroquinerie-23.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Gamme chromatique de ceintures', client: 'Petite maroquinerie & accessoires' },
   { src: 'assets/work/maroquinerie-24.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'alme'], title: 'Almé · Collection de maroquinerie', client: 'Sacs, petite maroquinerie et fermoir signature' },
   { src: 'assets/work/logo-06.jpg', cat: 'maroquinerie', subcat: 'accessoires', tags: ['accessoires', 'alme'], title: 'Almé · Identité double A', client: 'Monogramme, applications et territoire de marque' },
-  { src: 'assets/work/maroquinerie-25.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sac architectural à fermoir', client: 'Sacs & maroquinerie' },
+  { src: 'assets/work/maroquinerie-25.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'mulberry'], title: 'Mulberry · Recherche de collection', client: 'Croquis, volumes, tressages et cordons' },
   { src: 'assets/work/maroquinerie-26.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'bally'], title: 'Bally · Sac à chaussures', client: 'Partenariat Vogue US · Anna Wintour' },
   { src: 'assets/work/maroquinerie-27.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Bijoux de sac modulaires', client: 'Petite maroquinerie & accessoires' },
   { src: 'assets/work/maroquinerie-28.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sacs souples et portés', client: 'Sacs & maroquinerie' },
