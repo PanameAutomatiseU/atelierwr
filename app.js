@@ -304,39 +304,30 @@ function setupContinuousDesign(sec, items) {
   });
 
   const accessorySection = sections.get('maroquinerie');
-  const accessoryGrid = document.createElement('div');
-  accessoryGrid.className = 'grid design-continuous-grid design-continuous-grid--accessories';
-  accessoryGrid.dataset.expanded = '1';
-  accessoryGrid.dataset.subcat = 'all';
-  accessorySection.appendChild(accessoryGrid);
-  renderGrid(accessoryGrid, items, 'maroquinerie', null);
+  const typeFilterLabel = accessorySection.querySelector('.accessory-filter-panel__secondary');
+  const typeFilters = accessorySection.querySelector('.accessory-subtabs--types');
+  if (typeFilterLabel) typeFilterLabel.hidden = true;
+  if (typeFilters) typeFilters.hidden = true;
 
   const accessoryProjects = [...accessorySection.querySelectorAll('[data-accessory-project]')];
-  const accessoryButtons = [...accessorySection.querySelectorAll('[data-accessory-subcat]')];
+  const accessoryButtons = [...accessorySection.querySelectorAll('.accessory-project-quicklink[data-accessory-subcat]')];
   const showAccessorySelection = (key, shouldScroll = true) => {
-    const isProject = standaloneAccessoryProjects.includes(key);
+    if (!standaloneAccessoryProjects.includes(key)) return;
     accessoryProjects.forEach(project => {
-      project.hidden = !isProject || project.dataset.accessoryProject !== key;
+      project.hidden = project.dataset.accessoryProject !== key;
     });
-    accessoryGrid.hidden = isProject;
     accessoryButtons.forEach(button => {
       const active = button.dataset.accessorySubcat === key;
       button.classList.toggle('active', active);
       button.setAttribute('aria-pressed', active ? 'true' : 'false');
     });
-    if (isProject) {
-      const target = accessorySection.querySelector('[data-accessory-project="' + key + '"]');
-      if (shouldScroll && target) window.setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 70);
-      return;
-    }
-    accessoryGrid.dataset.subcat = key;
-    renderGrid(accessoryGrid, items, 'maroquinerie', null);
-    if (shouldScroll) window.setTimeout(() => accessoryGrid.scrollIntoView({ behavior: 'smooth', block: 'start' }), 70);
+    const target = accessorySection.querySelector('[data-accessory-project="' + key + '"]');
+    if (shouldScroll && target) window.setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 70);
   };
   accessoryButtons.forEach(button => button.addEventListener('click', () => {
     showAccessorySelection(button.dataset.accessorySubcat);
   }));
-  showAccessorySelection('all', false);
+  accessoryProjects.forEach(project => { project.hidden = true; });
 
   const allBars = [sourceBar];
   let floatingBar = document.querySelector('.design-tabs-floating');
