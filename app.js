@@ -374,6 +374,50 @@ function setupTabs(sectionId, items) {
         sec.querySelector(`[data-accessory-project="${requestedProject}"]`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 120);
     }
+
+    const sourceBar = sec.querySelector('.design-tabs');
+    if (sourceBar && !document.querySelector('.design-tabs-floating')) {
+      const floatingBar = sourceBar.cloneNode(true);
+      floatingBar.classList.add('design-tabs-floating');
+      floatingBar.setAttribute('aria-label', 'Accès permanent aux sept disciplines de Design et création');
+      document.body.appendChild(floatingBar);
+
+      const floatingButtons = floatingBar.querySelectorAll('[data-cat]');
+      const syncFloatingBar = () => {
+        const activeCat = sec.querySelector('.design-tabs .tab.active')?.dataset.cat;
+        floatingButtons.forEach(button => {
+          const active = button.dataset.cat === activeCat;
+          button.classList.toggle('active', active);
+          button.setAttribute('aria-pressed', active ? 'true' : 'false');
+        });
+      };
+      floatingButtons.forEach(button => button.addEventListener('click', () => {
+        sec.querySelector('.design-tabs [data-cat="' + button.dataset.cat + '"]')?.click();
+        syncFloatingBar();
+      }));
+      tabs.forEach(tab => tab.addEventListener('click', syncFloatingBar));
+
+      let floatingTick = false;
+      const updateFloatingBar = () => {
+        const bounds = sec.getBoundingClientRect();
+        const visible = bounds.top <= 76 && bounds.bottom > 150;
+        floatingBar.classList.toggle('is-visible', visible);
+        floatingBar.setAttribute('aria-hidden', visible ? 'false' : 'true');
+      };
+      const requestFloatingUpdate = () => {
+        if (floatingTick) return;
+        floatingTick = true;
+        requestAnimationFrame(() => {
+          updateFloatingBar();
+          floatingTick = false;
+        });
+      };
+      window.addEventListener('scroll', requestFloatingUpdate, { passive: true });
+      window.addEventListener('resize', requestFloatingUpdate);
+      syncFloatingBar();
+      updateFloatingBar();
+      window.setTimeout(updateFloatingBar, 180);
+    }
   }
 }
 
