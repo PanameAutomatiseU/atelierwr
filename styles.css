@@ -1062,3 +1062,68 @@ a.card:focus-visible .card-caption {
     hyphens: auto;
   }
 }
+
+
+/* Parcours continu des sept disciplines de Design & création */
+.design-continuous {
+  display: grid;
+  gap: clamp(80px, 11vw, 150px);
+  margin-top: clamp(42px, 6vw, 82px);
+}
+.design-discipline-section {
+  display: grid;
+  gap: clamp(26px, 4vw, 52px);
+  scroll-margin-top: 152px;
+}
+.design-discipline-heading {
+  padding: clamp(24px, 3vw, 38px) 0;
+  border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+.design-discipline-heading small {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--orange);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.design-discipline-heading h3 {
+  max-width: 1120px;
+  font-size: clamp(44px, 7.2vw, 100px);
+  line-height: .88;
+  letter-spacing: -.04em;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+.design-continuous .category-intro,
+.design-continuous [data-project-cat],
+.design-continuous .design-continuous-grid {
+  margin: 0;
+}
+.design-continuous .design-continuous-grid[hidden] {
+  display: none !important;
+}
+.design-continuous .accessory-project-feature {
+  scroll-margin-top: 152px;
+}
+.design-continuous > .design-discipline-section:last-child {
+  padding-bottom: clamp(40px, 7vw, 90px);
+}
+@media (max-width: 720px) {
+  .design-continuous {
+    gap: 76px;
+    margin-top: 38px;
+  }
+  .design-discipline-section {
+    gap: 24px;
+    scroll-margin-top: 138px;
+  }
+  .design-discipline-heading h3 {
+    font-size: clamp(34px, 11vw, 54px);
+  }
+  .design-continuous .accessory-project-feature {
+    scroll-margin-top: 138px;
+  }
+}
