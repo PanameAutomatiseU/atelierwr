@@ -46,12 +46,12 @@ const MAROQUINERIE = [
   { src: 'assets/work/maroquinerie-24.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'alme'], title: 'Almé · Collection de maroquinerie', client: 'Sacs, petite maroquinerie et fermoir signature' },
   { src: 'assets/work/logo-06.jpg', cat: 'maroquinerie', subcat: 'accessoires', tags: ['accessoires', 'alme'], title: 'Almé · Identité double A', client: 'Monogramme, applications et territoire de marque' },
   { src: 'assets/work/maroquinerie-25.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sac architectural à fermoir', client: 'Sacs & maroquinerie' },
-  { src: 'assets/work/maroquinerie-26.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Étude de fermoir et construction', client: 'Sacs & maroquinerie' },
+  { src: 'assets/work/maroquinerie-26.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'bally'], title: 'Bally · Sac à chaussures', client: 'Partenariat Vogue US · Anna Wintour' },
   { src: 'assets/work/maroquinerie-27.jpg', cat: 'maroquinerie', subcat: 'accessoires', title: 'Bijoux de sac modulaires', client: 'Petite maroquinerie & accessoires' },
   { src: 'assets/work/maroquinerie-28.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sacs souples et portés', client: 'Sacs & maroquinerie' },
   { src: 'assets/work/maroquinerie-29.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sacs compacts et variantes', client: 'Sacs & maroquinerie' },
   { src: 'assets/work/maroquinerie-30.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Cabas de ville', client: 'Sacs & maroquinerie' },
-  { src: 'assets/work/maroquinerie-31.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Cabas géométriques', client: 'Sacs & maroquinerie' },
+  { src: 'assets/work/maroquinerie-31.jpg', cat: 'maroquinerie', subcat: 'sacs', tags: ['sacs', 'bally'], title: 'Bally Sport · Collection de sacs', client: 'Archives graphiques et design sportif' },
   { src: 'assets/work/maroquinerie-32.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sacs et variations colorées', client: 'Sacs & maroquinerie' },
   { src: 'assets/work/maroquinerie-33.jpg', cat: 'maroquinerie', subcat: 'sacs', title: 'Sac à rabat compact', client: 'Sacs & maroquinerie' },
   { src: 'assets/work/maroquinerie-34.jpg', cat: 'maroquinerie', subcat: 'recherches', title: 'Croquis de sacs et volumes', client: 'Croquis & recherches' },
@@ -185,7 +185,7 @@ function renderGrid(gridEl, items, cat, moreBtn) {
   const subcat = gridEl.dataset.subcat || 'all';
   if (cat === 'maroquinerie') {
     const tagsFor = item => item.tags || [item.subcat];
-    const isStandaloneProject = item => tagsFor(item).some(tag => tag === 'lemarys' || tag === 'eyewear' || tag === 'mulberry' || tag === 'alme');
+    const isStandaloneProject = item => tagsFor(item).some(tag => tag === 'lemarys' || tag === 'eyewear' || tag === 'mulberry' || tag === 'alme' || tag === 'bally');
     if (subcat === 'lemarys') {
       list = list.filter(item => tagsFor(item).includes('lemarys'));
     } else if (subcat === 'lunetterie') {
@@ -194,6 +194,8 @@ function renderGrid(gridEl, items, cat, moreBtn) {
       list = list.filter(item => tagsFor(item).includes('mulberry'));
     } else if (subcat === 'alme') {
       list = list.filter(item => tagsFor(item).includes('alme'));
+    } else if (subcat === 'bally') {
+      list = list.filter(item => tagsFor(item).includes('bally'));
     } else {
       list = list.filter(item => !isStandaloneProject(item));
       if (subcat !== 'all') list = list.filter(item => tagsFor(item).includes(subcat));
@@ -226,7 +228,7 @@ function setupTabs(sectionId, items) {
   const categoryTitle = sec.querySelector('[data-category-title]');
   const accessoryTabs = sec.querySelectorAll('[data-accessory-subcat]');
   const accessoryProjects = sec.querySelectorAll('[data-accessory-project]');
-  const standaloneAccessoryProjects = ['lemarys', 'mulberry', 'alme', 'lunetterie'];
+  const standaloneAccessoryProjects = ['lemarys', 'mulberry', 'alme', 'bally', 'lunetterie'];
   const showAccessoryProject = key => {
     accessoryProjects.forEach(project => { project.hidden = key !== project.dataset.accessoryProject; });
     grid.hidden = standaloneAccessoryProjects.includes(key);
@@ -263,7 +265,7 @@ function setupTabs(sectionId, items) {
 
   if (sectionId === 'design') {
     const requestedProject = new URLSearchParams(window.location.search).get('project');
-    const availableProjects = ['lemarys', 'mulberry', 'alme', 'lunetterie'];
+    const availableProjects = ['lemarys', 'mulberry', 'alme', 'bally', 'lunetterie'];
     if (availableProjects.includes(requestedProject)) {
       const maroquinerieTab = sec.querySelector('[data-cat="maroquinerie"]');
       const projectTab = sec.querySelector(`[data-accessory-subcat="${requestedProject}"]`);
