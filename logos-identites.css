@@ -1,12 +1,19 @@
 .logos-page{background:#fff}
-.logos-hero{padding:clamp(54px,9vw,120px) 0 clamp(44px,7vw,84px);border-bottom:1px solid var(--line)}
-.logos-kicker{color:var(--blue);font-size:12px;font-weight:700;letter-spacing:.17em;text-transform:uppercase;margin-bottom:24px}
-.logos-hero h1{font-size:clamp(54px,10vw,136px);line-height:.88;text-transform:uppercase;max-width:1100px}
+.logos-hero{padding:clamp(48px,7vw,88px) 0 clamp(42px,6vw,72px);border-bottom:1px solid var(--line)}
+.logos-kicker{color:var(--blue);font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:20px}
+.logos-hero h1{max-width:1050px;font-size:clamp(48px,8.2vw,108px);line-height:.91;letter-spacing:-.035em;text-transform:uppercase}
 .logos-hero h1 span{display:block;color:var(--blue)}
-.logos-context{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,6vw,90px);margin-top:clamp(38px,6vw,72px);align-items:start}
-.logos-context .lead{font-size:clamp(20px,2.2vw,29px);line-height:1.35}
-.logos-context-copy{font-size:16px;color:#37332e}
-.logos-context-copy p+p{margin-top:18px}
+.logos-context{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(360px,.94fr);gap:0;margin-top:clamp(34px,5vw,58px);align-items:stretch;border:1px solid var(--line);background:#fff}
+.logos-context-copy{min-width:0;padding:clamp(26px,4vw,46px);color:#37332e;border-right:1px solid var(--line);font-size:clamp(13px,1.08vw,15px);line-height:1.7}
+.logos-context .lead{max-width:620px;margin-bottom:20px;color:var(--ink);font-size:clamp(22px,2.45vw,34px);font-weight:600;line-height:1.2;letter-spacing:-.02em}
+.logos-context-copy p:not(.lead){max-width:620px}
+.logos-context-copy p+p{margin-top:16px}
+.logos-expertise{display:flex;min-width:0;flex-direction:column;justify-content:center;padding:clamp(24px,3.5vw,42px);background:#f5f2ec}
+.logos-expertise>small{display:block;margin-bottom:17px;color:var(--blue);font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}
+.logos-expertise ol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin:0;padding:0;list-style:none;border-top:1px solid rgba(23,23,23,.24);border-left:1px solid rgba(23,23,23,.24)}
+.logos-expertise li{display:grid;grid-template-columns:27px minmax(0,1fr);gap:9px;align-items:start;min-width:0;min-height:78px;padding:14px 12px;border-right:1px solid rgba(23,23,23,.24);border-bottom:1px solid rgba(23,23,23,.24)}
+.logos-expertise li span{color:var(--orange);font-size:9px;font-weight:800;letter-spacing:.08em;line-height:1.45}
+.logos-expertise li strong{min-width:0;color:#171717;font:700 clamp(10px,.82vw,12px)/1.4 var(--font-body);letter-spacing:.02em;text-transform:uppercase;overflow-wrap:break-word;word-break:normal;hyphens:auto}
 .logos-nav{position:sticky;top:68px;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .logos-nav .wrap{display:flex;gap:22px;overflow-x:auto;padding-top:16px;padding-bottom:16px;scrollbar-width:none}
 .logos-nav a{white-space:nowrap;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
@@ -28,12 +35,19 @@
 .logo-project-copy p{color:var(--muted);font-size:15px;line-height:1.65}
 .logo-project-copy small{display:block;color:var(--blue);font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;margin-bottom:10px}
 @media(max-width:920px){.logo-project-media--trio{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:900px){
+ .logos-context{grid-template-columns:1fr}
+ .logos-context-copy{border-right:0;border-bottom:1px solid var(--line)}
+}
 @media(max-width:820px){
- .logos-context,.logo-project,.logo-project:nth-of-type(even),.logos-intro{grid-template-columns:1fr}
+ .logo-project,.logo-project:nth-of-type(even),.logos-intro{grid-template-columns:1fr}
  .logo-project:nth-of-type(even)>.logo-project-media{order:0}
  .logos-nav{top:68px}
 }
 @media(max-width:560px){
+ .logos-expertise{padding:20px 15px}
+ .logos-expertise ol{grid-template-columns:1fr}
+ .logos-expertise li{min-height:0}
  .logo-project-media--duo,.logo-project-media--trio{grid-template-columns:1fr}
  .logo-project-media img{min-height:0}
 }
