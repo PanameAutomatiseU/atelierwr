@@ -39,3 +39,18 @@
   .pack-project-media--tianqing img:first-child{grid-column:auto}
   .pack-project-media--duo img{min-height:0}
 }
+
+
+/* Swatch Place Vendôme — écrins collectionnables */
+.pack-project--swatch{grid-template-columns:1fr;align-items:start}
+.pack-project--swatch>.pack-project-copy{max-width:960px}
+.pack-project-media--swatch{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;background:transparent}
+.pack-concept{display:flex;min-width:0;flex-direction:column;background:#f5f5f5}
+.pack-concept img{display:block;width:100%;height:auto;aspect-ratio:1.5/1;object-fit:cover;background:#f5f5f5}
+.pack-concept-copy{flex:1;padding:20px 22px 24px;border-top:1px solid var(--line);background:#fff}
+.pack-concept-copy>span{display:block;margin-bottom:7px;color:var(--orange);font-size:9px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.pack-concept-copy h3{margin:0 0 10px;font-size:clamp(19px,2vw,27px);line-height:1.12}
+.pack-concept-copy p{margin:0;color:var(--muted);font-size:13px;line-height:1.65}
+@media(max-width:760px){
+  .pack-project--swatch,.pack-project-media--swatch{grid-template-columns:1fr}
+}
