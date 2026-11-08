@@ -253,7 +253,7 @@ function setupContinuousDesign(sec, items) {
     ['logo', 'Logo & identité'],
     ['affiches', 'Affiches & illustrations']
   ];
-  const standaloneAccessoryProjects = ['lemarys', 'mulberry', 'alme', 'celine', 'bally', 'fendi', 'place-vendome', 'maison-rinceau', 'lunetterie', 'croquis-recherches'];
+  const standaloneAccessoryProjects = ['lemarys', 'mulberry', 'alme', 'celine', 'bally', 'fendi', 'place-vendome', 'maison-rinceau', 'lunetterie', 'crazy-charms', 'croquis-recherches'];
   const sourceBar = sec.querySelector('.design-tabs');
   const originalTitle = sec.querySelector('.design-category-title');
   const originalProjectNav = sec.querySelector('[data-discipline-project-nav]');
