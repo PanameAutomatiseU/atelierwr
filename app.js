@@ -104,82 +104,80 @@ const ART = [
   ...W('nus', 8, ['Nu I · Encre', 'Nu II · Encre', 'Nu III · Aquarelle', 'Nu IV · Encre', 'Nu V · Encre', 'Nu VI · Aquarelle', 'Nu VII · Encre', 'Nu VIII · Encre']),
 ];
 
-const IG_ARCHIVE = ['Et demain ? · 17.10.2026', 'Baigneuse · Encre bleue', 'Bain de montagne · Encre bleue', 'Soleil couchant · Encre bleue', 'Calanques · Encre bleue', 'Baigneur · Encre bleue', 'Croquis · Affiche', 'Affiche W · Encre bleue', 'Affiche · Encre bleue', 'Port · Noir et blanc', 'Village bleu · Encre bleue', 'Nu aux rochers · Encre bleue'];
-const IG_FILES = ['01-poster-demain', '02-baigneuse-rocher', '03-bain-montagne', '04-soleil-couchant', '05-ville-calanques', '06-baigneur-dos', '07-sketch-poster', '08-poster-w', '09-poster-sept', '10-port-noir-blanc', '11-village-bleu', '12-nu-rochers'];
-const IG_LATEST = [
+const INK_WORKS = [
   {
     "src": "https://www.instagram.com/p/De_1ZhFMnmV/media/?size=l",
-    "postUrl": "https://www.instagram.com/wrigoulet/reel/De_1ZhFMnmV/",
+    "postUrl": "https://www.instagram.com/reel/De_1ZhFMnmV/",
     "title": "Juste pour s’amuser…",
     "client": "27.10.2026 · Illustration",
     "caption": "Juste pour s’amuser… 🐙🌊\n\nUne pieuvre, quelques poissons et un joyeux bazar sous-marin… Bref, tout baigne ! 😎☀️\n\n#Illustration #GraphicDesign #MediterraneanArt #ArtDirection #CreativePlay"
   },
   {
     "src": "https://www.instagram.com/p/De9qgpws_7F/media/?size=l",
-    "postUrl": "https://www.instagram.com/wrigoulet/reel/De9qgpws_7F/",
+    "postUrl": "https://www.instagram.com/reel/De9qgpws_7F/",
     "title": "La terrasse haute du Cercle",
     "client": "26.10.2026 · Encre et acrylique",
     "caption": "La terrasse haute du Cercle ☀️\n\nLignes de fuite, perspectives, ombres et lumière… Un décor presque graphique, où la rigueur des formes rencontre celle du sport.\n\nAu Cercle des Nageurs de Marseille, on vient s’entraîner, se dépasser, répéter les mêmes gestes, jour après jour.\n\nEntre architecture moderniste, culture sportive et art de vivre marseillais, un lieu à part, que j’avais envie de raconter à ma manière.\n\nIllustration originale encre et acrylique — disponible à la vente en MP.\n\n#CercleDesNageurs #Marseille #ArchitectureModerniste #IllustrationArt #ArtPrint"
   },
   {
     "src": "https://www.instagram.com/p/De76uPfsM_p/media/?size=l",
-    "postUrl": "https://www.instagram.com/wrigoulet/reel/De76uPfsM_p/",
+    "postUrl": "https://www.instagram.com/reel/De76uPfsM_p/",
     "title": "Encore cinq minutes…",
     "client": "25.10.2026 · Illustration",
     "caption": "☀️🧡 ENCORE CINQ MINUTES…\n\nLe soleil descend sur Marseille, mais au Cercle, on n’a jamais vraiment envie de partir.\n\nUn dernier bain, un dernier moment au soleil…\n\n« Maman, on reste encore cinq minutes ? »\n\nElle sourit. Elle allait justement lui demander la même chose. Malheureusement il est temps de rentrer !\n\n🎨 Illustration originale — Atelier WR\n💌 Disponible à la vente — Informations et commandes en MP.\n\n#Marseille #MarseilleJeTaime #CercleDesNageurs #IllustrationArt #MarseilleArt"
   },
   {
     "src": "https://www.instagram.com/p/De7S5ZMsbk5/media/?size=l",
-    "postUrl": "https://www.instagram.com/wrigoulet/reel/De7S5ZMsbk5/",
+    "postUrl": "https://www.instagram.com/reel/De7S5ZMsbk5/",
     "title": "Le solarium du Cercle",
     "client": "25.10.2026 · Feutre et encre · A4",
     "caption": "☀️ LE SOLARIUM DU CERCLE 😎\n\nIl y a des lieux à Marseille qui ne ressemblent à aucun autre. Des endroits qui ont une âme spéciale, où le temps semble s’arrêter…\n\nAccroché à la Corniche, face à la Méditerranée et aux îles du Frioul, le solarium du Cercle des Nageurs est de ceux-là.\n\nIci, on vient autant pour la mer que pour les copains. On profite du soleil, on refait le monde, on retrouve les habitués et cette façon si marseillaise de prendre son temps.\n\nLes minots d’hier deviennent les parents d’aujourd’hui. Les générations se croisent, les souvenirs se transmettent et les petits rituels restent.\n\nUn véritable petit théâtre à ciel ouvert, où les étés n’en finissent pas.\n\n🎨 Illustration originale au feutre et encre format A4, disponible à la vente.\n\n#Marseille #CercleDesNageurs #IllustrationArt #marseillecartepostale #MediterraneanLifestyle"
   },
   {
     "src": "https://www.instagram.com/p/Dek2xfLiI8B/media/?size=l",
-    "postUrl": "https://www.instagram.com/wrigoulet/p/Dek2xfLiI8B/",
+    "postUrl": "https://www.instagram.com/p/Dek2xfLiI8B/",
     "title": "Solitude solaire",
     "client": "16.10.2026 · Encre bleue et acrylique · A4",
     "caption": "SOLITUDE SOLAIRE ☀️\n\nUn instant suspendu, quelque part face à la mer…\n\nBy the Sea — Série d’illustrations & peintures\nEncre bleue & acrylique sur papier\nFormat A4 · 21 × 29,7 cm\n\n#ByTheSea #Illustration #MediterraneanArt #BlueInk #Bauhaus #ArtContemporain"
   },
   {
     "src": "https://www.instagram.com/p/DehPdD6MROs/media/?size=l",
-    "postUrl": "https://www.instagram.com/wrigoulet/reel/DehPdD6MROs/",
+    "postUrl": "https://www.instagram.com/reel/DehPdD6MROs/",
     "title": "Bain glacé au Tuba Club",
     "client": "15.10.2026 · Illustration",
     "caption": "Un lieu, une expérience, de belles rencontres… et le souvenir d’un moment aussi inattendu que précieux ! 🧊❤️\n\nBain glacé @tuba.club avec @caro_arditti\n\n#Marseille #Illustration #ArtMarseillais #IllustrateurMarseille #CréationLocale"
   },
   {
     "src": "https://www.instagram.com/p/DeDnx7EoDvS/media/?size=l",
-    "postUrl": "https://www.instagram.com/wrigoulet/reel/DeDnx7EoDvS/",
+    "postUrl": "https://www.instagram.com/reel/DeDnx7EoDvS/",
     "title": "Marseille, Between Lines",
     "client": "03.10.2026 · By the Sea",
     "caption": "MARSEILLE, BETWEEN LINES.\n\nSea. Sun. Architecture.\nAnd nothing else to do.\n\nBy the Sea — Marseille\nWilliam Rigoulet, 2026\nOriginal available · DM\n\n#MarseilleArt #MediterraneanArt #ContemporaryArt #FrenchArtist #bytheseaside"
   },
   {
     "src": "https://www.instagram.com/p/Dd-5vCgssw8/media/?size=l",
-    "postUrl": "https://www.instagram.com/wrigoulet/reel/Dd-5vCgssw8/",
+    "postUrl": "https://www.instagram.com/reel/Dd-5vCgssw8/",
     "title": "Sunshine is coming · Callelongue",
     "client": "02.10.2026 · Illustration",
     "caption": "Sunshine is coming ☀️ #Callelongue\n\nSOLD! 😀\n\n#Marseille #MarseilleJeTaime #IllustrationArt #UrbanSketching #MediterraneanArt"
   },
   {
     "src": "https://www.instagram.com/p/Dd-6HtvsX8q/media/?size=l",
-    "postUrl": "https://www.instagram.com/wrigoulet/p/Dd-6HtvsX8q/",
+    "postUrl": "https://www.instagram.com/p/Dd-6HtvsX8q/",
     "title": "Marseille. Soleil. Bang Bang Bang!!",
     "client": "02.10.2026 · Illustration",
     "caption": "Marseille. Soleil. Bang Bang Bang!! ☀️💥\n\n#Marseille #MarseilleJeTaime #MarseilleArt #UrbanSketching #MediterraneanArt"
   },
   {
     "src": "https://www.instagram.com/p/Dd9rH7_MTsX/media/?size=l",
-    "postUrl": "https://www.instagram.com/wrigoulet/reel/Dd9rH7_MTsX/",
+    "postUrl": "https://www.instagram.com/reel/Dd9rH7_MTsX/",
     "title": "Malmousque, my daily spot",
     "client": "01.10.2026 · Illustration",
     "caption": "Si vous me cherchez… je suis probablement sur les rochers. 🌊☀️\nMalmousque, my daily spot. 💙\n\n#Malmousque #Marseille #IllustrationMarseille #MarseilleArt #MediterraneanArt"
   },
   {
     "src": "https://www.instagram.com/p/DdNYJMlIDvW/media/?size=l",
-    "postUrl": "https://www.instagram.com/wrigoulet/p/DdNYJMlIDvW/",
+    "postUrl": "https://www.instagram.com/p/DdNYJMlIDvW/",
     "title": "Marseille carte postale",
     "client": "12.09.2026 · Illustration",
     "caption": "#illustration #marseillecartepostale #marseillemaville #blueaesthetic #hometown"
@@ -603,14 +601,16 @@ function setupTabs(sectionId, items) {
 function renderFineArtSeries() {
   const root = document.querySelector('[data-fineart-series]');
   if (!root) return;
+  const fineArtWorks = key => key === 'encres' ? INK_WORKS : ART.filter(item => item.cat === key);
   const series = [
     { key: 'sea', title: 'By the sea', intro: 'Marseille, la mer, les corps au soleil et la lumière méditerranéenne.' },
+    { key: 'encres', title: 'Mes dernières encres', intro: 'Illustrations au feutre et à l’encre, le plus souvent au format A4, qui saisissent des moments de vie marseillais et d’ailleurs ainsi que des lieux auxquels je suis particulièrement attaché. Une signature graphique fondée sur la complémentarité du bleu et de l’orange, dans des compositions souvent inspirées par la géométrie du Bauhaus.' },
     { key: 'voyage', title: 'Carnets de voyage', intro: 'Scènes, visages et paysages rapportés d’Asie, d’Inde et d’ailleurs.' },
     { key: 'animales', title: 'Lignes animales', intro: 'Bestiaire graphique en acrylique et plâtre, entre mouvement et matière.' },
     { key: 'nus', title: 'Nus', intro: 'Études du corps à l’encre et à l’aquarelle.' }
   ];
   root.innerHTML = series.map((serie, seriesIndex) => {
-    const works = ART.filter(item => item.cat === serie.key);
+    const works = fineArtWorks(serie.key);
     return `
       <section class="fineart-series" aria-labelledby="fineart-series-${serie.key}">
         <header class="fineart-series__head">
@@ -621,14 +621,14 @@ function renderFineArtSeries() {
         <div class="grid fineart-series__grid" data-fineart-series-grid="${serie.key}">
           ${works.map((item, index) => `
             <figure class="card" data-i="${index}">
-              <img src="${item.src}" alt="${item.title}${item.client ? ', ' + item.client : ''}" loading="lazy" decoding="async">
+              <img src="${item.src}" alt="${item.title}${item.client ? ', ' + item.client : ''}" loading="lazy" decoding="async" referrerpolicy="no-referrer">
               <figcaption><b>${item.title}</b><span>${item.client}</span></figcaption>
             </figure>`).join('')}
         </div>
       </section>`;
   }).join('');
   series.forEach(serie => {
-    const works = ART.filter(item => item.cat === serie.key);
+    const works = fineArtWorks(serie.key);
     const grid = root.querySelector('[data-fineart-series-grid="' + serie.key + '"]');
     grid.querySelectorAll('figure.card').forEach(card => card.addEventListener('click', () => openLb(works, +card.dataset.i)));
     observeCards(grid);
@@ -667,13 +667,6 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowLeft') lb.querySelector('.lb-prev').click();
   if (e.key === 'ArrowRight') lb.querySelector('.lb-next').click();
 });
-
-/* instagram strip */
-const igGrid = document.querySelector('.ig-grid');
-const archivedIgItems = IG_FILES.map((f, i) => { const [title, client] = IG_ARCHIVE[i].split(' · '); return { src: `assets/ig/${f}.jpg`, title, client }; });
-const igItems = [...new Map(IG_LATEST.map(item => [item.postUrl || item.src, item])).values()];
-igGrid.innerHTML = igItems.map((it, i) => `<a href="#" data-i="${i}" aria-label="Voir ${escapeHtml(it.title)}"><img src="${it.src}" alt="${escapeHtml(it.title)}" loading="lazy" referrerpolicy="no-referrer"></a>`).join('');
-igGrid.querySelectorAll('a').forEach(a => a.addEventListener('click', e => { e.preventDefault(); openLb(igItems, +a.dataset.i); }));
 
 /* nav */
 const nav = document.querySelector('.nav');
