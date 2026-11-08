@@ -1620,3 +1620,7 @@ a.card:focus-visible .card-caption {
     font-size: clamp(28px, 10vw, 42px);
   }
 }
+
+
+/* Planche d’ouverture · Croquis et recherches maroquinerie */
+.research-project-gallery .research-project-gallery__opening{grid-column:1/-1}
