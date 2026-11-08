@@ -1625,8 +1625,3 @@ a.card:focus-visible .card-caption {
 /* Planche d’ouverture · Croquis et recherches maroquinerie */
 .research-project-gallery .research-project-gallery__opening{grid-column:1/-1}
 
-
-/* Crazy Charms · planches verticales */
-.charms-project-gallery figure{background:#fff}
-.charms-project-gallery img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain;background:#fff}
-@media(max-width:760px){.charms-project-gallery{grid-template-columns:1fr}}
