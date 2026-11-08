@@ -3,7 +3,7 @@
 .other-watches-page .cartier-kicker,
 .other-watches-page .archive-number,
 .other-watches-page .archive-copy small{color:#8d1f18}
-.other-projects-overview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;padding-top:clamp(34px,5vw,62px)}
+.other-projects-overview{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding-top:clamp(34px,5vw,62px)}
 .other-projects-overview a{display:flex;min-height:190px;flex-direction:column;justify-content:flex-end;padding:clamp(24px,4vw,42px);border:1px solid var(--line);background:#f5f3ef;transition:transform .25s,box-shadow .25s}
 .other-projects-overview a.featured{background:#121212;color:#fff}
 .other-projects-overview a:hover{transform:translateY(-3px);box-shadow:0 20px 42px -32px rgba(0,0,0,.8)}
@@ -40,3 +40,6 @@
 
 .faw-project>img{max-height:none;object-fit:contain;background:#fff;border:1px solid var(--line)}
 .faw-copy p+p{margin-top:16px}
+
+.digital-dial-project>img{max-height:none;object-fit:contain;background:#000;border:1px solid var(--line)}
+.digital-dial-copy p+p{margin-top:16px}
