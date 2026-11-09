@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=20261109-maroquinerie-horlogerie">
 <link rel="stylesheet" href="cartier.css?v=20261031-1">
-<link rel="stylesheet" href="maroquinerie-accessoires.css?v=20261109-2">
+<link rel="stylesheet" href="maroquinerie-accessoires.css?v=20261109-3">
 </head>
 <body class="cartier-page leather-page">
 <header class="nav">
@@ -295,60 +295,141 @@
 
 <footer class="footer"><div class="wrap"><span>© Atelier WR · William Rigoulet · Marseille</span><a href="#top">Retour en haut ↑</a></div></footer>
 <script>
-document.querySelectorAll('.accessory-project-feature__gallery').forEach((gallery, galleryIndex) => {
-  const slides=[...gallery.querySelectorAll(':scope > figure')];
-  if(!slides.length) return;
-  gallery.classList.add('leather-carousel');
-  const controls=document.createElement('div');
-  controls.className='leather-carousel-controls';
-  controls.innerHTML='<button class="leather-carousel-arrow" type="button" data-direction="-1" aria-label="Visuel précédent">←</button><div class="leather-carousel-menu" role="tablist" aria-label="Choisir un visuel"></div><span class="leather-carousel-count" aria-live="polite"></span><button class="leather-carousel-arrow" type="button" data-direction="1" aria-label="Visuel suivant">→</button>';
-  gallery.appendChild(controls);
-  const menu=controls.querySelector('.leather-carousel-menu');
-  const count=controls.querySelector('.leather-carousel-count');
+(() => {
+  const projects=[...document.querySelectorAll('[data-accessory-project]')];
+  if(!projects.length) return;
+
+  const dialog=document.createElement('dialog');
+  dialog.className='leather-lightbox';
+  dialog.setAttribute('aria-label','Visualisation des projets en plein écran');
+  dialog.innerHTML=`
+    <div class="leather-lightbox__stage">
+      <button class="leather-lightbox__close" type="button" aria-label="Fermer">×</button>
+      <button class="leather-lightbox__arrow" type="button" data-lightbox-prev aria-label="Visuel précédent">←</button>
+      <img class="leather-lightbox__image" alt="">
+      <button class="leather-lightbox__arrow" type="button" data-lightbox-next aria-label="Visuel suivant">→</button>
+    </div>
+    <div class="leather-lightbox__footer">
+      <div class="leather-lightbox__caption"><strong></strong><span></span></div>
+      <span class="leather-lightbox__count" aria-live="polite"></span>
+      <div class="leather-lightbox__menu" role="tablist" aria-label="Choisir un visuel"></div>
+    </div>`;
+  document.body.appendChild(dialog);
+
+  const lightboxImage=dialog.querySelector('.leather-lightbox__image');
+  const lightboxTitle=dialog.querySelector('.leather-lightbox__caption strong');
+  const lightboxText=dialog.querySelector('.leather-lightbox__caption span');
+  const lightboxCount=dialog.querySelector('.leather-lightbox__count');
+  const lightboxMenu=dialog.querySelector('.leather-lightbox__menu');
+  const prevButton=dialog.querySelector('[data-lightbox-prev]');
+  const nextButton=dialog.querySelector('[data-lightbox-next]');
+  let slides=[];
   let active=0;
-  slides.forEach((slide,index)=>{
-    const label=slide.querySelector('figcaption strong')?.textContent?.trim()||('Visuel '+(index+1));
-    const button=document.createElement('button');
-    button.type='button';
-    button.className='leather-carousel-tab';
-    button.setAttribute('role','tab');
-    button.setAttribute('aria-label',label);
-    button.textContent=String(index+1).padStart(2,'0');
-    button.addEventListener('click',()=>show(index,true));
-    menu.appendChild(button);
-    slide.querySelector('a')?.addEventListener('click',event=>event.preventDefault());
-  });
-  const tabs=[...menu.children];
-  const show=(index,shouldScroll=true)=>{
-    active=(index+slides.length)%slides.length;
-    slides.forEach((slide,i)=>{
-      const selected=i===active;
-      slide.hidden=!selected;
-      slide.classList.toggle('is-active',selected);
-    });
-    tabs.forEach((tab,i)=>{
-      const selected=i===active;
-      tab.classList.toggle('active',selected);
-      tab.setAttribute('aria-selected',selected?'true':'false');
-      tab.tabIndex=selected?0:-1;
-    });
-    count.textContent=String(active+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');
-    if(shouldScroll) tabs[active]?.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
-  };
-  controls.querySelectorAll('[data-direction]').forEach(button=>button.addEventListener('click',()=>show(active+Number(button.dataset.direction))));
-  gallery.tabIndex=0;
-  gallery.addEventListener('keydown',event=>{
-    if(event.key==='ArrowLeft'){event.preventDefault();show(active-1)}
-    if(event.key==='ArrowRight'){event.preventDefault();show(active+1)}
-  });
+  let returnFocus=null;
   let startX=0;
-  gallery.addEventListener('pointerdown',event=>{startX=event.clientX});
-  gallery.addEventListener('pointerup',event=>{
-    const distance=event.clientX-startX;
-    if(Math.abs(distance)>55) show(active+(distance<0?1:-1));
+
+  const slideData=(slide)=>{
+    const img=slide.querySelector('img');
+    return {
+      src:img?.currentSrc||img?.src||'',
+      alt:img?.alt||'',
+      title:slide.querySelector('figcaption strong')?.textContent?.trim()||'',
+      text:slide.querySelector('figcaption span')?.textContent?.trim()||''
+    };
+  };
+
+  const show=(index,scrollMenu=true)=>{
+    if(!slides.length) return;
+    active=(index+slides.length)%slides.length;
+    const data=slideData(slides[active]);
+    lightboxImage.src=data.src;
+    lightboxImage.alt=data.alt;
+    lightboxTitle.textContent=data.title;
+    lightboxText.textContent=data.text;
+    lightboxCount.textContent=String(active+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');
+    const thumbs=[...lightboxMenu.children];
+    thumbs.forEach((thumb,i)=>{
+      const selected=i===active;
+      thumb.classList.toggle('active',selected);
+      thumb.setAttribute('aria-selected',selected?'true':'false');
+      thumb.tabIndex=selected?0:-1;
+    });
+    if(scrollMenu) thumbs[active]?.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+  };
+
+  const open=(gallery,index,trigger)=>{
+    slides=[...gallery.querySelectorAll(':scope > figure')];
+    active=index;
+    returnFocus=trigger;
+    lightboxMenu.replaceChildren();
+    slides.forEach((slide,i)=>{
+      const data=slideData(slide);
+      const button=document.createElement('button');
+      button.type='button';
+      button.className='leather-lightbox__thumb';
+      button.setAttribute('role','tab');
+      button.setAttribute('aria-label',data.title||('Visuel '+(i+1)));
+      const thumb=document.createElement('img');
+      thumb.src=data.src;
+      thumb.alt='';
+      button.appendChild(thumb);
+      button.addEventListener('click',()=>show(i,true));
+      lightboxMenu.appendChild(button);
+    });
+    const multiple=slides.length>1;
+    prevButton.hidden=!multiple;
+    nextButton.hidden=!multiple;
+    lightboxMenu.hidden=!multiple;
+    show(index,false);
+    if(typeof dialog.showModal==='function') dialog.showModal();
+    else dialog.setAttribute('open','');
+    dialog.querySelector('.leather-lightbox__close').focus();
+  };
+
+  projects.forEach((project,projectIndex)=>{
+    const gallery=project.querySelector('.accessory-project-feature__gallery');
+    const items=gallery?[...gallery.querySelectorAll(':scope > figure')]:[];
+    if(!gallery||!items.length) return;
+    const count=items.length;
+    project.classList.add(count<=2?'layout-side':'layout-stack');
+    if(count<=2&&projectIndex%2===1) project.classList.add('is-reversed');
+    project.classList.add(
+      count===1?'visuals-1':
+      count===2?'visuals-2':
+      count===3?'visuals-3':
+      count<=5?'visuals-4-5':'visuals-many'
+    );
+    items.forEach((item,index)=>{
+      const link=item.querySelector('a');
+      if(!link) return;
+      const label=item.querySelector('figcaption strong')?.textContent?.trim()||('Visuel '+(index+1));
+      link.setAttribute('aria-label','Agrandir : '+label);
+      link.addEventListener('click',(event)=>{
+        event.preventDefault();
+        open(gallery,index,link);
+      });
+    });
   });
-  show(0,false);
-});
+
+  const change=(direction)=>show(active+direction,true);
+  prevButton.addEventListener('click',()=>change(-1));
+  nextButton.addEventListener('click',()=>change(1));
+  dialog.querySelector('.leather-lightbox__close').addEventListener('click',()=>dialog.close());
+  dialog.addEventListener('click',(event)=>{if(event.target===dialog) dialog.close()});
+  dialog.addEventListener('keydown',(event)=>{
+    if(event.key==='ArrowLeft'){event.preventDefault();change(-1)}
+    if(event.key==='ArrowRight'){event.preventDefault();change(1)}
+  });
+  dialog.querySelector('.leather-lightbox__stage').addEventListener('pointerdown',(event)=>{startX=event.clientX});
+  dialog.querySelector('.leather-lightbox__stage').addEventListener('pointerup',(event)=>{
+    const distance=event.clientX-startX;
+    if(slides.length>1&&Math.abs(distance)>55) change(distance<0?1:-1);
+  });
+  dialog.addEventListener('close',()=>{
+    lightboxImage.removeAttribute('src');
+    returnFocus?.focus();
+  });
+})();
 </script>
 </body>
 </html>
