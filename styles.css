@@ -1625,3 +1625,33 @@ a.card:focus-visible .card-caption {
 /* Planche d’ouverture · Croquis et recherches maroquinerie */
 .research-project-gallery .research-project-gallery__opening{grid-column:1/-1}
 
+
+
+/* Maroquinerie : même présentation éditoriale que les projets horlogers */
+.accessory-project-directory--horology {
+  background: transparent;
+  padding-right: 0;
+  padding-left: 0;
+}
+.accessory-project-directory__list {
+  display: grid;
+  gap: 0;
+}
+.accessory-project-directory__list .project-group:last-child {
+  margin-bottom: 0;
+}
+.accessory-project-directory__list .project-group-media {
+  min-height: 280px;
+}
+.accessory-project-directory__list .project-group--single .project-group-media img {
+  object-fit: contain;
+}
+@media (max-width: 760px) {
+  .accessory-project-directory--horology {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .accessory-project-directory__list .project-group-media {
+    min-height: 0;
+  }
+}
