@@ -215,7 +215,7 @@ function setupContinuousDesign(sec, items) {
     continuousRoot.appendChild(section);
     sections.set(cat, section);
 
-    intros.filter(intro => intro.dataset.categoryIntro === cat).forEach(intro => {
+    intros.filter(intro => intro.dataset.categoryIntro === cat && cat !== 'logo').forEach(intro => {
       intro.hidden = false;
       section.appendChild(intro);
     });
@@ -292,6 +292,10 @@ function setupContinuousDesign(sec, items) {
   };
   allBars.forEach(bar => bar.querySelectorAll('[data-cat]').forEach(button => {
     button.addEventListener('click', () => {
+      if (button.dataset.cat === 'logo') {
+        window.location.assign('logos-identites.html');
+        return;
+      }
       const target = sections.get(button.dataset.cat);
       if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       setActiveDiscipline(button.dataset.cat);
