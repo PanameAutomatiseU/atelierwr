@@ -458,3 +458,21 @@ body:has(.leather-lightbox[open]){overflow:hidden}
   .research-process__gallery img,
   .research-case__gallery img{max-height:none}
 }
+
+/* Mobile : légende du plein écran sans encart noir */
+@media(max-width:820px){
+  .leather-lightbox__footer{
+    border-top:1px solid rgba(0,0,0,.14);
+    background:#fff;
+    color:#111
+  }
+  .leather-lightbox__caption strong{color:#111}
+  .leather-lightbox__caption span{color:rgba(0,0,0,.7)}
+  .leather-lightbox__count{color:rgba(0,0,0,.7)}
+  .leather-lightbox__menu{background:#fff}
+  .leather-lightbox__thumb{
+    border-color:rgba(0,0,0,.22);
+    background:#fff
+  }
+  .leather-lightbox__thumb.active{border-color:#111}
+}

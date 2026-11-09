@@ -1655,3 +1655,153 @@ a.card:focus-visible .card-caption {
     min-height: 0;
   }
 }
+
+
+/* Légendes : toujours sous les visuels */
+.card figcaption,
+.card .card-caption,
+.accessory-project-feature__gallery figcaption,
+.accessory-project-feature__gallery figure:hover figcaption,
+.accessory-project-feature__gallery figure:focus-within figcaption{
+  position:static!important;
+  inset:auto!important;
+  display:block!important;
+  padding:14px 16px 16px!important;
+  background:#fff!important;
+  color:#111!important;
+  opacity:1!important;
+  visibility:visible!important;
+  transform:none!important;
+  pointer-events:auto!important;
+  text-align:left!important
+}
+.card figcaption b,
+.card .card-caption b,
+.accessory-project-feature__gallery figcaption strong{
+  display:block!important;
+  margin:0 0 5px!important;
+  color:#111!important;
+  opacity:1!important
+}
+.card figcaption span,
+.card .card-caption>span,
+.accessory-project-feature__gallery figcaption span{
+  display:block!important;
+  margin:0!important;
+  color:rgba(0,0,0,.7)!important;
+  opacity:1!important
+}
+.jewelry-tile{
+  display:grid!important;
+  grid-template-rows:auto auto;
+  aspect-ratio:auto!important;
+  overflow:hidden!important;
+  background:#fff!important
+}
+.jewelry-tile img{
+  width:100%!important;
+  height:auto!important;
+  aspect-ratio:4/3;
+  object-fit:cover
+}
+.jewelry-tile>span,
+.jewelry-tile:hover>span,
+.jewelry-tile:focus-visible>span{
+  position:static!important;
+  display:block!important;
+  padding:13px 15px 15px!important;
+  background:#fff!important;
+  color:#111!important;
+  opacity:1!important;
+  visibility:visible!important;
+  transform:none!important
+}
+
+/* Légende du plein écran placée sous l’image */
+.lb{
+  grid-template-rows:minmax(0,1fr) auto;
+  justify-items:center
+}
+.lb.open{display:grid}
+.lb img{
+  grid-row:1;
+  align-self:center;
+  justify-self:center;
+  max-height:calc(100vh - 170px)
+}
+.lb-cap{
+  position:static!important;
+  grid-row:2;
+  width:100%;
+  padding:16px clamp(54px,7vw,100px) 20px!important;
+  background:#fff!important;
+  color:#111!important;
+  text-align:left!important;
+  pointer-events:auto!important
+}
+.lb-cap strong{color:#111!important}
+.lb-cap span{
+  margin-left:12px;
+  color:rgba(0,0,0,.7)!important;
+  opacity:1!important
+}
+.lb-cap p{
+  max-height:110px;
+  margin:10px 0 0;
+  color:rgba(0,0,0,.7)!important
+}
+.lb-cap a{color:#111!important}
+.lb.has-long-caption{
+  align-items:stretch;
+  padding-bottom:0!important
+}
+.lb.has-long-caption img{max-height:calc(100vh - 230px)}
+
+@media(max-width:560px){
+  .card figcaption,
+  .card .card-caption,
+  .accessory-project-feature__gallery figcaption{
+    padding:12px 13px 14px!important;
+    background:#fff!important;
+    color:#111!important;
+    font-size:10px!important
+  }
+  .card figcaption b,
+  .card .card-caption b,
+  .accessory-project-feature__gallery figcaption strong,
+  .jewelry-tile>span{
+    color:#111!important;
+    opacity:1!important
+  }
+  .card figcaption span,
+  .card .card-caption>span,
+  .accessory-project-feature__gallery figcaption span{
+    margin-top:4px!important;
+    color:rgba(0,0,0,.7)!important;
+    font-size:9px!important;
+    opacity:1!important
+  }
+  .lb{
+    grid-template-rows:minmax(0,1fr) auto;
+    padding:10px 10px 0
+  }
+  .lb img,
+  .lb.has-long-caption img{max-height:calc(100vh - 190px)}
+  .lb-cap{
+    padding:13px 14px 16px!important;
+    background:#fff!important;
+    color:#111!important
+  }
+  .lb-cap strong{display:block;color:#111!important}
+  .lb-cap span{
+    display:block;
+    margin:4px 0 0!important;
+    color:rgba(0,0,0,.7)!important
+  }
+  .lb-cap p{
+    max-height:20vh;
+    margin-top:8px;
+    color:rgba(0,0,0,.7)!important;
+    font-size:11px
+  }
+}
