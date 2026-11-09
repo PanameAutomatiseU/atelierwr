@@ -76,7 +76,6 @@ const DESIGN = [
     { src: 'assets/work/mobilier-03.jpg', cat: 'mobilier', tags: ['grand-palais'], title: 'Grand Palais · Sofa', client: 'Mobilier & assises' },
     { src: 'assets/work/mobilier-04.jpg', cat: 'mobilier', tags: ['grand-palais'], title: 'Grand Palais · Collection', client: 'Mobilier & assises' },
     { src: 'assets/work/mobilier-05.jpg', cat: 'mobilier', tags: ['ere-de-je'], title: 'Ère de je · Aire de jeu', client: 'Mobilier modulable · Studio étudiant' },
-    { src: 'assets/work/mobilier-06.jpg', cat: 'mobilier', title: 'Ego', client: 'Assise' },
     { src: 'assets/work/mobilier-07.jpg', cat: 'mobilier', tags: ['grand-palais'], title: 'Grand Palais · Mobilier outdoor', client: 'Mobilier & assises' },
     { src: 'assets/work/mobilier-08.jpg', cat: 'mobilier', tags: ['grand-palais'], title: 'Grand Palais · Croquis de collection', client: 'Mobilier & assises' }
   ],
