@@ -328,10 +328,8 @@ function setupContinuousDesign(sec, items) {
 
   const requestedProject = new URLSearchParams(window.location.search).get('project');
   if (standaloneAccessoryProjects.includes(requestedProject)) {
-    showAccessorySelection(requestedProject, false);
-    window.setTimeout(() => {
-      accessorySection.querySelector('[data-accessory-project="' + requestedProject + '"]')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 180);
+    window.location.replace('maroquinerie-accessoires.html#' + requestedProject);
+    return;
   } else if (standaloneFurnitureProjects.includes(requestedProject)) {
     showFurnitureSelection(requestedProject, false);
     window.setTimeout(() => {
