@@ -104,7 +104,20 @@ const ART = [
   ...W('nus', 8, ['Nu I · Encre', 'Nu II · Encre', 'Nu III · Aquarelle', 'Nu IV · Encre', 'Nu V · Encre', 'Nu VI · Aquarelle', 'Nu VII · Encre', 'Nu VIII · Encre']),
 ];
 
-const INK_WORKS = [];
+const INK_WORKS = [
+  { src: "assets/ig/01-poster-demain.jpg", title: "Lovely Messy Massilia", client: "Feutre et encre · A4" },
+  { src: "assets/ig/02-baigneuse-rocher.jpg", title: "Baigneuse sur les rochers", client: "Feutre et encre · A4" },
+  { src: "assets/ig/03-bain-montagne.jpg", title: "Bain de montagne", client: "Feutre et encre · A4" },
+  { src: "assets/ig/04-soleil-couchant.jpg", title: "Soleil couchant", client: "Feutre et encre · A4" },
+  { src: "assets/ig/05-ville-calanques.jpg", title: "Ville et calanques", client: "Feutre et encre · A4" },
+  { src: "assets/ig/06-baigneur-dos.jpg", title: "Le baigneur", client: "Feutre et encre · A4" },
+  { src: "assets/ig/07-sketch-poster.jpg", title: "Étude graphique", client: "Feutre et encre · A4" },
+  { src: "assets/ig/08-poster-w.jpg", title: "Composition W", client: "Feutre et encre · A4" },
+  { src: "assets/ig/09-poster-sept.jpg", title: "Composition Sept", client: "Feutre et encre · A4" },
+  { src: "assets/ig/10-port-noir-blanc.jpg", title: "Le port", client: "Feutre et encre · A4" },
+  { src: "assets/ig/11-village-bleu.jpg", title: "Le Vallon Bleu", client: "Feutre et encre · A4" },
+  { src: "assets/ig/12-nu-rochers.jpg", title: "Nu sur les rochers", client: "Feutre et encre · A4" }
+];
 
 const LIMIT = 9;
 const projectKey = value => String(value || 'projet')
