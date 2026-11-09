@@ -476,3 +476,18 @@ body:has(.leather-lightbox[open]){overflow:hidden}
   }
   .leather-lightbox__thumb.active{border-color:#111}
 }
+
+@media(max-width:820px){
+  .leather-project .accessory-project-feature__gallery figcaption,
+  .research-process__gallery figcaption,
+  .research-case__gallery figcaption{
+    background:#fff;
+    color:#111
+  }
+  .leather-project .accessory-project-feature__gallery figcaption strong,
+  .research-process__gallery figcaption strong,
+  .research-case__gallery figcaption strong{color:#111}
+  .leather-project .accessory-project-feature__gallery figcaption span,
+  .research-process__gallery figcaption span,
+  .research-case__gallery figcaption span{color:rgba(0,0,0,.7)}
+}
