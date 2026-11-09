@@ -1805,3 +1805,63 @@ a.card:focus-visible .card-caption {
     font-size:11px
   }
 }
+
+/* Mobilier & objets : présentation éditoriale alignée sur Horlogerie et Maroquinerie */
+.furniture-intro{
+  grid-template-columns:minmax(0,1.3fr) minmax(280px,.7fr)
+}
+.furniture-intro>.category-intro-copy{
+  position:static;
+  top:auto;
+  align-self:stretch;
+  min-width:0;
+  background:#fff
+}
+.furniture-intro .category-intro-copy h3{
+  max-width:760px;
+  font-size:clamp(38px,5.2vw,72px);
+  line-height:.92
+}
+.furniture-intro .category-intro-copy>p{
+  max-width:760px;
+  margin-top:22px;
+  font-size:15px;
+  line-height:1.72
+}
+.furniture-project-directory{
+  grid-column:1/-1;
+  width:100%;
+  min-width:0
+}
+.furniture-project-directory__list .furniture-project-link{
+  width:100%;
+  margin:0 0 28px;
+  padding:0;
+  border:0;
+  border-radius:0;
+  font:inherit;
+  text-align:left;
+  cursor:pointer;
+  appearance:none
+}
+.furniture-project-directory__list .furniture-project-link.active{
+  box-shadow:inset 5px 0 var(--orange),0 22px 45px -30px rgba(21,21,21,.7)
+}
+.furniture-project-directory__list .project-group-media{
+  min-height:280px
+}
+.furniture-project-directory__list .project-group--single .project-group-media img{
+  object-fit:contain
+}
+.furniture-projects{
+  grid-column:1/-1
+}
+@media(max-width:820px){
+  .furniture-intro{grid-template-columns:1fr}
+  .furniture-intro>.category-intro-copy{
+    border-right:0;
+    border-bottom:1px solid var(--ink)
+  }
+  .furniture-project-directory__list .furniture-project-link{margin-bottom:18px}
+  .furniture-project-directory__list .project-group-media{min-height:0}
+}

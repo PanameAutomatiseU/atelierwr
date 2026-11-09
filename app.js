@@ -252,7 +252,7 @@ function setupContinuousDesign(sec, items) {
   accessoryProjects.forEach(project => { project.hidden = true; });
 
   const furnitureSection = sections.get('mobilier');
-  const standaloneFurnitureProjects = ['grand-palais', 'carod', 'ere-de-je', 'ego'];
+  const standaloneFurnitureProjects = ['grand-palais', 'carod', 'ere-de-je'];
   const furnitureProjects = [...furnitureSection.querySelectorAll('[data-furniture-project]')];
   const furnitureButtons = [...furnitureSection.querySelectorAll('[data-furniture-project-key]')];
   const showFurnitureSelection = (key, shouldScroll = true) => {
