@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=20261109-maroquinerie-horlogerie">
 <link rel="stylesheet" href="cartier.css?v=20261031-1">
-<link rel="stylesheet" href="maroquinerie-accessoires.css?v=20261109-1">
+<link rel="stylesheet" href="maroquinerie-accessoires.css?v=20261109-2">
 </head>
 <body class="cartier-page leather-page">
 <header class="nav">
@@ -293,23 +293,61 @@
 </main>
 
 <footer class="footer"><div class="wrap"><span>© Atelier WR · William Rigoulet · Marseille</span><a href="#top">Retour en haut ↑</a></div></footer>
-<dialog class="leather-lightbox" aria-label="Visuel du projet agrandi">
-  <button type="button" aria-label="Fermer">×</button>
-  <img alt="">
-  <p></p>
-</dialog>
 <script>
-const leatherLightbox=document.querySelector('.leather-lightbox');
-document.querySelectorAll('.accessory-project-feature__gallery a').forEach(link=>link.addEventListener('click',event=>{
-  event.preventDefault();
-  const source=link.querySelector('img');
-  leatherLightbox.querySelector('img').src=link.href;
-  leatherLightbox.querySelector('img').alt=source?.alt||'Visuel du projet';
-  leatherLightbox.querySelector('p').textContent=link.closest('figure')?.querySelector('figcaption strong')?.textContent||'';
-  leatherLightbox.showModal();
-}));
-leatherLightbox.querySelector('button').addEventListener('click',()=>leatherLightbox.close());
-leatherLightbox.addEventListener('click',event=>{if(event.target===leatherLightbox)leatherLightbox.close()});
+document.querySelectorAll('.accessory-project-feature__gallery').forEach((gallery, galleryIndex) => {
+  const slides=[...gallery.querySelectorAll(':scope > figure')];
+  if(!slides.length) return;
+  gallery.classList.add('leather-carousel');
+  const controls=document.createElement('div');
+  controls.className='leather-carousel-controls';
+  controls.innerHTML='<button class="leather-carousel-arrow" type="button" data-direction="-1" aria-label="Visuel précédent">←</button><div class="leather-carousel-menu" role="tablist" aria-label="Choisir un visuel"></div><span class="leather-carousel-count" aria-live="polite"></span><button class="leather-carousel-arrow" type="button" data-direction="1" aria-label="Visuel suivant">→</button>';
+  gallery.appendChild(controls);
+  const menu=controls.querySelector('.leather-carousel-menu');
+  const count=controls.querySelector('.leather-carousel-count');
+  let active=0;
+  slides.forEach((slide,index)=>{
+    const label=slide.querySelector('figcaption strong')?.textContent?.trim()||('Visuel '+(index+1));
+    const button=document.createElement('button');
+    button.type='button';
+    button.className='leather-carousel-tab';
+    button.setAttribute('role','tab');
+    button.setAttribute('aria-label',label);
+    button.textContent=String(index+1).padStart(2,'0');
+    button.addEventListener('click',()=>show(index));
+    menu.appendChild(button);
+    slide.querySelector('a')?.addEventListener('click',event=>event.preventDefault());
+  });
+  const tabs=[...menu.children];
+  const show=index=>{
+    active=(index+slides.length)%slides.length;
+    slides.forEach((slide,i)=>{
+      const selected=i===active;
+      slide.hidden=!selected;
+      slide.classList.toggle('is-active',selected);
+    });
+    tabs.forEach((tab,i)=>{
+      const selected=i===active;
+      tab.classList.toggle('active',selected);
+      tab.setAttribute('aria-selected',selected?'true':'false');
+      tab.tabIndex=selected?0:-1;
+    });
+    count.textContent=String(active+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');
+    tabs[active]?.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+  };
+  controls.querySelectorAll('[data-direction]').forEach(button=>button.addEventListener('click',()=>show(active+Number(button.dataset.direction))));
+  gallery.tabIndex=0;
+  gallery.addEventListener('keydown',event=>{
+    if(event.key==='ArrowLeft'){event.preventDefault();show(active-1)}
+    if(event.key==='ArrowRight'){event.preventDefault();show(active+1)}
+  });
+  let startX=0;
+  gallery.addEventListener('pointerdown',event=>{startX=event.clientX});
+  gallery.addEventListener('pointerup',event=>{
+    const distance=event.clientX-startX;
+    if(Math.abs(distance)>55) show(active+(distance<0?1:-1));
+  });
+  show(0);
+});
 </script>
 </body>
 </html>
