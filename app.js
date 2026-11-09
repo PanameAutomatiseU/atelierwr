@@ -104,85 +104,7 @@ const ART = [
   ...W('nus', 8, ['Nu I · Encre', 'Nu II · Encre', 'Nu III · Aquarelle', 'Nu IV · Encre', 'Nu V · Encre', 'Nu VI · Aquarelle', 'Nu VII · Encre', 'Nu VIII · Encre']),
 ];
 
-const INK_WORKS = [
-  {
-    "src": "https://www.instagram.com/p/De_1ZhFMnmV/media/?size=l",
-    "postUrl": "https://www.instagram.com/reel/De_1ZhFMnmV/",
-    "title": "Juste pour s’amuser…",
-    "client": "27.10.2026 · Illustration",
-    "caption": "Juste pour s’amuser… 🐙🌊\n\nUne pieuvre, quelques poissons et un joyeux bazar sous-marin… Bref, tout baigne ! 😎☀️\n\n#Illustration #GraphicDesign #MediterraneanArt #ArtDirection #CreativePlay"
-  },
-  {
-    "src": "https://www.instagram.com/p/De9qgpws_7F/media/?size=l",
-    "postUrl": "https://www.instagram.com/reel/De9qgpws_7F/",
-    "title": "La terrasse haute du Cercle",
-    "client": "26.10.2026 · Encre et acrylique",
-    "caption": "La terrasse haute du Cercle ☀️\n\nLignes de fuite, perspectives, ombres et lumière… Un décor presque graphique, où la rigueur des formes rencontre celle du sport.\n\nAu Cercle des Nageurs de Marseille, on vient s’entraîner, se dépasser, répéter les mêmes gestes, jour après jour.\n\nEntre architecture moderniste, culture sportive et art de vivre marseillais, un lieu à part, que j’avais envie de raconter à ma manière.\n\nIllustration originale encre et acrylique — disponible à la vente en MP.\n\n#CercleDesNageurs #Marseille #ArchitectureModerniste #IllustrationArt #ArtPrint"
-  },
-  {
-    "src": "https://www.instagram.com/p/De76uPfsM_p/media/?size=l",
-    "postUrl": "https://www.instagram.com/reel/De76uPfsM_p/",
-    "title": "Encore cinq minutes…",
-    "client": "25.10.2026 · Illustration",
-    "caption": "☀️🧡 ENCORE CINQ MINUTES…\n\nLe soleil descend sur Marseille, mais au Cercle, on n’a jamais vraiment envie de partir.\n\nUn dernier bain, un dernier moment au soleil…\n\n« Maman, on reste encore cinq minutes ? »\n\nElle sourit. Elle allait justement lui demander la même chose. Malheureusement il est temps de rentrer !\n\n🎨 Illustration originale — Atelier WR\n💌 Disponible à la vente — Informations et commandes en MP.\n\n#Marseille #MarseilleJeTaime #CercleDesNageurs #IllustrationArt #MarseilleArt"
-  },
-  {
-    "src": "https://www.instagram.com/p/De7S5ZMsbk5/media/?size=l",
-    "postUrl": "https://www.instagram.com/reel/De7S5ZMsbk5/",
-    "title": "Le solarium du Cercle",
-    "client": "25.10.2026 · Feutre et encre · A4",
-    "caption": "☀️ LE SOLARIUM DU CERCLE 😎\n\nIl y a des lieux à Marseille qui ne ressemblent à aucun autre. Des endroits qui ont une âme spéciale, où le temps semble s’arrêter…\n\nAccroché à la Corniche, face à la Méditerranée et aux îles du Frioul, le solarium du Cercle des Nageurs est de ceux-là.\n\nIci, on vient autant pour la mer que pour les copains. On profite du soleil, on refait le monde, on retrouve les habitués et cette façon si marseillaise de prendre son temps.\n\nLes minots d’hier deviennent les parents d’aujourd’hui. Les générations se croisent, les souvenirs se transmettent et les petits rituels restent.\n\nUn véritable petit théâtre à ciel ouvert, où les étés n’en finissent pas.\n\n🎨 Illustration originale au feutre et encre format A4, disponible à la vente.\n\n#Marseille #CercleDesNageurs #IllustrationArt #marseillecartepostale #MediterraneanLifestyle"
-  },
-  {
-    "src": "https://www.instagram.com/p/Dek2xfLiI8B/media/?size=l",
-    "postUrl": "https://www.instagram.com/p/Dek2xfLiI8B/",
-    "title": "Solitude solaire",
-    "client": "16.10.2026 · Encre bleue et acrylique · A4",
-    "caption": "SOLITUDE SOLAIRE ☀️\n\nUn instant suspendu, quelque part face à la mer…\n\nBy the Sea — Série d’illustrations & peintures\nEncre bleue & acrylique sur papier\nFormat A4 · 21 × 29,7 cm\n\n#ByTheSea #Illustration #MediterraneanArt #BlueInk #Bauhaus #ArtContemporain"
-  },
-  {
-    "src": "https://www.instagram.com/p/DehPdD6MROs/media/?size=l",
-    "postUrl": "https://www.instagram.com/reel/DehPdD6MROs/",
-    "title": "Bain glacé au Tuba Club",
-    "client": "15.10.2026 · Illustration",
-    "caption": "Un lieu, une expérience, de belles rencontres… et le souvenir d’un moment aussi inattendu que précieux ! 🧊❤️\n\nBain glacé @tuba.club avec @caro_arditti\n\n#Marseille #Illustration #ArtMarseillais #IllustrateurMarseille #CréationLocale"
-  },
-  {
-    "src": "https://www.instagram.com/p/DeDnx7EoDvS/media/?size=l",
-    "postUrl": "https://www.instagram.com/reel/DeDnx7EoDvS/",
-    "title": "Marseille, Between Lines",
-    "client": "03.10.2026 · By the Sea",
-    "caption": "MARSEILLE, BETWEEN LINES.\n\nSea. Sun. Architecture.\nAnd nothing else to do.\n\nBy the Sea — Marseille\nWilliam Rigoulet, 2026\nOriginal available · DM\n\n#MarseilleArt #MediterraneanArt #ContemporaryArt #FrenchArtist #bytheseaside"
-  },
-  {
-    "src": "https://www.instagram.com/p/Dd-5vCgssw8/media/?size=l",
-    "postUrl": "https://www.instagram.com/reel/Dd-5vCgssw8/",
-    "title": "Sunshine is coming · Callelongue",
-    "client": "02.10.2026 · Illustration",
-    "caption": "Sunshine is coming ☀️ #Callelongue\n\nSOLD! 😀\n\n#Marseille #MarseilleJeTaime #IllustrationArt #UrbanSketching #MediterraneanArt"
-  },
-  {
-    "src": "https://www.instagram.com/p/Dd-6HtvsX8q/media/?size=l",
-    "postUrl": "https://www.instagram.com/p/Dd-6HtvsX8q/",
-    "title": "Marseille. Soleil. Bang Bang Bang!!",
-    "client": "02.10.2026 · Illustration",
-    "caption": "Marseille. Soleil. Bang Bang Bang!! ☀️💥\n\n#Marseille #MarseilleJeTaime #MarseilleArt #UrbanSketching #MediterraneanArt"
-  },
-  {
-    "src": "https://www.instagram.com/p/Dd9rH7_MTsX/media/?size=l",
-    "postUrl": "https://www.instagram.com/reel/Dd9rH7_MTsX/",
-    "title": "Malmousque, my daily spot",
-    "client": "01.10.2026 · Illustration",
-    "caption": "Si vous me cherchez… je suis probablement sur les rochers. 🌊☀️\nMalmousque, my daily spot. 💙\n\n#Malmousque #Marseille #IllustrationMarseille #MarseilleArt #MediterraneanArt"
-  },
-  {
-    "src": "https://www.instagram.com/p/DdNYJMlIDvW/media/?size=l",
-    "postUrl": "https://www.instagram.com/p/DdNYJMlIDvW/",
-    "title": "Marseille carte postale",
-    "client": "12.09.2026 · Illustration",
-    "caption": "#illustration #marseillecartepostale #marseillemaville #blueaesthetic #hometown"
-  }
-];
+const INK_WORKS = [];
 
 const LIMIT = 9;
 const projectKey = value => String(value || 'projet')
@@ -616,7 +538,7 @@ function renderFineArtSeries() {
         <header class="fineart-series__head">
           <span>${String(seriesIndex + 1).padStart(2, '0')}</span>
           <div><h3 id="fineart-series-${serie.key}">${serie.title}</h3><p>${serie.intro}</p></div>
-          <small>${works.length} œuvres</small>
+          <small>${works.length ? works.length + (works.length > 1 ? " œuvres" : " œuvre") : "Visuels à venir"}</small>
         </header>
         <div class="grid fineart-series__grid" data-fineart-series-grid="${serie.key}">
           ${works.map((item, index) => `
