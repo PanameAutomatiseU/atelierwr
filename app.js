@@ -82,7 +82,6 @@ const DESIGN = [
   ],
   ...W('packaging', 10, ['Coffrets · Almé Paris', 'Édition Nouvel An chinois · Packaging', 'Étiquettes · Domaine de la Bégude', 'Pleine Nature · Étiquettes de vin', "L'Ernest · La Grange d'Ernest", 'Triplette · Cantarelle', 'Gamme · Jean-Étienne Chermette', 'Coffret Année du Lapin · Philips', 'Coffret montre · Maison Boanton', 'Écrin V · Packaging']),
   ...W('logo', 12, ['Vitrophanie · La Boutique du Rhum', 'Identité · Maison Célestine', 'Crozes-Hermitage · Domaine du Chêne Vert', 'Domaines & distilleries · Diva', 'Déclinaisons · Maison Célestine', 'Monogramme · Almé Paris', 'Caves parisiennes · Joséphine', 'Logo · Aurea Imaging', 'Motif · Lemarys', 'Identité · Exacode', 'Avocats · Louise Law', 'Logo · Owl Hair Salon']),
-  ...W('affiches', 12, ['Vent de sable · Affiche', 'Affiche · Joséphine', 'Les dimanches Pleine Mer · Cannibale', 'Jazz classique · Comptoir du Live', 'Coupe du monde 2018 · Cannibale Café', 'Click & Collect · Cannibale', 'Hugo · Faire-part', 'La Circulade · Larzac', 'Les Chapeaux de Beaupré · Château de Beaupré', 'Héron · Illustration', 'Marseille · Encre et soleil', 'Joyeux Noël · Fama']),
 ];
 
 const SEA_ARCHIVE = [
@@ -184,7 +183,6 @@ function setupContinuousDesign(sec, items) {
     ['mobilier', 'Mobilier & objets'],
     ['packaging', 'Packaging & vins'],
     ['logo', 'Logo & identité'],
-    ['affiches', 'Affiches & illustrations']
   ];
   const standaloneAccessoryProjects = ['lemarys', 'mulberry', 'alme', 'celine', 'bally', 'fendi', 'place-vendome', 'maison-rinceau', 'lunetterie', 'crazy-charms', 'croquis-recherches'];
   const sourceBar = sec.querySelector('.design-tabs');
@@ -226,14 +224,6 @@ function setupContinuousDesign(sec, items) {
       group.hidden = false;
       section.appendChild(group);
     });
-
-    if (cat === 'affiches') {
-      const disciplineGrid = document.createElement('div');
-      disciplineGrid.className = 'grid design-continuous-grid';
-      disciplineGrid.dataset.expanded = '1';
-      section.appendChild(disciplineGrid);
-      renderGrid(disciplineGrid, items, cat, null);
-    }
   });
 
   const accessorySection = sections.get('maroquinerie');
