@@ -68,3 +68,14 @@
   .aura-story{gap:28px}
   .aura-story__copy h2{font-size:clamp(42px,14vw,66px)}
 }
+
+/* Canopée · Collection 03 */
+.canopee-story{
+  border-top:1px solid rgba(23,23,23,.18)
+}
+.canopee-story__copy h2 em{color:#687454}
+.canopee-development .lighting-section__head h2 em{color:#e3a15f}
+.canopee-moodboard .lighting-zoom img,
+.canopee-board .lighting-zoom img,
+.canopee-product-visual .lighting-zoom img{max-height:none}
+.canopee-product-visual{max-width:1280px;margin:0 auto}
