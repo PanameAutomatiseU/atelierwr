@@ -350,6 +350,14 @@ function setupContinuousDesign(sec, items) {
   updateContinuousNavigation();
   window.setTimeout(updateContinuousNavigation, 180);
 
+  const requestedDiscipline = new URLSearchParams(window.location.search).get('discipline');
+  if (requestedDiscipline && sections.has(requestedDiscipline)) {
+    window.setTimeout(() => {
+      sections.get(requestedDiscipline).scrollIntoView({ behavior: 'auto', block: 'start' });
+      setActiveDiscipline(requestedDiscipline);
+    }, 120);
+  }
+
   const requestedProject = new URLSearchParams(window.location.search).get('project');
   if (standaloneAccessoryProjects.includes(requestedProject)) {
     window.location.replace('maroquinerie-accessoires.html#' + requestedProject);
