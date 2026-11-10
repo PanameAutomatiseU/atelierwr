@@ -180,6 +180,7 @@ function setupContinuousDesign(sec, items) {
     ['joaillerie', 'Joaillerie'],
     ['maroquinerie', 'Maroquinerie & accessoires'],
     ['mobilier', 'Mobilier & objets'],
+    ['luminaires', 'Luminaires'],
     ['packaging', 'Packaging & vins'],
     ['logo', 'Logo & identité'],
   ];
