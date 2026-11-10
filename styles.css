@@ -2151,3 +2151,17 @@ a.card:focus-visible .card-caption {
 @media(max-width:820px){
   .lighting-canopee-media img{min-height:230px}
 }
+
+/* Luminaires · nouvel aperçu Saturn */
+.lighting-saturn-media{background:#171120}
+.lighting-saturn-media img{
+  display:block;
+  width:100%;
+  height:100%;
+  min-height:320px;
+  object-fit:cover;
+  object-position:center
+}
+@media(max-width:820px){
+  .lighting-saturn-media img{min-height:230px}
+}
