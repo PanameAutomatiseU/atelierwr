@@ -21,3 +21,20 @@
 .lighting-lightbox__close{position:fixed;z-index:2;top:18px;right:24px;font-size:38px;line-height:1}
 .lighting-lightbox__nav{font-size:54px}
 @media(max-width:620px){.lighting-lightbox{padding:54px 14px 20px}.lighting-lightbox[open]{grid-template-columns:44px minmax(0,1fr) 44px;gap:4px}.lighting-lightbox figure{height:calc(100vh - 74px)}.lighting-lightbox__nav{font-size:42px}}
+
+/* Visuel d’introduction Saturn */
+.lighting-hero__visual{margin:0;background:#070711}
+.lighting-hero__zoom{width:100%;height:100%;background:#070711}
+.lighting-hero__visual .lighting-hero__zoom img{
+  width:100%;
+  height:100%;
+  max-height:none;
+  object-fit:cover;
+  object-position:center
+}
+@media(max-width:900px){
+  .lighting-hero__visual .lighting-hero__zoom img{min-height:460px}
+}
+@media(max-width:620px){
+  .lighting-hero__visual .lighting-hero__zoom img{min-height:350px}
+}
