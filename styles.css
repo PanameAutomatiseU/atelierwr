@@ -4,7 +4,8 @@
   --ink:#151515;
   --blue:#1d3c8c;
   --blue-deep:#142a63;
-  --orange:#e8742e;\n  --red-deep:#a6192e;
+  --orange:#e8742e;
+  --red-deep:#a6192e;
   --muted:#6b6459;
   --line:rgba(21,21,21,.14);
   --font-body:"Plus Jakarta Sans","Helvetica Neue",Arial,sans-serif;
@@ -102,7 +103,7 @@ p{margin:0}
 .domain{padding:26px 22px 26px 0;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
 .domain:nth-child(3n){border-right:0}
 .domain small{display:block;color:var(--orange);font-size:12px;letter-spacing:.18em;font-weight:700}
-.domain h3{font-size:19px;margin:10px 0 8px;line-height:1.15;letter-spacing:-.01em}
+.domain h3{font-size:19px;margin:10px 0 8px;line-height:1.15;letter-spacing:-.01em;color:var(--red-deep);text-transform:uppercase}
 .domain p{font-size:14px;color:var(--muted);line-height:1.5}
 
 /* gallery */
