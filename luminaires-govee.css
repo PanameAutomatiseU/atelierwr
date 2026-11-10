@@ -38,3 +38,33 @@
 @media(max-width:620px){
   .lighting-hero__visual .lighting-hero__zoom img{min-height:350px}
 }
+
+/* Aura · Collection 02 */
+.aura-story{
+  display:grid;
+  grid-template-columns:minmax(320px,.92fr) minmax(0,1.08fr);
+  gap:clamp(38px,7vw,100px);
+  align-items:center;
+  border-top:1px solid rgba(23,23,23,.18)
+}
+.aura-story__copy h2{
+  margin:14px 0 0;
+  font:900 clamp(46px,6.4vw,92px)/.86 var(--font-display);
+  letter-spacing:-.055em;
+  text-transform:uppercase
+}
+.aura-story__copy h2 em{color:#d2652d;font-style:normal}
+.aura-story__copy .lead{margin-top:30px;font-size:clamp(19px,2vw,28px);line-height:1.35}
+.aura-story__copy>p:last-child{margin-top:22px;color:#555;font-size:15px;line-height:1.75}
+.aura-moodboard .lighting-zoom img{max-height:none}
+.aura-development .lighting-section__head h2 em{color:#ff9a61}
+.aura-board .lighting-zoom img,
+.aura-product-visual .lighting-zoom img{max-height:none}
+.aura-product-visual{max-width:1280px;margin:0 auto}
+@media(max-width:900px){
+  .aura-story{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .aura-story{gap:28px}
+  .aura-story__copy h2{font-size:clamp(42px,14vw,66px)}
+}
