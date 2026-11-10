@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261110-govee-saturn">
+<link rel="stylesheet" href="styles.css?v=20261110-mobilier-responsive">
 <link rel="stylesheet" href="hero.css?v=20261107-nouvel-entete">
 </head>
 <body>
@@ -308,83 +308,66 @@
           <li><span>06</span><strong>Développement, prototypes &amp; fabricants</strong></li>
         </ol>
       </div>
-      <section class="accessory-project-directory accessory-project-directory--horology furniture-project-directory" aria-labelledby="furniture-directory-title">
-        <div class="accessory-project-directory__head">
-          <small>Projets à découvrir</small>
-          <h4 id="furniture-directory-title">Trois projets,<br>trois échelles.</h4>
-        </div>
-        <div class="accessory-project-directory__list furniture-project-directory__list">
-          <button class="project-group rv furniture-project-link" type="button" data-furniture-project-key="grand-palais" aria-controls="furniture-grand-palais" aria-pressed="false">
-            <span class="project-group-media" aria-hidden="true">
-              <img src="assets/work/mobilier-03.jpg" alt="" loading="lazy" decoding="async">
-              <img src="assets/work/mobilier-04.jpg" alt="" loading="lazy" decoding="async">
-            </span>
-            <span class="project-group-copy">
-              <small>Projet 01 · Direction artistique · Design mobilier</small>
-              <strong>Grand Palais</strong>
-              <span>Une famille d’assises et de mobilier conçue pour dialoguer avec un lieu monumental. · Découvrir le projet →</span>
-            </span>
-          </button>
-          <button class="project-group rv furniture-project-link" type="button" data-furniture-project-key="carod" aria-controls="furniture-carod" aria-pressed="false">
-            <span class="project-group-media" aria-hidden="true">
-              <img src="assets/work/mobilier-01.jpg" alt="" loading="lazy" decoding="async">
-              <img src="assets/work/mobilier-02.jpg" alt="" loading="lazy" decoding="async">
-            </span>
-            <span class="project-group-copy">
-              <small>Projet 02 · Design d’objet · Technologie</small>
-              <strong>Piano Carod</strong>
-              <span>Un piano connecté qui relie héritage architectural, présence sculpturale et usage contemporain. · Découvrir le projet →</span>
-            </span>
-          </button>
-          <button class="project-group project-group--single rv furniture-project-link" type="button" data-furniture-project-key="ere-de-je" aria-controls="furniture-ere-de-je" aria-pressed="false">
-            <span class="project-group-media" aria-hidden="true">
-              <img src="assets/work/mobilier-05.jpg" alt="" loading="lazy" decoding="async">
-            </span>
-            <span class="project-group-copy">
-              <small>Projet 03 · Mobilier modulable · Habitat compact</small>
-              <strong>Ère de je</strong>
-              <span>Un volume compact qui devient canapé, espace d’accueil ou lit selon les moments de la journée. · Découvrir le projet →</span>
-            </span>
-          </button>
-        </div>
-      </section>
+
+      <nav class="furniture-project-tabs" aria-label="Choisir un projet Mobilier et objets" role="tablist">
+        <button class="furniture-project-tab" type="button" role="tab" data-furniture-project-key="grand-palais" aria-controls="furniture-grand-palais" aria-selected="false" aria-pressed="false"><span>01</span><strong>Grand Palais</strong><small>Mobilier &amp; assises</small></button>
+        <button class="furniture-project-tab" type="button" role="tab" data-furniture-project-key="carod" aria-controls="furniture-carod" aria-selected="false" aria-pressed="false"><span>02</span><strong>Piano Carod</strong><small>Objet connecté</small></button>
+        <button class="furniture-project-tab" type="button" role="tab" data-furniture-project-key="ere-de-je" aria-controls="furniture-ere-de-je" aria-selected="false" aria-pressed="false"><span>03</span><strong>Ère de je</strong><small>Mobilier modulable</small></button>
+      </nav>
+
       <div class="furniture-projects">
-        <article class="accessory-project-feature grand-palais-project-feature" id="furniture-grand-palais" data-furniture-project="grand-palais" hidden aria-labelledby="grand-palais-project-heading">
-          <div class="accessory-project-feature__intro">
-            <small>Direction artistique · Design mobilier</small>
-            <h4 id="grand-palais-project-heading">Grand Palais.<br>Mobilier &amp; assises.</h4>
-            <p>Cette recherche réunit une famille de mobilier pensée pour accompagner les usages d’un lieu monumental. Assises, sofa et mobilier extérieur dialoguent avec l’architecture du Grand Palais par des lignes sobres, des volumes généreux et une présence graphique maîtrisée. Du dessin de collection aux mises en situation, le projet construit un ensemble cohérent, confortable et adaptable aux différents espaces et événements.</p>
+        <article class="furniture-project-panel" id="furniture-grand-palais" data-furniture-project="grand-palais" role="tabpanel" hidden aria-labelledby="grand-palais-project-heading">
+          <div class="furniture-project-lead">
+            <div class="furniture-project-copy">
+              <small>Projet 01 · Direction artistique · Design mobilier</small>
+              <h4 id="grand-palais-project-heading">Grand Palais.<br>Mobilier &amp; assises.</h4>
+              <p>Cette recherche réunit une famille de mobilier pensée pour accompagner les usages d’un lieu monumental. Assises, sofa et mobilier extérieur dialoguent avec l’architecture du Grand Palais par des lignes sobres, des volumes généreux et une présence graphique maîtrisée. Du dessin de collection aux mises en situation, le projet construit un ensemble cohérent, confortable et adaptable aux différents espaces et événements.</p>
+            </div>
+            <figure class="furniture-project-figure furniture-project-hero">
+              <button class="furniture-visual" type="button" aria-label="Agrandir le sofa Grand Palais"><img src="assets/work/mobilier-03.jpg" alt="Sofa dessiné pour le Grand Palais" loading="lazy" decoding="async"></button>
+              <figcaption><strong>Sofa Grand Palais</strong><span>Une assise généreuse aux lignes architecturales.</span></figcaption>
+            </figure>
           </div>
-          <div class="accessory-project-feature__gallery grand-palais-project-gallery" aria-label="Quatre visuels du projet mobilier Grand Palais">
-            <figure><a href="assets/work/mobilier-03.jpg" target="_blank" rel="noopener"><img src="assets/work/mobilier-03.jpg" alt="Sofa dessiné pour le Grand Palais" loading="lazy" decoding="async"></a><figcaption><strong>Sofa Grand Palais</strong><span>Une assise généreuse aux lignes architecturales.</span></figcaption></figure>
-            <figure><a href="assets/work/mobilier-04.jpg" target="_blank" rel="noopener"><img src="assets/work/mobilier-04.jpg" alt="Collection de mobilier développée pour le Grand Palais" loading="lazy" decoding="async"></a><figcaption><strong>Collection</strong><span>Déclinaison d’un langage formel commun.</span></figcaption></figure>
-            <figure><a href="assets/work/mobilier-07.jpg" target="_blank" rel="noopener"><img src="assets/work/mobilier-07.jpg" alt="Mobilier extérieur pour le Grand Palais" loading="lazy" decoding="async"></a><figcaption><strong>Mobilier outdoor</strong><span>Des pièces adaptées aux espaces extérieurs et événementiels.</span></figcaption></figure>
-            <figure><a href="assets/work/mobilier-08.jpg" target="_blank" rel="noopener"><img src="assets/work/mobilier-08.jpg" alt="Croquis de la collection de mobilier Grand Palais" loading="lazy" decoding="async"></a><figcaption><strong>Croquis de collection</strong><span>Recherche de proportions, d’usages et de cohérence d’ensemble.</span></figcaption></figure>
-          </div>
-        </article>
-        <article class="accessory-project-feature carod-project-feature" id="furniture-carod" data-furniture-project="carod" hidden aria-labelledby="carod-project-heading">
-          <div class="accessory-project-feature__intro">
-            <small>Design d’objet · Piano connecté</small>
-            <h4 id="carod-project-heading">Piano Carod.<br>Le son prend forme.</h4>
-            <p>Carod est un piano connecté issu d’une manufacture chinoise, inspiré par l’architecture gothique italienne et ses codes esthétiques. Ses lignes verticales, ses rythmes et ses détails évoquent la structure d’une nef, tandis que l’intégration numérique inscrit l’instrument dans un usage contemporain. Quand le son prend forme, et que la forme évoque l’harmonie du son, l’objet trouve son équilibre entre héritage et technologie.</p>
-          </div>
-          <div class="accessory-project-feature__gallery carod-project-gallery" aria-label="Deux visuels du projet de piano connecté Carod">
-            <figure><a href="assets/work/mobilier-01.jpg" target="_blank" rel="noopener"><img src="assets/work/mobilier-01.jpg" alt="Piano connecté Carod inspiré de l’architecture gothique italienne" loading="lazy" decoding="async"></a><figcaption><strong>Piano « Italy »</strong><span>Une silhouette verticale inspirée des rythmes de l’architecture gothique italienne.</span></figcaption></figure>
-            <figure><a href="assets/work/mobilier-02.jpg" target="_blank" rel="noopener"><img src="assets/work/mobilier-02.jpg" alt="Piano Carod connecté présenté en situation" loading="lazy" decoding="async"></a><figcaption><strong>Le piano en situation</strong><span>Un objet connecté qui relie présence sculpturale, musique et usage contemporain.</span></figcaption></figure>
-          </div>
-        </article>
-        <article class="accessory-project-feature ere-de-je-project-feature" id="furniture-ere-de-je" data-furniture-project="ere-de-je" hidden aria-labelledby="ere-de-je-project-heading">
-          <div class="accessory-project-feature__intro">
-            <small>Design mobilier · Habitat compact</small>
-            <h4 id="ere-de-je-project-heading">Ère de je.<br>Aire de jeu.</h4>
-            <p>Pensé pour l’espace réduit d’un studio étudiant, Ère de je transforme un volume compact en véritable aire de jeu domestique. Un seul ensemble se déploie en canapé, espace d’accueil, assise collective ou lit deux places. Le projet privilégie la modularité, la simplicité d’usage, la convivialité et un coût maîtrisé afin de proposer un mobilier flexible qui s’adapte aux moments de la journée comme aux dimensions du lieu.</p>
-          </div>
-          <div class="accessory-project-feature__gallery ere-de-je-project-gallery" aria-label="Deux visuels du projet de mobilier modulable Ère de je">
-            <figure><a href="assets/work/mobilier-05.jpg" target="_blank" rel="noopener"><img src="assets/work/mobilier-05.jpg" alt="Ère de je, mobilier modulable pour studio étudiant, du croquis aux usages" loading="lazy" decoding="async"></a><figcaption><strong>Du croquis à l’usage</strong><span>Volume compact, ouverture intuitive, espace d’accueil et transformation en lit deux places.</span></figcaption></figure>
-            <figure><a href="https://static.wixstatic.com/media/223f51_301c7a7aa1164901b1b815f87a48f1ae~mv2_d_3508_2480_s_4_2.png" target="_blank" rel="noopener"><img src="https://static.wixstatic.com/media/223f51_301c7a7aa1164901b1b815f87a48f1ae~mv2_d_3508_2480_s_4_2.png/v1/fill/w_1600,h_1131,al_c,q_90,enc_auto/223f51_301c7a7aa1164901b1b815f87a48f1ae~mv2_d_3508_2480_s_4_2.png" alt="Planche originale de recherche du mobilier Ère de je" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a><figcaption><strong>Recherche originale</strong><span>Exploration de la modularité, des positions et des différents scénarios de vie dans un studio.</span></figcaption></figure>
+          <div class="furniture-project-media" aria-label="Autres visuels du projet Grand Palais">
+            <figure class="furniture-project-figure"><button class="furniture-visual" type="button" aria-label="Agrandir la collection Grand Palais"><img src="assets/work/mobilier-04.jpg" alt="Collection de mobilier développée pour le Grand Palais" loading="lazy" decoding="async"></button><figcaption><strong>Collection</strong><span>Déclinaison d’un langage formel commun.</span></figcaption></figure>
+            <figure class="furniture-project-figure"><button class="furniture-visual" type="button" aria-label="Agrandir le mobilier outdoor Grand Palais"><img src="assets/work/mobilier-07.jpg" alt="Mobilier extérieur pour le Grand Palais" loading="lazy" decoding="async"></button><figcaption><strong>Mobilier outdoor</strong><span>Des pièces adaptées aux espaces extérieurs et événementiels.</span></figcaption></figure>
+            <figure class="furniture-project-figure"><button class="furniture-visual" type="button" aria-label="Agrandir les croquis Grand Palais"><img src="assets/work/mobilier-08.jpg" alt="Croquis de la collection de mobilier Grand Palais" loading="lazy" decoding="async"></button><figcaption><strong>Croquis de collection</strong><span>Recherche de proportions, d’usages et de cohérence d’ensemble.</span></figcaption></figure>
           </div>
         </article>
 
+        <article class="furniture-project-panel" id="furniture-carod" data-furniture-project="carod" role="tabpanel" hidden aria-labelledby="carod-project-heading">
+          <div class="furniture-project-lead">
+            <div class="furniture-project-copy">
+              <small>Projet 02 · Design d’objet · Piano connecté</small>
+              <h4 id="carod-project-heading">Piano Carod.<br>Le son prend forme.</h4>
+              <p>Carod est un piano connecté issu d’une manufacture chinoise, inspiré par l’architecture gothique italienne et ses codes esthétiques. Ses lignes verticales, ses rythmes et ses détails évoquent la structure d’une nef, tandis que l’intégration numérique inscrit l’instrument dans un usage contemporain. Quand le son prend forme et que la forme évoque l’harmonie du son, l’objet trouve son équilibre entre héritage et technologie.</p>
+            </div>
+            <figure class="furniture-project-figure furniture-project-hero">
+              <button class="furniture-visual" type="button" aria-label="Agrandir le piano Carod Italy"><img src="assets/work/mobilier-01.jpg" alt="Piano connecté Carod inspiré de l’architecture gothique italienne" loading="lazy" decoding="async"></button>
+              <figcaption><strong>Piano « Italy »</strong><span>Une silhouette verticale inspirée des rythmes de l’architecture gothique italienne.</span></figcaption>
+            </figure>
+          </div>
+          <div class="furniture-project-media furniture-project-media--single" aria-label="Autre visuel du projet Piano Carod">
+            <figure class="furniture-project-figure"><button class="furniture-visual" type="button" aria-label="Agrandir le piano Carod en situation"><img src="assets/work/mobilier-02.jpg" alt="Piano Carod connecté présenté en situation" loading="lazy" decoding="async"></button><figcaption><strong>Le piano en situation</strong><span>Un objet connecté qui relie présence sculpturale, musique et usage contemporain.</span></figcaption></figure>
+          </div>
+        </article>
+
+        <article class="furniture-project-panel" id="furniture-ere-de-je" data-furniture-project="ere-de-je" role="tabpanel" hidden aria-labelledby="ere-de-je-project-heading">
+          <div class="furniture-project-lead">
+            <div class="furniture-project-copy">
+              <small>Projet 03 · Mobilier modulable · Habitat compact</small>
+              <h4 id="ere-de-je-project-heading">Ère de je.<br>Aire de jeu.</h4>
+              <p>Pensé pour l’espace réduit d’un studio étudiant, Ère de je transforme un volume compact en véritable aire de jeu domestique. Un seul ensemble se déploie en canapé, espace d’accueil, assise collective ou lit deux places. Le projet privilégie la modularité, la simplicité d’usage, la convivialité et un coût maîtrisé afin de proposer un mobilier flexible qui s’adapte aux moments de la journée comme aux dimensions du lieu.</p>
+            </div>
+            <figure class="furniture-project-figure furniture-project-hero">
+              <button class="furniture-visual" type="button" aria-label="Agrandir la présentation Ère de je"><img src="assets/work/mobilier-05.jpg" alt="Ère de je, mobilier modulable pour studio étudiant, du croquis aux usages" loading="lazy" decoding="async"></button>
+              <figcaption><strong>Du croquis à l’usage</strong><span>Volume compact, ouverture intuitive, espace d’accueil et transformation en lit deux places.</span></figcaption>
+            </figure>
+          </div>
+          <div class="furniture-project-media furniture-project-media--single" aria-label="Autre visuel du projet Ère de je">
+            <figure class="furniture-project-figure"><button class="furniture-visual" type="button" aria-label="Agrandir la recherche originale Ère de je"><img src="https://static.wixstatic.com/media/223f51_301c7a7aa1164901b1b815f87a48f1ae~mv2_d_3508_2480_s_4_2.png/v1/fill/w_1600,h_1131,al_c,q_90,enc_auto/223f51_301c7a7aa1164901b1b815f87a48f1ae~mv2_d_3508_2480_s_4_2.png" alt="Planche originale de recherche du mobilier Ère de je" loading="lazy" decoding="async" referrerpolicy="no-referrer"></button><figcaption><strong>Recherche originale</strong><span>Exploration de la modularité, des positions et des différents scénarios de vie dans un studio.</span></figcaption></figure>
+          </div>
+        </article>
       </div>
     </section>
     <section class="category-intro jewelry-intro" data-category-intro="joaillerie" hidden aria-labelledby="joaillerie-title">
@@ -655,6 +638,6 @@
   <div class="lb-cap"></div>
 </div>
 
-<script src="app.js?v=20261109-sans-affiches"></script>
+<script src="app.js?v=20261110-mobilier-responsive"></script>
 </body>
 </html>

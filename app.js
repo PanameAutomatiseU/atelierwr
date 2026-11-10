@@ -243,6 +243,7 @@ function setupContinuousDesign(sec, items) {
       const active = button.dataset.accessorySubcat === key;
       button.classList.toggle('active', active);
       button.setAttribute('aria-pressed', active ? 'true' : 'false');
+      if (button.matches('.furniture-project-tab')) button.setAttribute('aria-selected', active ? 'true' : 'false');
     });
     const target = accessorySection.querySelector('[data-accessory-project="' + key + '"]');
     if (shouldScroll && target) window.setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 70);
@@ -259,12 +260,15 @@ function setupContinuousDesign(sec, items) {
   const showFurnitureSelection = (key, shouldScroll = true) => {
     if (!standaloneFurnitureProjects.includes(key)) return;
     furnitureProjects.forEach(project => {
-      project.hidden = project.dataset.furnitureProject !== key;
+      const active = project.dataset.furnitureProject === key;
+      project.hidden = !active;
+      project.setAttribute('aria-hidden', active ? 'false' : 'true');
     });
     furnitureButtons.forEach(button => {
       const active = button.dataset.furnitureProjectKey === key;
       button.classList.toggle('active', active);
       button.setAttribute('aria-pressed', active ? 'true' : 'false');
+      button.setAttribute('aria-selected', active ? 'true' : 'false');
     });
     const target = furnitureSection.querySelector('[data-furniture-project="' + key + '"]');
     if (shouldScroll && target) window.setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 70);
@@ -272,7 +276,23 @@ function setupContinuousDesign(sec, items) {
   furnitureButtons.forEach(button => button.addEventListener('click', () => {
     showFurnitureSelection(button.dataset.furnitureProjectKey);
   }));
-  furnitureProjects.forEach(project => { project.hidden = true; });
+  furnitureProjects.forEach(project => {
+    project.hidden = true;
+    project.setAttribute('aria-hidden', 'true');
+    const figures = [...project.querySelectorAll('.furniture-project-figure')];
+    const items = figures.map(figure => ({
+      src: figure.querySelector('img')?.currentSrc || figure.querySelector('img')?.src || '',
+      title: figure.querySelector('figcaption strong')?.textContent.trim() || '',
+      client: figure.querySelector('figcaption span')?.textContent.trim() || ''
+    }));
+    figures.forEach((figure, index) => {
+      figure.querySelector('.furniture-visual')?.addEventListener('click', event => {
+        event.preventDefault();
+        openLb(items, index);
+      });
+    });
+  });
+  showFurnitureSelection('grand-palais', false);
 
   const allBars = [sourceBar];
   let floatingBar = document.querySelector('.design-tabs-floating');
