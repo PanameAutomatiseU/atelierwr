@@ -2266,3 +2266,43 @@ a.card:focus-visible .card-caption {
 .lb .lb-prev:hover,.lb .lb-next:hover{background:var(--blue)}
 .lb-counter{position:absolute;z-index:3;bottom:70px;left:50%;transform:translateX(-50%);color:#fff;background:rgba(21,21,21,.72);padding:5px 12px;border-radius:20px;font-size:12px;letter-spacing:.1em;pointer-events:none}
 @media(max-width:600px){.lb .lb-prev,.lb .lb-next{width:36px;height:52px;font-size:28px}.lb .lb-prev{left:2px}.lb .lb-next{right:2px}}
+
+/* Palette du bandeau Design & création : blanc, noir et bordeaux */
+.design-tabs,
+.design-tabs-floating {
+  background: #f4f0e9 !important;
+  border-bottom: 1px solid #111 !important;
+}
+.design-tabs .tab,
+.design-tabs .tab:visited,
+.design-tabs-floating .tab,
+.design-tabs-floating .tab:visited {
+  background: #fff !important;
+  border: 1px solid #111 !important;
+  color: #741526 !important;
+  -webkit-text-fill-color: #741526 !important;
+  box-shadow: none !important;
+}
+.design-tabs .tab::after,
+.design-tabs-floating .tab::after {
+  color: #741526 !important;
+  -webkit-text-fill-color: #741526 !important;
+}
+.design-tabs .tab:hover,
+.design-tabs-floating .tab:hover {
+  background: #f7f0f1 !important;
+  border-color: #111 !important;
+}
+.design-tabs .tab.active,
+.design-tabs-floating .tab.active {
+  background: #fff !important;
+  border: 2px solid #741526 !important;
+  color: #741526 !important;
+  -webkit-text-fill-color: #741526 !important;
+  box-shadow: inset 0 -3px 0 #741526 !important;
+}
+.design-tabs .tab.active::after,
+.design-tabs-floating .tab.active::after {
+  color: #741526 !important;
+  -webkit-text-fill-color: #741526 !important;
+}
