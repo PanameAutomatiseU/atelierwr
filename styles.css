@@ -2306,3 +2306,51 @@ a.card:focus-visible .card-caption {
   color: #741526 !important;
   -webkit-text-fill-color: #741526 !important;
 }
+
+/* Sept disciplines sur une seule ligne, desktop et mobile */
+.design-tabs,
+.design-tabs-floating {
+  display: grid !important;
+  grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+  grid-auto-flow: row !important;
+  flex-wrap: nowrap !important;
+  gap: clamp(2px, .45vw, 6px) !important;
+  width: 100% !important;
+  overflow-x: visible !important;
+}
+.design-tabs .tab,
+.design-tabs-floating .tab {
+  grid-column: auto !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  overflow-wrap: anywhere !important;
+  hyphens: auto !important;
+}
+.design-tabs .tab:last-child,
+.design-tabs-floating .tab:last-child {
+  grid-column: auto !important;
+}
+@media (max-width: 720px) {
+  .design-tabs,
+  .design-tabs-floating {
+    grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+    gap: 2px !important;
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+  }
+  .design-tabs .tab,
+  .design-tabs .tab:visited,
+  .design-tabs-floating .tab,
+  .design-tabs-floating .tab:visited {
+    min-height: 48px !important;
+    padding: 5px 1px !important;
+    font-size: clamp(5px, 1.48vw, 7px) !important;
+    line-height: 1.08 !important;
+    letter-spacing: 0 !important;
+  }
+  .design-tabs .tab::after,
+  .design-tabs-floating .tab::after {
+    font-size: clamp(4px, 1.05vw, 6px) !important;
+    letter-spacing: 0 !important;
+  }
+}
