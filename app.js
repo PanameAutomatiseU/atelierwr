@@ -573,7 +573,7 @@ function renderFineArtSeries() {
   root.innerHTML = series.map((serie, seriesIndex) => {
     const works = fineArtWorks(serie.key);
     return `
-      <section class="fineart-series" aria-labelledby="fineart-series-${serie.key}">
+      <section class="fineart-series" id="fineart-series-${serie.key}" aria-labelledby="fineart-series-${serie.key}">
         <header class="fineart-series__head">
           <span>${String(seriesIndex + 1).padStart(2, '0')}</span>
           <div><h3 id="fineart-series-${serie.key}">${serie.title}</h3><p>${serie.intro}</p></div>
@@ -666,6 +666,33 @@ document.addEventListener('keydown', e => {
 /* nav */
 const nav = document.querySelector('.nav');
 document.querySelector('.burger').onclick = () => nav.classList.toggle('open');
+document.querySelectorAll('.menu-toggle').forEach(toggle => toggle.addEventListener('click', () => {
+  const group = toggle.closest('.menu-group');
+  const opening = !group.classList.contains('expanded');
+  document.querySelectorAll('.menu-group').forEach(g => {
+    g.classList.remove('expanded');
+    g.querySelector('.menu-toggle')?.setAttribute('aria-expanded', 'false');
+  });
+  group.classList.toggle('expanded', opening);
+  toggle.setAttribute('aria-expanded', String(opening));
+}));
+document.querySelectorAll('[data-nav-cat]').forEach(link => link.addEventListener('click', () => {
+  document.querySelector('.design-tabs [data-cat="' + link.dataset.navCat + '"]')?.click();
+}));
+document.querySelectorAll('.menu-dropdown a').forEach(link => link.addEventListener('click', () => {
+  document.querySelectorAll('.menu-group.expanded').forEach(g => {
+    g.classList.remove('expanded');
+    g.querySelector('.menu-toggle')?.setAttribute('aria-expanded', 'false');
+  });
+}));
+document.addEventListener('click', e => {
+  if (e.target.closest('.menu-group')) return;
+  document.querySelectorAll('.menu-group.expanded').forEach(g => {
+    g.classList.remove('expanded');
+    g.querySelector('.menu-toggle')?.setAttribute('aria-expanded', 'false');
+  });
+});
+
 document.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
 const sections = [...document.querySelectorAll('section[id]')];
 const links = [...document.querySelectorAll('.menu a')];
