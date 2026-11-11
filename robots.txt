@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://atelierwr.net/sitemap.xml
