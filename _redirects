@@ -1,0 +1,6 @@
+# Redirections permanentes des anciennes pages du site Wix
+# Anciennes URL confirmees dans l'index public des moteurs de recherche
+/contact /#contact 301
+/product-design /#design 301
+/logo /logos-identites.html 301
+/bags-accessories /maroquinerie-accessoires.html 301
