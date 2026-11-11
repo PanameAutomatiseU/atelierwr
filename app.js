@@ -606,6 +606,7 @@ function observeCards(root) {
 const lb = document.getElementById('lb');
 const lbImg = lb.querySelector('img');
 const lbCap = lb.querySelector('.lb-cap');
+const lbCounter = lb.querySelector('.lb-counter');
 const lbZoomIn = lb.querySelector('.lb-zoom-in');
 const lbZoomOut = lb.querySelector('.lb-zoom-out');
 const lbZoomReset = lb.querySelector('.lb-zoom-reset');
@@ -632,6 +633,7 @@ const escapeHtml = value => String(value || '').replace(/[&<>"']/g, char => ({ '
 function showLb() {
   setLbZoom(1);
   const it = lbList[lbIndex];
+  lbCounter.textContent = `${lbIndex + 1} / ${lbList.length}`;
   lbImg.src = it.src;
   lbImg.alt = it.title;
   lb.classList.toggle('has-long-caption', Boolean(it.caption));
@@ -644,6 +646,16 @@ lb.querySelector('.lb-close').onclick = closeLb;
 lb.querySelector('.lb-prev').onclick = e => { e.stopPropagation(); lbIndex = (lbIndex - 1 + lbList.length) % lbList.length; showLb(); };
 lb.querySelector('.lb-next').onclick = e => { e.stopPropagation(); lbIndex = (lbIndex + 1) % lbList.length; showLb(); };
 lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+let lbTouchStartX = null;
+lb.addEventListener('touchstart', e => {
+  if (e.touches.length === 1) lbTouchStartX = e.touches[0].clientX;
+}, { passive: true });
+lb.addEventListener('touchend', e => {
+  if (lbTouchStartX === null || !e.changedTouches.length || lbScale > 1) return;
+  const delta = e.changedTouches[0].clientX - lbTouchStartX;
+  lbTouchStartX = null;
+  if (Math.abs(delta) > 55) lb.querySelector(delta < 0 ? '.lb-next' : '.lb-prev').click();
+}, { passive: true });
 document.querySelectorAll('[data-jewelry-i]').forEach(button => button.addEventListener('click', () => openLb(JEWELRY_GALLERY, +button.dataset.jewelryI)));
 document.addEventListener('keydown', e => {
   if (!lb.classList.contains('open')) return;
