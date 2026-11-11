@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261111-tabs-red">
+<link rel="stylesheet" href="styles.css?v=20261111-menu-dropdown">
 <link rel="stylesheet" href="hero.css?v=20261107-nouvel-entete">
 
 <link rel="canonical" href="https://atelierwr.net/">
@@ -39,9 +39,32 @@
       <span>Studio de création</span>
     </a>
     <nav class="menu">
-      <a href="#studio">Atelier WR</a>
-      <a href="#design">Design &amp; création</a>
-      <a href="#fineart">Fine Art</a>
+      <div class="menu-group">
+        <a href="#studio">Atelier WR</a><button class="menu-toggle" type="button" aria-label="Sous-menu Atelier WR" aria-expanded="false">⌄</button>
+        <div class="menu-dropdown"><a href="#studio">Le studio</a><a href="#parcours">Parcours &amp; savoir-faire</a><a href="#contact">Prendre contact</a></div>
+      </div>
+      <div class="menu-group">
+        <a href="#design">Design &amp; création</a><button class="menu-toggle" type="button" aria-label="Sous-menu Design et création" aria-expanded="false">⌄</button>
+        <div class="menu-dropdown">
+          <a href="#design" data-nav-cat="horlogerie">Horlogerie</a>
+          <a href="#design" data-nav-cat="joaillerie">Joaillerie</a>
+          <a href="#design" data-nav-cat="maroquinerie">Maroquinerie &amp; accessoires</a>
+          <a href="#design" data-nav-cat="mobilier">Mobilier &amp; objets</a>
+          <a href="#design" data-nav-cat="luminaires">Luminaires</a>
+          <a href="#design" data-nav-cat="packaging">Packaging &amp; vins</a>
+          <a href="#design" data-nav-cat="logo">Logo &amp; identité</a>
+        </div>
+      </div>
+      <div class="menu-group">
+        <a href="#fineart">Fine Art</a><button class="menu-toggle" type="button" aria-label="Sous-menu Fine Art" aria-expanded="false">⌄</button>
+        <div class="menu-dropdown">
+          <a href="#fineart-series-sea">By the sea</a>
+          <a href="#fineart-series-encres">Mes dernières encres</a>
+          <a href="#fineart-series-voyage">Carnets de voyage</a>
+          <a href="#fineart-series-animales">Lignes animales</a>
+          <a href="#fineart-series-nus">Nus</a>
+        </div>
+      </div>
       <a href="#parcours">Parcours</a>
       <a href="#contact">Contact</a>
     </nav>
