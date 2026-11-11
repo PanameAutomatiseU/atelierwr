@@ -110,7 +110,6 @@ const INK_WORKS = [
   { src: "assets/ig/15-baigneuses-rochers.jpg", title: "Baigneuses sur les rochers", client: "Illustration · Marseille" },
   { src: "assets/ig/14-marseille-bleu-orange.jpg", title: "Marseille, bleu et orange", client: "Illustration · Marseille" },
   { src: "assets/ig/13-coucher-soleil-marseille.jpg", title: "Marseille au soleil couchant", client: "Illustration · Marseille" },
-  { src: "assets/ig/01-poster-demain.jpg", title: "Lovely Messy Massilia", client: "Feutre et encre · A4" },
   { src: "assets/ig/02-baigneuse-rocher.jpg", title: "Baigneuse sur les rochers", client: "Feutre et encre · A4" },
   { src: "assets/ig/03-bain-montagne.jpg", title: "Bain de montagne", client: "Feutre et encre · A4" },
   { src: "assets/ig/04-soleil-couchant.jpg", title: "Soleil couchant", client: "Feutre et encre · A4" },
