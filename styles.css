@@ -2259,3 +2259,10 @@ a.card:focus-visible .card-caption {
 .lb .lb-zoom-controls .lb-zoom-reset{font-size:11px;letter-spacing:.06em;min-width:60px}
 .lb .lb-zoom-controls button:disabled{opacity:.35;cursor:default}
 @media(max-width:600px){.lb .lb-zoom-controls{top:12px}.lb .lb-zoom-controls button{padding:5px}.lb img{max-width:90vw}}
+
+/* Navigation clairement visible dans la visionneuse Fine Art */
+.lb .lb-prev,.lb .lb-next{z-index:4;display:flex;align-items:center;justify-content:center;width:52px;height:64px;padding:0;border:1px solid rgba(255,255,255,.3);border-radius:4px;background:rgba(21,21,21,.72);font-size:38px;opacity:1}
+.lb .lb-prev{left:14px}.lb .lb-next{right:14px}
+.lb .lb-prev:hover,.lb .lb-next:hover{background:var(--blue)}
+.lb-counter{position:absolute;z-index:3;bottom:70px;left:50%;transform:translateX(-50%);color:#fff;background:rgba(21,21,21,.72);padding:5px 12px;border-radius:20px;font-size:12px;letter-spacing:.1em;pointer-events:none}
+@media(max-width:600px){.lb .lb-prev,.lb .lb-next{width:36px;height:52px;font-size:28px}.lb .lb-prev{left:2px}.lb .lb-next{right:2px}}
