@@ -606,9 +606,31 @@ function observeCards(root) {
 const lb = document.getElementById('lb');
 const lbImg = lb.querySelector('img');
 const lbCap = lb.querySelector('.lb-cap');
+const lbZoomIn = lb.querySelector('.lb-zoom-in');
+const lbZoomOut = lb.querySelector('.lb-zoom-out');
+const lbZoomReset = lb.querySelector('.lb-zoom-reset');
+let lbScale = 1;
+function setLbZoom(scale) {
+  lbScale = Math.max(1, Math.min(2.5, Math.round(scale * 10) / 10));
+  lbImg.style.transform = `scale(${lbScale})`;
+  lb.classList.toggle('is-zoomed', lbScale > 1);
+  lbZoomOut.disabled = lbZoomReset.disabled = lbScale === 1;
+  lbZoomIn.disabled = lbScale >= 2.5;
+  lbZoomReset.textContent = `${Math.round(lbScale * 100)} %`;
+}
+lbZoomIn.onclick = () => setLbZoom(lbScale + 0.25);
+lbZoomOut.onclick = () => setLbZoom(lbScale - 0.25);
+lbZoomReset.onclick = () => setLbZoom(1);
+lbImg.addEventListener('click', () => setLbZoom(lbScale >= 2.5 ? 1 : lbScale + 0.5));
+lbImg.addEventListener('wheel', e => {
+  if (!lb.classList.contains('open')) return;
+  e.preventDefault();
+  setLbZoom(lbScale + (e.deltaY < 0 ? 0.25 : -0.25));
+}, { passive: false });
 function openLb(list, i) { lbList = list; lbIndex = i; showLb(); lb.classList.add('open'); document.body.classList.add('no-scroll'); }
 const escapeHtml = value => String(value || '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[char]));
 function showLb() {
+  setLbZoom(1);
   const it = lbList[lbIndex];
   lbImg.src = it.src;
   lbImg.alt = it.title;
