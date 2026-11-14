@@ -2373,3 +2373,16 @@ a.card:focus-visible .card-caption {
  .menu-group.expanded .menu-dropdown{display:block}
  .menu-dropdown a{padding:11px 18px!important;white-space:normal}
 }
+
+
+/* Ouverture Design & création · titre et projet à la une · 2026-11-15 */
+#design.section{padding-top:0}
+#design>.wrap{padding-top:clamp(34px,5vw,72px)}
+.design-title-banner{width:100%;padding:clamp(24px,3.2vw,54px) clamp(8px,2vw,32px);overflow:hidden;background:#050505}
+#design .design-title-banner h2{display:flex;align-items:baseline;justify-content:center;gap:.18em;width:100%;margin:0;color:#fff;font-family:var(--font-display);font-size:clamp(25px,8.2vw,150px);font-weight:900;line-height:.86;letter-spacing:-.055em;text-align:center;text-transform:uppercase;white-space:nowrap}
+#design .design-title-banner h2 span{color:var(--orange)}
+#design .design-title-banner h2 strong{color:#fff;font:inherit}
+#design .project-spotlight{margin-bottom:0}
+#design .project-spotlight small{color:var(--orange);font-size:clamp(11px,1vw,14px);font-weight:800;letter-spacing:.16em}
+#design .design-tabs{display:none!important}
+@media(max-width:720px){#design>.wrap{padding-top:28px}.design-title-banner{padding:22px 5px}#design .design-title-banner h2{gap:.14em;font-size:clamp(24px,8.1vw,58px);letter-spacing:-.06em}}
