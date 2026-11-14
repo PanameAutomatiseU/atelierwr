@@ -22,3 +22,20 @@ body.fineart-page{background:#fff;color:var(--ink)}
 @media(max-width:900px){.fineart-page .fineart{padding-top:105px}.fineart-series-entry{grid-template-columns:1fr 1fr;gap:28px}.fineart-series-entry__copy h2{font-size:clamp(30px,5.8vw,52px)}}
 @media(max-width:620px){.fineart-page .fineart{padding:92px 0 52px}.fineart-page .fineart-page-head{margin:24px 0 36px}.fineart-series-entry{grid-template-columns:1fr;gap:20px;padding:38px 0}.fineart-series-entry .fineart-series-entry__copy,.fineart-series-entry:nth-child(even) .fineart-series-entry__copy{order:1}.fineart-series-entry figure,.fineart-series-entry:nth-child(even) figure{order:2}.fineart-series-entry__copy h2{font-size:clamp(32px,11vw,54px)}.fineart-series-entry__copy span{margin-top:20px}.fineart-page .card figcaption{padding:11px 12px 13px!important}}
 @media(prefers-reduced-motion:reduce){.fineart-series-entry img{transition:none}}
+
+
+/* Fine Art · œuvres uniformisées, filet fin et galeries aérées · 2026-11-15 */
+.fineart-series-entry figure{background:#fff}
+.fineart-series-entry img{width:100%;height:clamp(360px,42vw,580px);max-height:none;aspect-ratio:auto;box-sizing:border-box;padding:8px;border:1px solid rgba(0,0,0,.42);background:#fff;object-fit:contain}
+.fineart-series-entry figcaption{display:grid;gap:6px;padding:0 2px;margin-top:20px;color:var(--ink);text-align:left}
+.fineart-series-entry figcaption strong{font-family:var(--font-body);font-size:12px;font-weight:700;line-height:1.35}
+.fineart-series-entry figcaption span{color:#6a655e;font-size:10px;line-height:1.4}
+.fineart-page .fineart-series__grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(58px,7vw,96px) clamp(24px,3.4vw,48px);columns:auto!important;column-gap:normal!important}
+.fineart-page .fineart-series__grid .card{display:block;width:100%;margin:0!important;padding:0;border:0;background:#fff;break-inside:auto}
+.fineart-page .fineart-series__grid .fineart-open{display:flex;align-items:center;justify-content:center;width:100%;height:clamp(300px,32vw,480px);box-sizing:border-box;padding:8px;border:1px solid rgba(0,0,0,.42);background:#fff;overflow:hidden}
+.fineart-page .fineart-series__grid .fineart-open img{width:100%;height:100%;max-height:none;border:0;background:#fff;object-fit:contain}
+.fineart-page .fineart-series__grid .card figcaption,.fineart-page .fineart-series__grid .card:hover figcaption,.fineart-page .fineart-series__grid .card:focus-within figcaption{display:block!important;margin-top:20px!important;padding:0 2px!important;border:0!important;background:#fff!important;color:var(--ink)!important;text-align:left!important}
+.fineart-page .fineart-series__grid .card figcaption b{margin-bottom:7px;font-size:13px;line-height:1.35;text-align:left}
+.fineart-page .fineart-series__grid .card figcaption span{color:#666159;font-size:10px;line-height:1.5;text-align:left}
+@media(max-width:980px){.fineart-page .fineart-series__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:64px 30px}.fineart-page .fineart-series__grid .fineart-open{height:clamp(320px,48vw,500px)}}
+@media(max-width:620px){.fineart-series-entry img{height:clamp(330px,112vw,520px)}.fineart-series-entry figcaption{margin-top:18px}.fineart-page .fineart-series__grid{grid-template-columns:1fr;gap:68px}.fineart-page .fineart-series__grid .fineart-open{height:clamp(330px,112vw,520px)}.fineart-page .fineart-series__grid .card figcaption{margin-top:18px!important}}
