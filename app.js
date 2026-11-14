@@ -118,7 +118,6 @@ const INK_WORKS = [
   { src: "assets/ig/07-sketch-poster.jpg", title: "Étude graphique", client: "Feutre et encre · A4" },
   { src: "assets/ig/08-poster-w.jpg", title: "Composition W", client: "Feutre et encre · A4" },
   { src: "assets/ig/09-poster-sept.jpg", title: "Composition Sept", client: "Feutre et encre · A4" },
-  { src: "assets/ig/10-port-noir-blanc.jpg", title: "Le port", client: "Feutre et encre · A4" },
   { src: "assets/ig/11-village-bleu.jpg", title: "Le Vallon Bleu", client: "Feutre et encre · A4" },
   { src: "assets/ig/12-nu-rochers.jpg", title: "Nu sur les rochers", client: "Feutre et encre · A4" }
 ];
