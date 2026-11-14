@@ -560,39 +560,16 @@ function setupTabs(sectionId, items) {
 }
 
 function renderFineArtSeries() {
-  const root = document.querySelector('[data-fineart-series]');
+  const root = document.querySelector('[data-fineart-gallery]');
   if (!root) return;
-  const fineArtWorks = key => key === 'encres' ? INK_WORKS : ART.filter(item => item.cat === key);
-  const series = [
-    { key: 'sea', title: 'By the sea', intro: 'Marseille, la mer, les corps au soleil et la lumière méditerranéenne.' },
-    { key: 'encres', title: 'Mes dernières encres', intro: 'Illustrations au feutre et à l’encre, le plus souvent au format A4, qui saisissent des moments de vie marseillais et d’ailleurs ainsi que des lieux auxquels je suis particulièrement attaché. Une signature graphique fondée sur la complémentarité du bleu et de l’orange, dans des compositions souvent inspirées par la géométrie du Bauhaus.' },
-    { key: 'voyage', title: 'Carnets de voyage', intro: 'Scènes, visages et paysages rapportés d’Asie, d’Inde et d’ailleurs.' },
-    { key: 'animales', title: 'Lignes animales', intro: 'Bestiaire graphique en acrylique et plâtre, entre mouvement et matière.' },
-    { key: 'nus', title: 'Nus', intro: 'Études du corps à l’encre et à l’aquarelle.' }
-  ];
-  root.innerHTML = series.map((serie, seriesIndex) => {
-    const works = fineArtWorks(serie.key);
-    return `
-      <section class="fineart-series" id="fineart-series-${serie.key}" aria-labelledby="fineart-series-${serie.key}">
-        <header class="fineart-series__head">
-          <span>${String(seriesIndex + 1).padStart(2, '0')}</span>
-          <div><h3 id="fineart-series-${serie.key}">${serie.title}</h3><p>${serie.intro}</p></div>
-          <small>${works.length ? works.length + (works.length > 1 ? " œuvres" : " œuvre") : "Visuels à venir"}</small>
-        </header>
-        <div class="grid fineart-series__grid" data-fineart-series-grid="${serie.key}">
-          ${works.map((item, index) => `
-            <figure class="card" data-i="${index}">
-              <img src="${item.src}" alt="${item.title}${item.client ? ', ' + item.client : ''}" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-              <figcaption><b>${item.title}</b><span>${item.client}</span></figcaption>
-            </figure>`).join('')}
-        </div>
-      </section>`;
-  }).join('');
-  series.forEach(serie => {
-    const works = fineArtWorks(serie.key);
-    const grid = root.querySelector('[data-fineart-series-grid="' + serie.key + '"]');
-    grid.querySelectorAll('figure.card').forEach(card => card.addEventListener('click', () => openLb(works, +card.dataset.i)));
-    observeCards(grid);
+  const key = root.dataset.fineartGallery;
+  const works = key === 'encres' ? INK_WORKS : ART.filter(item => item.cat === key);
+  root.querySelectorAll('.fineart-open').forEach((link, index) => {
+    link.addEventListener('click', event => {
+      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      openLb(works, index);
+    });
   });
 }
 
@@ -725,4 +702,10 @@ if (document.body.classList.contains('discipline-page')) {
     const items = figures.map(figure => ({src:figure.querySelector('img')?.src || '',title:figure.querySelector('figcaption strong')?.textContent.trim() || '',client:figure.querySelector('figcaption span')?.textContent.trim() || ''}));
     figures.forEach((figure,index) => figure.querySelector('.furniture-visual')?.addEventListener('click', () => openLb(items,index)));
   });
+}
+
+/* Anciennes adresses des galeries Fine Art. */
+const fineArtLegacyPages = {"#fineart-series-sea": "by-the-sea.html", "#fineart-series-encres": "mes-dernieres-encres.html", "#fineart-series-voyage": "carnets-de-voyage.html", "#fineart-series-animales": "lignes-animales.html", "#fineart-series-nus": "nus.html"};
+if ((location.pathname === "/" || location.pathname.endsWith("/index.html")) && fineArtLegacyPages[location.hash]) {
+  location.replace(fineArtLegacyPages[location.hash]);
 }
