@@ -715,5 +715,14 @@ window.addEventListener('load', revealPassed);
 const ro = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); ro.unobserve(e.target); } }), { threshold: .12 });
 document.querySelectorAll('.rv').forEach(el => ro.observe(el));
 
-setupTabs('design', DESIGN);
+if (document.getElementById('design')) setupTabs('design', DESIGN);
 renderFineArtSeries();
+
+/* Independent furniture page: preserve the existing project galleries. */
+if (document.body.classList.contains('discipline-page')) {
+  document.querySelectorAll('[data-furniture-project]').forEach(project => {
+    const figures = [...project.querySelectorAll('.furniture-project-figure')];
+    const items = figures.map(figure => ({src:figure.querySelector('img')?.src || '',title:figure.querySelector('figcaption strong')?.textContent.trim() || '',client:figure.querySelector('figcaption span')?.textContent.trim() || ''}));
+    figures.forEach((figure,index) => figure.querySelector('.furniture-visual')?.addEventListener('click', () => openLb(items,index)));
+  });
+}
