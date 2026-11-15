@@ -151,3 +151,22 @@
 /* Design & création · typographie affinée · 2026-11-15 */
 .design-index__heading h1{font-weight:700;letter-spacing:-.045em}
 .design-band{font-weight:700;letter-spacing:.045em}
+
+
+/* Design & création · équilibre crème, noir, bleu et orange · 2026-11-15 */
+.design-index{--design-blue:#1d3c8c}
+.geo-arc--left{border-color:rgba(29,60,140,.62)}
+.design-index__heading h1{color:#151515}
+.design-index__heading h1 em{color:#ff4d00}
+.design-index__heading h1:after{background:#1d3c8c}
+.design-index__heading p{color:#1d3c8c}
+.design-band,
+.design-band--one,.design-band--two,.design-band--three,.design-band--four,
+.design-band--five,.design-band--six,.design-band--seven{
+  border-bottom-color:rgba(29,60,140,.38);
+  color:#151515;
+}
+.design-band:first-child{border-top-color:rgba(29,60,140,.38)}
+.design-band i{color:#1d3c8c}
+.design-band:hover,.design-band:hover i{color:#ff4d00}
+.design-index__caption{color:#1d3c8c}
