@@ -196,3 +196,21 @@
   .design-band-navigation{padding-left:17px}
   .design-band-navigation::before{width:2px}
 }
+
+
+/* Design & création · retour sans lignes colorées · 2026-11-15 */
+.design-index__heading h1 span:first-child{
+  color:#151515;
+  font-size:1em;
+  letter-spacing:inherit;
+}
+.design-band-navigation{padding-left:0}
+.design-band-navigation::before{display:none}
+.geo-arc--left{border-color:rgba(21,21,21,.42)}
+.design-index__heading h1:after{background:#151515}
+.design-band,
+.design-band--one,.design-band--two,.design-band--three,.design-band--four,
+.design-band--five,.design-band--six,.design-band--seven{
+  border-bottom-color:rgba(21,21,21,.42);
+}
+.design-band:first-child{border-top-color:rgba(21,21,21,.42)}
