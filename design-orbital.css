@@ -16,3 +16,64 @@
 .orbital-page .bubble-luminaires{--bubble-color:#8B8F8E!important;color:#0A1518}
 .orbital-page .bubble-packaging{--bubble-color:#B50B16!important;color:#FFFFFF}
 .orbital-page .bubble-logo{--bubble-color:#0D2F36!important;color:#FFFFFF}
+
+
+/* Design & création · composition ajustée et mobile Bauhaus · 2026-11-15 */
+.orbital-intro{padding-top:92px;padding-bottom:20px;min-height:calc(100svh - 68px)}
+.orbit-stage{height:clamp(500px,54svh,620px);margin-top:-48px}
+.orbit-caption{margin-top:34px}
+.orbit-bubble{
+  border:2px solid #151515;
+  color:#fff!important;
+  font-size:clamp(16px,1.85vw,30px);
+  font-weight:900;
+  line-height:1.02;
+  letter-spacing:.025em;
+  text-transform:uppercase;
+  box-shadow:0 2px 0 rgba(21,21,21,.18);
+}
+.orbit-bubble span{max-width:88%;text-wrap:balance}
+.orbit-bubble:hover{outline:2px solid #151515;outline-offset:5px;filter:brightness(1.06)}
+.orbit-bubble i{background:#fff}
+.orbital-page .bubble-horlogerie{--bubble-color:#d45a1f!important;color:#fff!important}
+.orbital-page .bubble-joaillerie{--bubble-color:#a97100!important;color:#fff!important}
+.orbital-page .bubble-maroquinerie{--bubble-color:#a00000!important;color:#fff!important}
+.orbital-page .bubble-mobilier{--bubble-color:#75513a!important;color:#fff!important}
+.orbital-page .bubble-luminaires{--bubble-color:#034d73!important;color:#fff!important}
+.orbital-page .bubble-packaging{--bubble-color:#38634a!important;color:#fff!important}
+.orbital-page .bubble-logo{--bubble-color:#6c3d78!important;color:#fff!important}
+@media(max-width:900px){
+  .orbital-intro{
+    padding:82px 20px 22px;
+    min-height:calc(100svh - 60px);
+    background-color:#f3eee3;
+    background-image:
+      radial-gradient(circle at 8% 19%,rgba(232,116,46,.22) 0 34px,transparent 35px),
+      radial-gradient(circle at 92% 55%,rgba(29,60,140,.17) 0 58px,transparent 59px),
+      linear-gradient(112deg,transparent 0 30%,rgba(21,21,21,.12) 30% 30.8%,transparent 30.8% 100%),
+      repeating-linear-gradient(90deg,transparent 0 70px,rgba(21,21,21,.06) 70px 71px);
+  }
+  .orbital-heading{position:relative;z-index:3}
+  .orbit-stage{height:auto;margin-top:24px;padding:22px 4px}
+  .orbit-lines{display:block;opacity:.18;stroke-width:2}
+  .orbit-navigation{gap:18px}
+  .orbit-bubble{
+    aspect-ratio:1.35;
+    min-height:86px;
+    border-radius:999px;
+    padding:12px 14px;
+    font-size:clamp(14px,2.5vw,20px);
+  }
+  .orbit-bubble i{width:24px;height:2px;margin-top:10px}
+  .deco-yellow{width:120px;height:120px;left:-42px;top:28px;opacity:.18}
+  .deco-blue{width:190px;height:190px;right:-90px;top:45%;opacity:.13}
+  .deco-orange{display:block;width:10px;height:260px;left:62%;bottom:-80px;opacity:.15;transform:rotate(28deg)}
+}
+@media(max-width:540px){
+  .orbital-heading h1{font-size:clamp(46px,13vw,62px);line-height:.86}
+  .orbital-heading p{margin-top:18px}
+  .orbit-navigation{gap:14px 12px}
+  .orbit-bubble{min-height:82px;font-size:clamp(14px,4vw,18px)}
+  .orbit-bubble:last-child{width:48%}
+  .orbit-caption{margin-top:22px}
+}
