@@ -214,3 +214,30 @@
   border-bottom-color:rgba(21,21,21,.42);
 }
 .design-band:first-child{border-top-color:rgba(21,21,21,.42)}
+
+
+/* Design & création · DESIGN bleu et axe vertical, filets noirs conservés · 2026-11-15 */
+.design-index__heading h1 span:first-child{
+  color:#1d3c8c;
+  font-size:1.09em;
+  letter-spacing:-.05em;
+}
+.design-band-navigation{
+  position:relative;
+  padding-left:clamp(24px,2.4vw,38px);
+}
+.design-band-navigation::before{
+  display:block;
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  width:3px;
+  background:#151515;
+}
+@media(max-width:540px){
+  .design-index__heading h1 span:first-child{font-size:1.07em}
+  .design-band-navigation{padding-left:17px}
+  .design-band-navigation::before{width:2px}
+}
