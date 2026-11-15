@@ -146,3 +146,8 @@
   .design-index__caption{font-size:8px;gap:12px}
 }
 @media(prefers-reduced-motion:reduce){.design-band,.design-band span,.design-band i{transition:none}.design-band:hover span,.design-band:hover i{transform:none}}
+
+
+/* Design & création · typographie affinée · 2026-11-15 */
+.design-index__heading h1{font-weight:700;letter-spacing:-.045em}
+.design-band{font-weight:700;letter-spacing:.045em}
