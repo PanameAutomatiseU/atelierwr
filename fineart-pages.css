@@ -88,3 +88,66 @@ body.fineart-page{background:#fff;color:var(--ink)}
   .fineart-page .fineart-category-bar + .fineart{padding-top:50px}
 }
 @media(prefers-reduced-motion:reduce){.fineart-category-bar a{transition:none}}
+
+
+/* Fine Art · capsules colorées et ajustements Bauhaus · 2026-11-15 */
+.fineart-category-bar{
+  padding-block:8px;
+  border-bottom:1px solid rgba(21,21,21,.34);
+  background:#f3eee3;
+}
+.fineart-category-bar__inner{
+  gap:8px;
+  padding-inline:max(20px,calc((100vw - 1200px)/2));
+}
+.fineart-category-bar a{
+  flex:1 0 128px;
+  min-height:58px;
+  padding:8px 16px;
+  border:1px solid #151515!important;
+  border-radius:999px;
+  color:#fff;
+  white-space:normal;
+  box-shadow:0 1px 0 rgba(21,21,21,.18);
+}
+.fineart-category-bar a:nth-child(1){background:#151515}
+.fineart-category-bar a:nth-child(2){background:#1d3c8c}
+.fineart-category-bar a:nth-child(3){background:#b9541f}
+.fineart-category-bar a:nth-child(4){background:#a00000}
+.fineart-category-bar a:nth-child(5){background:#38634a}
+.fineart-category-bar a:nth-child(6){background:#6c3d78}
+.fineart-category-bar strong{
+  max-width:132px;
+  color:#fff;
+  font-size:clamp(11px,1vw,13px);
+  line-height:1.08;
+  letter-spacing:.07em;
+  text-align:center;
+  text-wrap:balance;
+}
+.fineart-category-bar span{flex:0 0 auto;color:#fff;font-size:9px;opacity:.82}
+.fineart-category-bar a:hover{filter:brightness(1.09)}
+.fineart-category-bar a.is-active{
+  color:#fff;
+  box-shadow:0 0 0 2px #fff,0 0 0 4px #151515;
+}
+.fineart-category-bar a.is-active span{color:#fff}
+.fineart-series-entry{padding:clamp(34px,5vw,72px) 0}
+.fineart-series-entry img{height:clamp(320px,37vw,510px)}
+@media(max-width:620px){
+  .fineart-category-bar{
+    padding-block:12px;
+    background-color:#f3eee3;
+    background-image:
+      radial-gradient(circle at 12% 22%,rgba(232,116,46,.22) 0 22px,transparent 23px),
+      radial-gradient(circle at 78% 82%,rgba(29,60,140,.16) 0 30px,transparent 31px),
+      linear-gradient(115deg,transparent 0 34%,rgba(21,21,21,.12) 34% 34.8%,transparent 34.8% 100%),
+      repeating-linear-gradient(90deg,transparent 0 58px,rgba(21,21,21,.07) 58px 59px);
+  }
+  .fineart-category-bar__inner{gap:10px;padding:0 14px}
+  .fineart-category-bar a{flex-basis:142px;min-height:62px;padding:8px 14px}
+  .fineart-category-bar strong{font-size:12px}
+  .fineart-series-entry{gap:16px;padding:30px 0}
+  .fineart-series-entry img{height:min(46svh,390px)}
+  .fineart-series-entry__copy h2{font-size:clamp(38px,12vw,58px);line-height:.88;text-wrap:balance}
+}
