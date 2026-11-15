@@ -7,3 +7,23 @@
 @media(max-width:560px){
   .hero-full img{width:100%;max-width:none;min-height:0;object-fit:contain;object-position:center}
 }
+
+
+/* Atelier · bandeau des marques accompagnées · 2026-11-15 */
+.nav a[href="parcours.html"]{display:none!important}
+.studio .domains::after{
+  content:"";
+  display:block;
+  grid-column:1 / -1;
+  width:100%;
+  aspect-ratio:1500 / 620;
+  margin-top:clamp(62px,8vw,118px);
+  background:url("assets/brands/marques-accompagnees.svg") center / contain no-repeat;
+}
+@media(max-width:620px){
+  .studio .domains::after{
+    aspect-ratio:700 / 1410;
+    margin-top:58px;
+    background-image:url("assets/brands/marques-accompagnees-mobile.svg");
+  }
+}
