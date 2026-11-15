@@ -12,7 +12,7 @@
     const overlay = document.createElement('div');
     overlay.className = 'design-band-transition';
     overlay.setAttribute('aria-hidden', 'true');
-    overlay.style.setProperty('--transition-color', getComputedStyle(band).backgroundColor);
+    overlay.style.setProperty('--transition-color', '#ff4d00');
     document.body.append(overlay);
     const animation = overlay.animate(
       [{opacity:0},{opacity:1,offset:.38},{opacity:1}],
