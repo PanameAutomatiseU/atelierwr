@@ -1,0 +1,8 @@
+DÉPÔT DES IMAGES À INTÉGRER
+
+Ajoutez dans ce dossier les fichiers JPG ou PNG destinés au site Atelier WR.
+Utilisez si possible un nom descriptif, par exemple :
+- le-solarium-du-cercle.jpg
+- le-vallon-vue-mer.jpg
+
+Les images seront optimisées puis déplacées dans le dossier approprié du site après leur intégration.
