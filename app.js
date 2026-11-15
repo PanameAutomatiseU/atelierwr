@@ -365,6 +365,83 @@ const ART = [
     "title": "Poupée de chiffon",
     "client": "Nus",
     "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-42.jpg",
+    "cat": "nus",
+    "title": "Nu 42",
+    "client": "Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-43.jpg",
+    "cat": "nus",
+    "title": "Nu 43",
+    "client": "Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-44.jpg",
+    "cat": "nus",
+    "title": "Nu 44",
+    "client": "Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-45.jpg",
+    "cat": "nus",
+    "title": "Nu 45",
+    "client": "Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-46.jpg",
+    "cat": "nus",
+    "title": "Nu 46",
+    "client": "Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-47.jpg",
+    "cat": "nus",
+    "title": "Nu 47",
+    "client": "Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-48.jpg",
+    "cat": "nus",
+    "title": "Nu 48",
+    "client": "Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-49.jpg",
+    "cat": "nus",
+    "title": "Nu 49",
+    "client": "Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-50.jpg",
+    "cat": "nus",
+    "title": "Nu 50",
+    "client": "Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-51.jpg",
+    "cat": "nus",
+    "title": "Nu 51",
+    "client": "Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-52.jpg",
+    "cat": "nus",
+    "title": "Nu 52",
+    "client": "Technique et dimensions à préciser",
+    "projectHref": ""
   }
 ],
 ];
