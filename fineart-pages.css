@@ -39,3 +39,52 @@ body.fineart-page{background:#fff;color:var(--ink)}
 .fineart-page .fineart-series__grid .card figcaption span{color:#666159;font-size:10px;line-height:1.5;text-align:left}
 @media(max-width:980px){.fineart-page .fineart-series__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:64px 30px}.fineart-page .fineart-series__grid .fineart-open{height:clamp(320px,48vw,500px)}}
 @media(max-width:620px){.fineart-series-entry img{height:clamp(330px,112vw,520px)}.fineart-series-entry figcaption{margin-top:18px}.fineart-page .fineart-series__grid{grid-template-columns:1fr;gap:68px}.fineart-page .fineart-series__grid .fineart-open{height:clamp(330px,112vw,520px)}.fineart-page .fineart-series__grid .card figcaption{margin-top:18px!important}}
+
+
+/* Navigation secondaire des univers Fine Art · 2026-11-15 */
+.fineart-category-bar{
+  position:sticky;
+  top:68px;
+  z-index:35;
+  overflow-x:auto;
+  overscroll-behavior-inline:contain;
+  scrollbar-width:thin;
+  border-bottom:1px solid rgba(21,21,21,.28);
+  background:#fff;
+  color:var(--ink);
+}
+.fineart-category-bar__inner{
+  display:flex;
+  width:max-content;
+  min-width:100%;
+  padding-inline:max(20px,calc((100vw - 1200px)/2));
+}
+.fineart-category-bar a{
+  display:flex;
+  flex:1 0 auto;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  min-height:54px;
+  padding:0 clamp(14px,1.8vw,28px);
+  border-left:1px solid rgba(21,21,21,.18);
+  color:var(--ink);
+  white-space:nowrap;
+  text-decoration:none;
+  transition:background-color .2s ease,color .2s ease;
+}
+.fineart-category-bar a:last-child{border-right:1px solid rgba(21,21,21,.18)}
+.fineart-category-bar strong{font-family:var(--font-display);font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.fineart-category-bar span{color:var(--orange);font-size:9px;font-weight:800}
+.fineart-category-bar a:hover{background:#f3eee3}
+.fineart-category-bar a.is-active{background:var(--ink);color:#fff}
+.fineart-category-bar a.is-active span{color:var(--orange)}
+.fineart-category-bar a:focus-visible{position:relative;z-index:2;outline:3px solid var(--orange);outline-offset:-3px}
+.fineart-page .fineart-category-bar + .fineart{padding-top:72px}
+@media(max-width:620px){
+  .fineart-category-bar{top:60px}
+  .fineart-category-bar__inner{padding-inline:0}
+  .fineart-category-bar a{min-height:50px;padding:0 18px}
+  .fineart-page .fineart-category-bar + .fineart{padding-top:50px}
+}
+@media(prefers-reduced-motion:reduce){.fineart-category-bar a{transition:none}}
