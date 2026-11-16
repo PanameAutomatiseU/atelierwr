@@ -304,3 +304,39 @@
   .design-band{min-height:60px;padding:11px 12px;font-size:clamp(16px,4.6vw,23px);letter-spacing:.04em}
   .design-band:hover span,.design-band:focus-visible span{transform:translateX(6px)}
 }
+
+
+/* Design & création · titre unifié et repères carrés · 2026-11-16 */
+.design-index__heading h1{
+  font-family:var(--font-display);
+  font-weight:900;
+  letter-spacing:-.05em;
+}
+.design-band{
+  font-weight:700;
+}
+.design-band span{
+  display:inline-flex;
+  align-items:center;
+  gap:clamp(10px,1.15vw,16px);
+}
+.design-band span::before{
+  content:"";
+  display:block;
+  flex:0 0 auto;
+  width:8px;
+  height:8px;
+  background:#151515;
+  transition:background-color .18s ease;
+}
+.design-band:hover span::before,
+.design-band:focus-visible span::before{
+  background:#1d3c8c;
+}
+@media(max-width:540px){
+  .design-band span{gap:9px}
+  .design-band span::before{width:6px;height:6px}
+}
+@media(prefers-reduced-motion:reduce){
+  .design-band span::before{transition:none}
+}
