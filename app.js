@@ -115,13 +115,6 @@ const ART = [
     "projectHref": ""
   },
   {
-    "src": "assets/work/nus-03.jpg",
-    "cat": "nus",
-    "title": "Nu III",
-    "client": "Aquarelle",
-    "projectHref": ""
-  },
-  {
     "src": "assets/work/nus-04.jpg",
     "cat": "nus",
     "title": "Nu IV",
@@ -133,13 +126,6 @@ const ART = [
     "cat": "nus",
     "title": "Nu V",
     "client": "Encre",
-    "projectHref": ""
-  },
-  {
-    "src": "assets/work/nus-06.jpg",
-    "cat": "nus",
-    "title": "Nu VI",
-    "client": "Aquarelle",
     "projectHref": ""
   },
   {
@@ -157,290 +143,325 @@ const ART = [
     "projectHref": ""
   },
   {
-    "src": "assets/work/nus-09.jpg",
-    "cat": "nus",
-    "title": "Nu 09",
-    "client": "Nus",
-    "projectHref": ""
-  },
-  {
-    "src": "assets/work/nus-10.jpg",
-    "cat": "nus",
-    "title": "portrait",
-    "client": "Nus",
-    "projectHref": ""
-  },
-  {
-    "src": "assets/work/nus-11.jpg",
-    "cat": "nus",
-    "title": "Nu 11",
-    "client": "Nus",
-    "projectHref": ""
-  },
-  {
     "src": "assets/work/nus-12.jpg",
     "cat": "nus",
     "title": "Nu 12",
-    "client": "Nus",
+    "client": "Croquis · Technique et dimensions à préciser",
     "projectHref": ""
   },
   {
     "src": "assets/work/nus-13.jpg",
     "cat": "nus",
     "title": "Nu 13",
-    "client": "Nus",
+    "client": "Croquis · Technique et dimensions à préciser",
     "projectHref": ""
   },
   {
     "src": "assets/work/nus-14.jpg",
     "cat": "nus",
     "title": "Nu 14",
-    "client": "Nus",
+    "client": "Croquis · Technique et dimensions à préciser",
     "projectHref": ""
   },
   {
     "src": "assets/work/nus-15.jpg",
     "cat": "nus",
     "title": "Nu 15",
-    "client": "Nus",
+    "client": "Croquis · Technique et dimensions à préciser",
     "projectHref": ""
   },
   {
     "src": "assets/work/nus-16.jpg",
     "cat": "nus",
     "title": "Nu 16",
-    "client": "Nus",
+    "client": "Croquis · Technique et dimensions à préciser",
     "projectHref": ""
   },
   {
     "src": "assets/work/nus-17.jpg",
     "cat": "nus",
     "title": "Nu 17",
-    "client": "Nus",
+    "client": "Croquis · Technique et dimensions à préciser",
     "projectHref": ""
   },
   {
     "src": "assets/work/nus-18.jpg",
     "cat": "nus",
     "title": "Nu 18",
-    "client": "Nus",
+    "client": "Croquis · Technique et dimensions à préciser",
     "projectHref": ""
   },
   {
     "src": "assets/work/nus-19.jpg",
     "cat": "nus",
     "title": "Nu 19",
-    "client": "Nus",
+    "client": "Croquis · Technique et dimensions à préciser",
     "projectHref": ""
   },
   {
     "src": "assets/work/nus-20.jpg",
     "cat": "nus",
     "title": "Nu 20",
-    "client": "Nus",
+    "client": "Croquis · Technique et dimensions à préciser",
     "projectHref": ""
   },
   {
     "src": "assets/work/nus-21.jpg",
     "cat": "nus",
     "title": "Nu 21",
-    "client": "Nus",
+    "client": "Croquis · Technique et dimensions à préciser",
     "projectHref": ""
   },
   {
     "src": "assets/work/nus-22.jpg",
     "cat": "nus",
     "title": "Nu 22",
-    "client": "Nus",
+    "client": "Croquis · Technique et dimensions à préciser",
     "projectHref": ""
   },
   {
     "src": "assets/work/nus-23.jpg",
     "cat": "nus",
     "title": "Nu 23",
-    "client": "Nus",
+    "client": "Croquis · Technique et dimensions à préciser",
     "projectHref": ""
   },
   {
     "src": "assets/work/nus-24.jpg",
     "cat": "nus",
     "title": "Nu 24",
-    "client": "Nus",
-    "projectHref": ""
-  },
-  {
-    "src": "assets/work/nus-25.jpg",
-    "cat": "nus",
-    "title": "Nu 25",
-    "client": "Nus",
-    "projectHref": ""
-  },
-  {
-    "src": "assets/work/nus-28.jpg",
-    "cat": "nus",
-    "title": "Nu 28",
-    "client": "Nus",
-    "projectHref": ""
-  },
-  {
-    "src": "assets/work/nus-29.jpg",
-    "cat": "nus",
-    "title": "portrait",
-    "client": "Nus",
-    "projectHref": ""
-  },
-  {
-    "src": "assets/work/nus-30.jpg",
-    "cat": "nus",
-    "title": "Nu 30",
-    "client": "Nus",
-    "projectHref": ""
-  },
-  {
-    "src": "assets/work/nus-31.jpg",
-    "cat": "nus",
-    "title": "Nu 31",
-    "client": "Nus",
-    "projectHref": ""
-  },
-  {
-    "src": "assets/work/nus-32.jpg",
-    "cat": "nus",
-    "title": "Nu 32",
-    "client": "Nus",
-    "projectHref": ""
-  },
-  {
-    "src": "assets/work/nus-33.jpg",
-    "cat": "nus",
-    "title": "Nu 33",
-    "client": "Nus",
-    "projectHref": ""
-  },
-  {
-    "src": "assets/work/nus-34.jpg",
-    "cat": "nus",
-    "title": "Nu 34",
-    "client": "Nus",
-    "projectHref": ""
-  },
-  {
-    "src": "assets/work/nus-35.jpg",
-    "cat": "nus",
-    "title": "Nu 35",
-    "client": "Nus",
-    "projectHref": ""
-  },
-  {
-    "src": "assets/work/nus-36.jpg",
-    "cat": "nus",
-    "title": "Nu 36",
-    "client": "Nus",
-    "projectHref": ""
-  },
-  {
-    "src": "assets/work/nus-37.jpg",
-    "cat": "nus",
-    "title": "Nu 37",
-    "client": "Nus",
-    "projectHref": ""
-  },
-  {
-    "src": "assets/work/nus-39.jpg",
-    "cat": "nus",
-    "title": "Meditation",
-    "client": "Nus",
-    "projectHref": ""
-  },
-  {
-    "src": "assets/work/nus-40.jpg",
-    "cat": "nus",
-    "title": "Nu 40",
-    "client": "Nus",
-    "projectHref": ""
-  },
-  {
-    "src": "assets/work/nus-41.jpg",
-    "cat": "nus",
-    "title": "Poupée de chiffon",
-    "client": "Nus",
+    "client": "Croquis · Technique et dimensions à préciser",
     "projectHref": ""
   },
   {
     "src": "assets/work/nus-42.jpg",
     "cat": "nus",
     "title": "Nu 42",
-    "client": "Technique et dimensions à préciser",
-    "projectHref": ""
-  },
-  {
-    "src": "assets/work/nus-43.jpg",
-    "cat": "nus",
-    "title": "Nu 43",
-    "client": "Technique et dimensions à préciser",
-    "projectHref": ""
-  },
-  {
-    "src": "assets/work/nus-44.jpg",
-    "cat": "nus",
-    "title": "Nu 44",
-    "client": "Technique et dimensions à préciser",
+    "client": "Croquis · Technique et dimensions à préciser",
     "projectHref": ""
   },
   {
     "src": "assets/work/nus-45.jpg",
     "cat": "nus",
     "title": "Nu 45",
-    "client": "Technique et dimensions à préciser",
+    "client": "Croquis · Technique et dimensions à préciser",
     "projectHref": ""
   },
   {
     "src": "assets/work/nus-46.jpg",
     "cat": "nus",
     "title": "Nu 46",
-    "client": "Technique et dimensions à préciser",
+    "client": "Croquis · Technique et dimensions à préciser",
     "projectHref": ""
   },
   {
     "src": "assets/work/nus-47.jpg",
     "cat": "nus",
     "title": "Nu 47",
-    "client": "Technique et dimensions à préciser",
+    "client": "Croquis · Technique et dimensions à préciser",
     "projectHref": ""
   },
   {
     "src": "assets/work/nus-48.jpg",
     "cat": "nus",
     "title": "Nu 48",
-    "client": "Technique et dimensions à préciser",
+    "client": "Croquis · Technique et dimensions à préciser",
     "projectHref": ""
   },
   {
     "src": "assets/work/nus-49.jpg",
     "cat": "nus",
     "title": "Nu 49",
-    "client": "Technique et dimensions à préciser",
+    "client": "Croquis · Technique et dimensions à préciser",
     "projectHref": ""
   },
   {
     "src": "assets/work/nus-50.jpg",
     "cat": "nus",
     "title": "Nu 50",
-    "client": "Technique et dimensions à préciser",
+    "client": "Croquis · Technique et dimensions à préciser",
     "projectHref": ""
   },
   {
     "src": "assets/work/nus-51.jpg",
     "cat": "nus",
     "title": "Nu 51",
-    "client": "Technique et dimensions à préciser",
+    "client": "Croquis · Technique et dimensions à préciser",
     "projectHref": ""
   },
   {
     "src": "assets/work/nus-52.jpg",
     "cat": "nus",
     "title": "Nu 52",
-    "client": "Technique et dimensions à préciser",
+    "client": "Croquis · Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-03.jpg",
+    "cat": "nus",
+    "title": "Nu III",
+    "client": "Aquarelle",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-06.jpg",
+    "cat": "nus",
+    "title": "Nu VI",
+    "client": "Aquarelle",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-09.jpg",
+    "cat": "nus",
+    "title": "Nu 09",
+    "client": "Peinture · Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-10.jpg",
+    "cat": "nus",
+    "title": "portrait",
+    "client": "Peinture · Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-11.jpg",
+    "cat": "nus",
+    "title": "Nu 11",
+    "client": "Peinture · Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-25.jpg",
+    "cat": "nus",
+    "title": "Nu 25",
+    "client": "Peinture · Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-26.jpg",
+    "cat": "nus",
+    "title": "Nu 26",
+    "client": "Peinture · Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-27.jpg",
+    "cat": "nus",
+    "title": "Nu 27",
+    "client": "Peinture · Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-28.jpg",
+    "cat": "nus",
+    "title": "Nu 28",
+    "client": "Peinture · Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-29.jpg",
+    "cat": "nus",
+    "title": "portrait",
+    "client": "Peinture · Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-30.jpg",
+    "cat": "nus",
+    "title": "Nu 30",
+    "client": "Peinture · Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-31.jpg",
+    "cat": "nus",
+    "title": "Nu 31",
+    "client": "Peinture · Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-32.jpg",
+    "cat": "nus",
+    "title": "Nu 32",
+    "client": "Peinture · Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-33.jpg",
+    "cat": "nus",
+    "title": "Nu 33",
+    "client": "Peinture · Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-34.jpg",
+    "cat": "nus",
+    "title": "Nu 34",
+    "client": "Peinture · Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-35.jpg",
+    "cat": "nus",
+    "title": "Nu 35",
+    "client": "Peinture · Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-36.jpg",
+    "cat": "nus",
+    "title": "Nu 36",
+    "client": "Peinture · Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-37.jpg",
+    "cat": "nus",
+    "title": "Nu 37",
+    "client": "Peinture · Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-38.jpg",
+    "cat": "nus",
+    "title": "Nu 38",
+    "client": "Peinture · Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-39.jpg",
+    "cat": "nus",
+    "title": "Meditation",
+    "client": "Peinture · Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-40.jpg",
+    "cat": "nus",
+    "title": "Nu 40",
+    "client": "Peinture · Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-41.jpg",
+    "cat": "nus",
+    "title": "Poupée de chiffon",
+    "client": "Peinture · Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-43.jpg",
+    "cat": "nus",
+    "title": "Nu 43",
+    "client": "Peinture · Technique et dimensions à préciser",
+    "projectHref": ""
+  },
+  {
+    "src": "assets/work/nus-44.jpg",
+    "cat": "nus",
+    "title": "Nu 44",
+    "client": "Peinture · Technique et dimensions à préciser",
     "projectHref": ""
   }
 ],

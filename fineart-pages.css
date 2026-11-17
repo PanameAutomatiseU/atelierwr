@@ -88,3 +88,51 @@ body.fineart-page{background:#fff;color:var(--ink)}
   .fineart-page .fineart-category-bar + .fineart{padding-top:50px}
 }
 @media(prefers-reduced-motion:reduce){.fineart-category-bar a{transition:none}}
+
+
+/* Nus et modèles vivants · titre bicolore et classement · 2026-11-17 */
+.fineart-page-head h1.fineart-duotone-title{
+  display:flex;
+  flex-wrap:wrap;
+  gap:0 .2em;
+  max-width:1200px;
+  font-size:clamp(38px,6.5vw,98px);
+  line-height:.88;
+}
+.fineart-duotone-title span{color:#1d3c8c}
+.fineart-duotone-title em{color:#e8742e;font-style:normal}
+.fineart-gallery-group{
+  grid-column:1/-1;
+  display:flex;
+  align-items:baseline;
+  gap:16px;
+  margin-top:clamp(14px,2vw,28px);
+  padding:0 0 16px;
+  border-bottom:2px solid #1d3c8c;
+}
+.fineart-gallery-group span{
+  color:#e8742e;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.14em;
+}
+.fineart-gallery-group h2{
+  margin:0;
+  color:#1d3c8c;
+  font-family:var(--font-display);
+  font-size:clamp(28px,4.8vw,58px);
+  font-weight:900;
+  line-height:.9;
+  letter-spacing:-.04em;
+  text-transform:uppercase;
+}
+.fineart-gallery-group--paintings{
+  margin-top:clamp(46px,7vw,90px);
+  border-bottom-color:#e8742e;
+}
+.fineart-gallery-group--paintings h2{color:#e8742e}
+.fineart-gallery-group--paintings span{color:#1d3c8c}
+@media(max-width:540px){
+  .fineart-page-head h1.fineart-duotone-title{font-size:clamp(34px,11vw,54px)}
+  .fineart-gallery-group{gap:10px;padding-bottom:12px}
+}
