@@ -1,0 +1,61 @@
+name: Optimiser Le Solarium du Cercle
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/optimize-solarium-20261117.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --quiet Pillow
+      - name: Optimiser et ranger l’image
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageOps
+
+          folder = Path('a-integrer')
+          matches = [p for p in folder.iterdir() if p.is_file() and 'cercle' in p.name.lower() and p.suffix.lower() in {'.jpg', '.jpeg', '.png'}]
+          if len(matches) != 1:
+              raise SystemExit(f'Fichier attendu introuvable ou ambigu : {matches}')
+
+          source = matches[0]
+          target = Path('assets/ig/20-solarium-du-cercle.jpg')
+          target.parent.mkdir(parents=True, exist_ok=True)
+
+          with Image.open(source) as opened:
+              image = ImageOps.exif_transpose(opened).convert('RGB')
+              image.thumbnail((1400, 1400), Image.Resampling.LANCZOS)
+              quality = 82
+              while True:
+                  image.save(target, 'JPEG', quality=quality, optimize=True, progressive=True)
+                  if target.stat().st_size <= 500 * 1024 or quality <= 68:
+                      break
+                  quality -= 3
+
+          source.unlink()
+          print(f'{target}: {target.stat().st_size} octets, qualité {quality}, dimensions {image.size}')
+          PY
+      - name: Enregistrer l’image optimisée
+        shell: bash
+        run: |
+          rm .github/workflows/optimize-solarium-20261117.yml
+          git config user.name 'Atelier WR — intégration image'
+          git config user.email 'actions@users.noreply.github.com'
+          git add -A
+          git commit -m 'Optimiser Le Solarium du Cercle'
+          git push origin main
