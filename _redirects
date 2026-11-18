@@ -3,3 +3,6 @@
 /product-design /#design 301
 /logo /logos-identites.html 301
 /bags-accessories /maroquinerie-accessoires.html 301
+
+# Relative gallery media emitted by the shared scripts.
+/en/assets/* /assets/:splat 301

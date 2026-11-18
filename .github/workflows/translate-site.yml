@@ -1,0 +1,52 @@
+name: Synchroniser la version anglaise
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+      - '*.js'
+      - 'scripts/translate_site.py'
+      - 'scripts/english-runtime.js'
+      - 'scripts/language-switch.js'
+      - 'scripts/translation-requirements.txt'
+      - '.github/workflows/translate-site.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: atelierwr-english
+  cancel-in-progress: true
+
+jobs:
+  translate:
+    if: github.repository == 'PanameAutomatiseU/atelierwr'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: scripts/translation-requirements.txt
+      - name: Préparer le moteur de traduction
+        run: |
+          python -m pip install -r scripts/translation-requirements.txt
+          curl --fail --location --retry 2 https://argos-net.com/v1/translate-fr_en-1_9.argosmodel -o "$RUNNER_TEMP/fr-en.zip"
+          echo "3b3052fee6bb1e8e8e632a26a723eb2a2c7710dfe73ba61ffd9b83e85d4f14c1  $RUNNER_TEMP/fr-en.zip" | sha256sum -c
+          unzip -q "$RUNNER_TEMP/fr-en.zip" -d "$RUNNER_TEMP/atelierwr-model"
+      - name: Générer et enregistrer le site anglais
+        run: |
+          python scripts/translate_site.py "$RUNNER_TEMP/atelierwr-model/translate-fr_en-1_9"
+          git add -- '*.html' en sitemap.xml
+          if git diff --cached --quiet; then exit 0; fi
+          git diff --cached --check
+          git config user.name 'Atelier WR — traduction automatique'
+          git config user.email 'actions@users.noreply.github.com'
+          git commit -m 'Synchroniser la version anglaise'
+          git push origin HEAD:main

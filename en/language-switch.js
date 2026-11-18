@@ -1,0 +1,17 @@
+(() => {
+const englishRoutes = {"/": "/en/", "/autres-horlogerie": "/en/autres-horlogerie.html", "/autres-horlogerie.html": "/en/autres-horlogerie.html", "/boanton": "/en/boanton.html", "/boanton.html": "/en/boanton.html", "/by-the-sea": "/en/by-the-sea.html", "/by-the-sea.html": "/en/by-the-sea.html", "/carnets-de-voyage": "/en/carnets-de-voyage.html", "/carnets-de-voyage.html": "/en/carnets-de-voyage.html", "/cartier": "/en/cartier.html", "/cartier.html": "/en/cartier.html", "/contact": "/en/contact.html", "/contact.html": "/en/contact.html", "/design-creation": "/en/design-creation.html", "/design-creation.html": "/en/design-creation.html", "/designer-graphiste-marseille": "/en/designer-graphiste-marseille", "/designer-graphiste-marseille.html": "/en/designer-graphiste-marseille", "/fine-art": "/en/fine-art.html", "/fine-art.html": "/en/fine-art.html", "/horlogerie": "/en/horlogerie.html", "/horlogerie.html": "/en/horlogerie.html", "/index": "/en/", "/index.html": "/en/", "/joaillerie": "/en/joaillerie.html", "/joaillerie.html": "/en/joaillerie.html", "/lignes-animales": "/en/lignes-animales.html", "/lignes-animales.html": "/en/lignes-animales.html", "/logos-identites": "/en/logos-identites.html", "/logos-identites.html": "/en/logos-identites.html", "/luminaire-aura": "/en/luminaire-aura.html", "/luminaire-aura.html": "/en/luminaire-aura.html", "/luminaire-canopee": "/en/luminaire-canopee.html", "/luminaire-canopee.html": "/en/luminaire-canopee.html", "/luminaire-celestine": "/en/luminaire-celestine.html", "/luminaire-celestine.html": "/en/luminaire-celestine.html", "/luminaire-heritage": "/en/luminaire-heritage.html", "/luminaire-heritage.html": "/en/luminaire-heritage.html", "/luminaire-luma": "/en/luminaire-luma.html", "/luminaire-luma.html": "/en/luminaire-luma.html", "/luminaire-saturn": "/en/luminaire-saturn.html", "/luminaire-saturn.html": "/en/luminaire-saturn.html", "/luminaires": "/en/luminaires.html", "/luminaires-govee": "/enluminaires.html", "/luminaires-govee.html": "/enluminaires.html", "/luminaires.html": "/en/luminaires.html", "/maroquinerie-accessoires": "/en/maroquinerie-accessoires.html", "/maroquinerie-accessoires.html": "/en/maroquinerie-accessoires.html", "/mes-dernieres-encres": "/en/mes-dernieres-encres.html", "/mes-dernieres-encres.html": "/en/mes-dernieres-encres.html", "/mobilier-objets": "/en/mobilier-objets.html", "/mobilier-objets.html": "/en/mobilier-objets.html", "/nus": "/en/nus.html", "/nus.html": "/en/nus.html", "/packaging-vins": "/en/packaging-vins.html", "/packaging-vins.html": "/en/packaging-vins.html", "/parcours": "/en/parcours.html", "/parcours.html": "/en/parcours.html", "/prendre-contact": "/en/prendre-contact", "/prendre-contact.html": "/en/prendre-contact", "luminaires.html": "/enluminaires.html"};
+const english = document.documentElement.lang === "en";
+let link = document.querySelector(".language-switch");
+if (!english && !link && Object.hasOwn(englishRoutes, location.pathname)) {
+  link = document.createElement("a");
+  link.href = englishRoutes[location.pathname];
+  link.hreflang = "en";
+  link.lang = "en";
+  link.className = "language-switch";
+  link.setAttribute("aria-label", "English version");
+  link.textContent = "EN";
+  (document.querySelector("header.nav .menu, header.nav .wrap") || document.body).append(link);
+}
+if (link) link.addEventListener("click", () => { link.hash = location.hash; });
+
+})();
