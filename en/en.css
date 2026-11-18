@@ -132,3 +132,12 @@
 .english-collaborate .collab-hero h1 {
   font-size: clamp(40px, 6.7vw, 106px);
 }
+
+.english-project-links {
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+
+.english-work > .english-intro p {
+  max-width: 75ch;
+}
