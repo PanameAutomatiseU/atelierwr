@@ -1,0 +1,17 @@
+.cabanes-opening {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: clamp(18px, 4vw, 52px);
+  align-items: center;
+}
+
+.cabanes-concept {
+  margin-top: clamp(36px, 6vw, 80px);
+  align-items: start;
+}
+
+@media (max-width: 760px) {
+  .cabanes-opening {
+    grid-template-columns: 1fr;
+  }
+}

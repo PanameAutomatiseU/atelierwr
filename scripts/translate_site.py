@@ -32,6 +32,15 @@ GLOSSARY = {
     "Aller au contenu": "Skip to content", "Navigation principale": "Main navigation",
     "Fermer": "Close", "Précédent": "Previous", "Suivant": "Next",
     "Voir la publication Instagram ↗": "View Instagram post ↗",
+    "Le lieu et le concept": "About the Brand",
+    "Une expérience de « workation » au cœur de la France": "A unique “workation” experience in the heart of France",
+    "Le Château de Cabanes a été pensé pour les familles qui souhaitent prolonger leurs vacances dans le sud de la France tout en continuant à travailler à distance.":
+        "We wanted to create a place where families can enjoy an extended vacation in southern France while continuing to work remotely.",
+    "Les parents peuvent profiter des soirées pendant que les enfants participent à des activités encadrées et se font des amis sur le domaine. Les produits de la ferme, servis à table, font partie de cette expérience de vacances et de travail sans souci.":
+        "Parents can enjoy evening activities while their children take part in supervised activities and make friends on the property. Farm-to-table produce is part of the stress-free workation experience.",
+    "Vue d’architecte du domaine après restauration.": "Artist’s rendering of the estate after restoration.",
+    "Vue aérienne du projet du Château de Cabanes, avec les bâtiments, les jardins et la piscine":
+        "Aerial rendering of Château de Cabanes, including the buildings, gardens and pool.",
     "Boanton": "Boanton", "Emblème": "Emblème", "Héritage": "Héritage",
 }
 JS_LITERAL = re.compile(r'\x27((?:\\.|[^\x27\r\n\\])*)\x27|"((?:\\.|[^"\r\n\\])*)"')
