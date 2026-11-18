@@ -52,4 +52,13 @@
   <url><loc>https://atelierwr.net/nus.html</loc></url>
   <url><loc>https://atelierwr.net/parcours.html</loc></url>
   <url><loc>https://atelierwr.net/contact.html</loc></url>
+  <url>
+    <loc>https://atelierwr.net/en/</loc>
+  </url>
+  <url>
+    <loc>https://atelierwr.net/en/leather-goods</loc>
+  </url>
+  <url>
+    <loc>https://atelierwr.net/en/contact</loc>
+  </url>
 </urlset>
