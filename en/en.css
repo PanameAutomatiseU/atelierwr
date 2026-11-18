@@ -99,3 +99,36 @@
     grid-template-columns: 1fr;
   }
 }
+
+.english-studio-menu {
+  position: relative;
+}
+
+.english-studio-menu summary {
+  cursor: pointer;
+}
+
+.english-studio-menu__links {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: calc(100% + 10px);
+  display: grid;
+  min-width: 140px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.english-studio-menu__links a {
+  padding: 9px;
+}
+
+.english-studio-portrait {
+  margin-block: 36px;
+}
+
+.english-collaborate .collab-hero h1 {
+  font-size: clamp(40px, 6.7vw, 106px);
+}
