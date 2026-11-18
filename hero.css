@@ -18,12 +18,12 @@
   width:100%;
   aspect-ratio:1500 / 620;
   margin-top:clamp(62px,8vw,118px);
-  background:url("assets/brands/marques-accompagnees.svg?v=logos-gris-40") center / contain no-repeat;
+  background:url("assets/brands/marques-accompagnees.svg?v=logos-samsung") center / contain no-repeat;
 }
 @media(max-width:620px){
   .studio .domains::after{
     aspect-ratio:700 / 1410;
     margin-top:58px;
-    background-image:url("assets/brands/marques-accompagnees-mobile.svg?v=logos-gris-40");
+    background-image:url("assets/brands/marques-accompagnees-mobile.svg?v=logos-samsung");
   }
 }
