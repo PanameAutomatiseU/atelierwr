@@ -28,6 +28,10 @@ GLOSSARY = {
     "Place Vendôme": "Place Vendôme", "Almé Paris": "Almé Paris",
     "Contact": "Contact", "Marseille": "Marseille", "Packaging": "Packaging",
     "Émail": "Enamel", "Direction artistique": "Art direction",
+    "Haut de page ↑": "Back to top ↑", "Retour en haut ↑": "Back to top ↑",
+    "Aller au contenu": "Skip to content", "Navigation principale": "Main navigation",
+    "Fermer": "Close", "Précédent": "Previous", "Suivant": "Next",
+    "Voir la publication Instagram ↗": "View Instagram post ↗",
     "Boanton": "Boanton", "Emblème": "Emblème", "Héritage": "Héritage",
 }
 JS_LITERAL = re.compile(r'\x27((?:\\.|[^\x27\r\n\\])*)\x27|"((?:\\.|[^"\r\n\\])*)"')
