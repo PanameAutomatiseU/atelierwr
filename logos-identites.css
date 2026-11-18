@@ -99,3 +99,5 @@
 .logos-nav a:hover,.logos-nav a:focus-visible{border-color:var(--red-deep);background:var(--red-deep);color:#fff}
 @media(max-width:980px){.logos-general,.logos-method{grid-template-columns:1fr}.logos-general-copy,.logos-method-head{border-right:0;border-bottom:1px solid var(--ink)}.logos-nav .wrap{grid-template-columns:1fr}.logos-nav-head{display:none}}
 @media(max-width:700px){.logos-expertise-panel ol,.logos-method ol{grid-template-columns:1fr}.logos-expertise-panel li{min-height:0}.logos-method li,.logos-method li:nth-child(even),.logos-method li:nth-child(n+3){border-right:0;border-bottom:1px solid var(--line)}.logos-method li:last-child{border-bottom:0}.logos-nav{position:relative;top:auto}.logos-nav-links{gap:5px}.logos-nav a{font-size:7.5px}}
+
+.logo-project-copy .logo-case-link{display:inline-block;margin-top:10px;color:var(--blue);font-weight:700;text-decoration:underline;text-underline-offset:4px}
