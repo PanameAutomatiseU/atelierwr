@@ -45,9 +45,10 @@
 
 .cabanes-cc {
   width: 116px;
-  aspect-ratio: 1;
+  height: 132px;
   background-size: 950% auto;
-  background-position: 20% 50%;
+  background-position: 18.6% 50%;
+  clip-path: polygon(43% 0, 58% 0, 58% 18%, 89% 21%, 89% 79%, 58% 82%, 58% 100%, 43% 100%, 43% 82%, 12% 79%, 12% 21%, 43% 18%);
 }
 
 .cabanes-diamond {
