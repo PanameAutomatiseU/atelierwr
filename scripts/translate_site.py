@@ -156,9 +156,14 @@ def build(model):
         if not soup.html or not soup.body or soup.html.get("lang", "").startswith("en"):
             continue
         canonical = soup.find("link", rel="canonical")
-        route = urlsplit(canonical["href"]).path if canonical else "/" + file.name
-        for alias in {route, "/" + file.name, "/" + file.stem}:
-            routes[alias] = "/en" + route
+        page_path = "/" + file.stem
+        default_route = "/" if file.stem == "index" else page_path
+        canonical_path = urlsplit(canonical.get("href", "")).path if canonical else ""
+        canonical_path = "/" + canonical_path.lstrip("/")
+        aliases = {default_route, page_path, "/" + file.name}
+        route = canonical_path if canonical_path in aliases else default_route
+        for alias in aliases:
+            routes[alias] = "/en" + default_route
         for script in soup.find_all("script"):
             if script.string and script.get("type") != "application/ld+json":
                 dynamic.update(js_phrases(str(script.string)))
@@ -219,7 +224,10 @@ def build(model):
     root = index.getroot()
     for entry in list(root):
         location = entry.find(ns + "loc")
-        if location is not None and (location.text or "").startswith(ORIGIN + "/en/"):
+        if location is not None and (
+            (location.text or "").startswith(ORIGIN + "/en/")
+            or location.text == ORIGIN + "/enluminaires.html"
+        ):
             root.remove(entry)
     for route in sorted({routes[route] for route, _, _ in docs.values()}):
         ElementTree.SubElement(ElementTree.SubElement(root, ns + "url"), ns + "loc").text = ORIGIN + route
