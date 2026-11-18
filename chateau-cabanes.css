@@ -15,3 +15,128 @@
     grid-template-columns: 1fr;
   }
 }
+
+.cabanes-step-head {
+  min-width: 0;
+}
+
+.cabanes-art {
+  --sign-ink: #151515;
+  --sign-paper: #faf8f2;
+  width: min(100%, 420px);
+  margin: 24px 0 0;
+  background: var(--sign-paper);
+}
+
+.cabanes-artwork {
+  display: flex;
+  min-height: 162px;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(14px, 4vw, 38px);
+  padding: 24px;
+}
+
+.cabanes-cc,
+.cabanes-pattern i {
+  display: block;
+  background: url("assets/work/chateau-cabanes-signature.png") no-repeat;
+}
+
+.cabanes-cc {
+  width: 116px;
+  aspect-ratio: 1;
+  background-size: 950% auto;
+  background-position: 20% 50%;
+}
+
+.cabanes-diamond {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 54px;
+  aspect-ratio: 1;
+  border: 1.5px solid var(--sign-ink);
+  transform: rotate(45deg);
+}
+
+.cabanes-diamond i {
+  position: absolute;
+  inset: 4px;
+  border: 1px solid var(--sign-ink);
+}
+
+.cabanes-diamond i + i {
+  inset: 8px;
+}
+
+.cabanes-hexagon {
+  position: relative;
+  width: 100px;
+  height: 116px;
+  background: var(--sign-ink);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.cabanes-hexagon::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: var(--sign-paper);
+  clip-path: inherit;
+}
+
+.cabanes-sun,
+.cabanes-moon,
+.cabanes-stars i {
+  display: block;
+  width: 44px;
+  aspect-ratio: 1;
+  background: var(--sign-ink);
+}
+
+.cabanes-sun {
+  clip-path: polygon(50% 0%,56% 23%,69% 4%,67% 29%,85% 15%,76% 33%,96% 31%,80% 44%,100% 50%,80% 56%,96% 69%,76% 67%,85% 85%,67% 71%,69% 96%,56% 77%,50% 100%,44% 77%,31% 96%,33% 71%,15% 85%,24% 67%,4% 69%,20% 56%,0% 50%,20% 44%,4% 31%,24% 33%,15% 15%,33% 29%,31% 4%,44% 23%);
+}
+
+.cabanes-moon {
+  border-radius: 50%;
+  mask-image: radial-gradient(circle at 50% 74%, transparent 66%, black 67%);
+}
+
+.cabanes-stars {
+  display: flex;
+  gap: 4px;
+}
+
+.cabanes-stars i {
+  width: 29px;
+  clip-path: polygon(50% 0,64% 36%,100% 50%,64% 64%,50% 100%,36% 64%,0 50%,36% 36%);
+}
+
+.cabanes-art--applications .cabanes-artwork {
+  overflow: hidden;
+  padding: 0;
+}
+
+.cabanes-pattern {
+  display: grid;
+  flex: 0 0 115%;
+  grid-template-columns: repeat(5, 1fr);
+  overflow: hidden;
+}
+
+.cabanes-pattern i {
+  aspect-ratio: 0.84;
+  background-size: 455% auto;
+  background-position: 14.6% 50%;
+}
+
+.cabanes-pattern i:nth-child(n+6):nth-child(-n+10) {
+  transform: translateX(50%);
+}
+
+.cabanes-plaque {
+  max-width: min(100%, 680px);
+  margin-inline: auto;
+}
